@@ -1,0 +1,9 @@
+o que é modelo{
+    #abstração de algo do mundo real{
+        #criação de algo que é capaz de fazer o que no mundo real é capaz de fazer.
+    }
+}
+
+models{
+    
+}
