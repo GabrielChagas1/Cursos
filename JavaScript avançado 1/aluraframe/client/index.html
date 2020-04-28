@@ -57,5 +57,16 @@
     <script>
         let negociacaoController = new NegociacaoController();
     </script>
+
+    <script>
+        let lista = new Proxy(new ListaNegociacoes(), {
+            set: function(target, prop, value, receiver){
+                console.log(`valor anterior: ${target[prop]}, valor atual; ${value}`);
+                return Reflect.get(target, prop, value, receiver);
+            }
+        });
+
+        lista.adiciona(new Negociacao(new Date, 1, 100));
+    </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+o problema das maquinas virtuais{
+
+    antigamente -> várias aplicações, vários servidores...
+
+    servidores -> custos com manutenção e demanda de muito tempo para reparos, capacidade pouca aproveitada.
+
+    virtualização{
+        hardware -> SO -> Hypervisor
+
+        Hypervisor -> tecnólogia que permite a virtualização dos recursos físicos do sistema
+
+        #melhoria  no uso de recursos de infraestrutura
+        
+        #problema{
+            vários sistemas operacionais rodando num VM dá muito custo.
+        }
+    }
+
+    containers{
+        container{
+            #funcionará junto do nosso sistema operacional base, conterá a nossa aplicação, ou seja, a aplicação será executada dentro dele, eles vão dividir as funcionalidades do sistema, com somente um sistema operacional reduzimos o custo de manutenção e infraestrutura.
+
+            vantagens{
+                O container é a solução para suprir o problema de múltiplas máquinas virtuais em um hardware físico, já que com o container, nós dividimos o sistema operacional entre nossas aplicações.
+            }
+        }
+    }
+
+    docker{
+        PaaS - Plataform as a service -> responsável por fazer a sua aplicação subir sem problemas.
+
+        O Docker nada mais é do que uma coleção de tecnologias para facilitar o deploy e a execução das nossas aplicações. A sua principal tecnologia é a Docker Engine, a plataforma que segura os containers, fazendo o intermédio entre o sistema operacional.
+    }
+
+    instalação docker{
+        
+    }
+}
