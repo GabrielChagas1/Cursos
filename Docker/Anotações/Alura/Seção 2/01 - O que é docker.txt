@@ -1,0 +1,17 @@
+aula{
+    Docker -> Tecnológia de virtualização != tradicional (VM)
+
+    # Engine de administração de containers
+
+    # Processo isolado do sistema, a partir dele você pode startar as aplicações isoladas do host onde o container foi criado, ou seja executar um software dentro de um ambiente mais controlado possivel.
+
+    # Utiliza os serviços do LXC (Linux Containers)
+
+    # Empacota software com vários níveis de isolamento {
+        # Isolamento de arquivos.
+        # Controle de rede e CPU que o container pode usar.
+        # Acesso ao container a partir de um IP.
+    }
+
+
+}
