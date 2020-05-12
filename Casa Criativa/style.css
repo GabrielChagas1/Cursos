@@ -17,6 +17,23 @@ body.hideScroll{
 
 /* global */
 
+.button{
+    background: #ff5e84;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #ff5e8444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+    background: #0984e3;
+    text-decoration: none;
+}
+
 .hide{
     display: none;
 }
@@ -46,7 +63,7 @@ p, .description{
 
 #intro{
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 main{
@@ -78,16 +95,6 @@ button{
 button:first-child:hover{
     text-decoration: underline;
 }
-
-.fat{
-    background: #ff5e84;
-    color: #fff;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 16px #ff5e8444;
-}
-
 
 footer{
     text-align: center;
@@ -256,17 +263,38 @@ form button:hover{
     margin-right: 16px;
 }
 
-#page-ideias li:last-child{
-    margin: 0;
-    width: 150px;
-    height: 40px;
-    border-radius: 4px;
-    background: #ff5e84;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#page-ideias li a{
+    color: #24282b;
 }
 
-#page-ideias li:last-child a{
+#page-ideias li a.button{
     color: #fff;
+}
+
+#page-ideias section#title{
+    text-align: center;
+}
+
+#page-ideias section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+#page-ideias section#title h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+#page-ideias section#ideias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#page-ideias section#ideias .idea{
+    margin: 0;
+}
+
+section#title, section#ideias, footer{
+    margin-top: 64px;
 }
