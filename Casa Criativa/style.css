@@ -233,3 +233,40 @@ form button:hover{
     opacity: 0;
     visibility: hidden;
 }
+
+/* Ideia */
+
+#page-ideias #container{
+    display: block;
+}
+
+
+#page-ideias header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias li{
+    list-style: none;
+    margin-right: 16px;
+}
+
+#page-ideias li:last-child{
+    margin: 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    background: #ff5e84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-ideias li:last-child a{
+    color: #fff;
+}
