@@ -1,0 +1,300 @@
+/* estilos da página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #e5e5e5;
+    color: #24282b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll{
+    overflow: hidden;
+}
+
+/* global */
+
+.button{
+    background: #ff5e84;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #ff5e8444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+    background: #0984e3;
+    text-decoration: none;
+}
+
+.hide{
+    display: none;
+}
+
+a{
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+#container{
+    width: 90%;
+    max-width: 980px;
+    margin: 40px auto;
+    display: flex;
+}
+
+#intro{
+    width: 300px;
+    margin-right: 64px;
+}
+
+main{
+    margin: 32px 0;
+}
+
+#buttons{
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-around;
+    
+}
+
+
+button{
+    border: none;
+    font-weight: bold;
+    color: #ff5e84;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+}
+
+button:first-child:hover{
+    text-decoration: underline;
+}
+
+footer{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #777;
+}
+
+footer a{
+    opacity: 0.8;
+}
+
+.idea{
+    display: flex;
+    background: #fff;
+    margin-bottom: 32px;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea p{
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+.idea a{
+    display: block;
+    text-align: right;
+}
+
+/* modal */
+#modal{
+    background: #ff5e84;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 400ms;
+}
+
+#modal.addScroll{
+    overflow: auto;
+}
+
+#modal .content{
+    color: #fff;
+}
+
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
+}
+
+
+
+form input, form textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ff5e84;
+    outline: none;
+    font-size: 16px;
+}
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a{
+    width: 150px;
+    height: 40px;
+    background: #ffffff22;
+    color: #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    align-self: start;
+    transition: 400ms;
+}
+
+form a:hover{
+    background: #fff;
+    color: #ff5e84;
+    text-decoration: none;
+}
+
+form button{
+    background: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    grid-column: 2;
+    justify-self: end;
+    transition: 400ms;
+}
+
+form button:hover{
+    background: #0984e3;
+    color: #fff;
+}
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Ideia */
+
+#page-ideias #container{
+    display: block;
+}
+
+
+#page-ideias header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias li{
+    list-style: none;
+    margin-right: 16px;
+}
+
+#page-ideias li a{
+    color: #24282b;
+}
+
+#page-ideias li a.button{
+    color: #fff;
+}
+
+#page-ideias section#title{
+    text-align: center;
+}
+
+#page-ideias section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+#page-ideias section#title h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+#page-ideias section#ideias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#page-ideias section#ideias .idea{
+    margin: 0;
+}
+
+section#title, section#ideias, footer{
+    margin-top: 64px;
+}
