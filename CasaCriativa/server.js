@@ -3,15 +3,21 @@ const express = require('express');
 const server = express();
 
 // configurar arquivos estáticos
-server.use(express.static('public'))
+server.use(express.static('public'));
+
+// configurando o nunjucks
+const nunjucks = require('nunjucks');
+nunjucks.configure('views', {
+    express: server,
+});
 
 
 server.get('/', (req, res) =>{
-    return res.sendFile(__dirname +'/index.html');
+    return res.render('index.html');
 }); 
 
 server.get('/ideias', (req, res) =>{
-    return res.sendFile(__dirname +'/ideias.html');
+    return res.render('ideias.html');
 }); 
 
 
