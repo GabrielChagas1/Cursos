@@ -23,41 +23,19 @@
         </section>
         <main>
             <section id="ideias">
-                <div class="idea">
-                    <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg">
-                    <div class="content">
-                        <h3>Cursos de Programação</h3>
-                        <p>Estudo</p>
-                        <div class="description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis voluptatem, quo placeat vel, perferendis accusantium, libero perspiciatis vitae rerum modi voluptas obcaecati rem? Assumenda dolore iste obcaecati in saepe.
+                {% for idea in ideas  %}
+                    <div class="idea">
+                        <img src="{{idea.img}}" alt="imagem de {{idea.title}}">
+                        <div class="content">
+                            <h3>{{idea.title}}</h3>
+                            <p>{{idea.category}}</p>
+                            <div class="description">
+                                {{idea.description}}
+                            </div>
+                            <a href="{{idea.url}}" target="_blank">Ir para a Ideia</a>
                         </div>
-                        <a href="#">Ir para a Ideia</a>
                     </div>
-                </div>
-    
-                <div class="idea">
-                    <img src="https://image.flaticon.com/icons/svg/2729/2729005.svg">
-                    <div class="content">
-                        <h3>Exercícios</h3>
-                        <p>Saúde</p>
-                        <div class="description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis voluptatem, quo placeat vel, perferendis accusantium, libero perspiciatis vitae rerum modi voluptas obcaecati rem? Assumenda dolore iste obcaecati in saepe.
-                        </div>
-                        <a href="#">Ir para a Ideia</a>
-                    </div>
-                </div>
-    
-                <div class="idea">
-                    <img src="https://image.flaticon.com/icons/svg/2729/2729027.svg">
-                    <div class="content">
-                        <h3>Meditação</h3>
-                        <p>Mentalidade</p>
-                        <div class="description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis voluptatem, quo placeat vel, perferendis accusantium, libero perspiciatis vitae rerum modi voluptas obcaecati rem? Assumenda dolore iste obcaecati in saepe.
-                        </div>
-                        <a href="#">Ir para a Ideia</a>
-                    </div>
-                </div>
+                {% endfor %}
             </section>
         </main>
         <footer>
