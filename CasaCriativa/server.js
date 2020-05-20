@@ -11,7 +11,7 @@ server.get('/', (req, res) =>{
 }); 
 
 server.get('/ideias', (req, res) =>{
-    return res.sendFile(__dirname +'/ideas.html');
+    return res.sendFile(__dirname +'/ideias.html');
 }); 
 
 
