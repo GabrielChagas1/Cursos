@@ -27,11 +27,41 @@ body.hideScroll{
     display: flex;
     align-items: center;
     justify-content: center;
+  
 }
 
 .button:hover{
     background: #0984e3;
     text-decoration: none;
+}
+
+
+.button-editar{
+    background: #0984e3;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #ff5e8444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.button-excluir{
+    background: #ff5e84;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #ff5e8444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .hide{
@@ -109,8 +139,11 @@ footer a{
     opacity: 0.8;
 }
 
-.idea{
+.idea .conteudo{
     display: flex;
+}
+
+.idea{
     background: #fff;
     margin-bottom: 32px;
     padding: 32px;
@@ -136,6 +169,16 @@ footer a{
 .idea a{
     display: block;
     text-align: right;
+}
+
+.idea .close img, .edit img{
+    width: 30px;
+}
+
+.idea .btn-right{
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
 }
 
 /* modal */

@@ -4,34 +4,11 @@ const server = express();
 
 const db = require('./db');
 
-
-// const ideas = [
-//     {
-//         img: "https://image.flaticon.com/icons/svg/2729/2729007.svg",
-//         title: "Cursos de Programação",
-//         category: "Estudo",
-//         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis voluptatem, quo placeat vel, perferendis accusantium, libero perspiciatis vitae rerum modi voluptas obcaecati rem? Assumenda dolore iste obcaecati in saepe.",
-//         url: "https://rocketseat.com.br",
-//     },
-//     {
-//         img: "https://image.flaticon.com/icons/svg/2729/2729005.svg",
-//         title: "Exercícios",
-//         category: "Saúde",
-//         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis voluptatem, quo placeat vel, perferendis accusantium, libero perspiciatis vitae rerum modi voluptas obcaecati rem? Assumenda dolore iste obcaecati in saepe.",
-//         url: "https://rocketseat.com.br",
-//     },
-//     {
-//         img: "https://image.flaticon.com/icons/svg/2729/2729027.svg",
-//         title: "Meditação",
-//         category: "Mentalidade", 
-//         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis corporis voluptatem, quo placeat vel, perferendis accusantium, libero perspiciatis vitae rerum modi voluptas obcaecati rem? Assumenda dolore iste obcaecati in saepe.",
-//         url: "https://rocketseat.com.br",
-//     },
-// ]
-
-
 // configurar arquivos estáticos
 server.use(express.static('public'));
+
+// configurando o req.body
+server.use(express.urlencoded({extended: true}));
 
 // configurando o nunjucks
 const nunjucks = require('nunjucks');
@@ -45,7 +22,10 @@ server.get('/', (req, res) =>{
 
      // consultar dados da tabela
     db.all(`SELECT * FROM ideias`, (err, rows) =>{
-        if(err) return console.log(err);
+        if(err){
+            console.log(err);
+            return res.send('Erro no banco de dados');
+        }
 
         const reversedIdeas = [...rows].reverse();
         let lastIdeas = [];
@@ -60,13 +40,64 @@ server.get('/', (req, res) =>{
 
     
 }); 
-
 server.get('/ideias', (req, res) =>{
     db.all(`SELECT * FROM ideias`, (err, rows) =>{
+        if(err){
+            console.log(err);
+            return res.send('Erro no banco de dados');
+        }
+
         const reversedIdeas = [...rows].reverse();
         return res.render('ideias.html', {ideas: reversedIdeas});
     });
 }); 
+
+server.post('/', (req, res) =>{
+  console.log(req.body);
+
+    if(checkField(req.body)){
+        // inserir dados na tabela
+        const query = `
+        INSERT INTO ideias(
+            image,
+            title,
+            category,
+            description,
+            link
+        ) VALUES (?, ?, ?, ?, ?);`;
+
+        const values = [
+            req.body.image,
+            req.body.title,
+            req.body.category,
+            req.body.description, 
+            req.body.link
+        ]
+        db.run(query, values, (err) =>{
+            if(err){
+                console.log(err);
+                return res.send('Erro no banco de dados');
+            };
+
+            return res.redirect('/ideias');
+
+        });
+    }else{
+        return res.send('Por favor preencher todos os dados');
+    }
+});
+
+function checkField(body){
+    if(
+        body.image == '' || 
+        body.title == '' ||
+        body.category == '' ||
+        body.description == '' ||
+        body.link == '' 
+    ) return false;
+    else true;
+}
+
 
 // ligando o servidor.
 server.listen(3000);
