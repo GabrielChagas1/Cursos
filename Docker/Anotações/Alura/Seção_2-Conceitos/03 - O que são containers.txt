@@ -1,0 +1,20 @@
+aula{
+
+    O que são containers{
+        # Separação de processos no mesmo kernel (Isolamento).
+
+        # Sistemas de arquivos criados a partir de uma imagem.
+
+        # Ambientes leves e portátei no qual a aplicação são executadas.
+
+        # Encapsula todos os binários e bibliotecas necessárias para execução de uma APP(Dependências).
+
+        # Algo entre um chroot e uma vm.
+
+        chroot -> comando que redefini a pasta raiz para um determinado processo, informa a nova pasta raiz.
+
+        # Aprisionar o processo dentro da pasta raiz, o processo não vai ter acesso as outras pastas de fora, só as que estão dentro do chroot.
+    }
+
+
+}
