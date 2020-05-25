@@ -1,0 +1,32 @@
+aula{
+
+    VM -> revolucionou o mercado de tecnólogia.
+
+    Por que não usar {
+        # A quantidade de memória que uma VM precisa é muito maior que usar o Docker.
+
+        #Camadas{
+            VM{
+                1- Server
+                2- Host OS (linux)
+                3- Hypervisor
+                4- Guest OS (Sistema operacional complete)
+                5- Bins/Libs
+                6- Apps
+            }
+
+            Docker{
+                1- Server
+                2- Host OS (linux)
+                3- Docker engine
+                4- Bins/Libs
+                5- Apps
+
+                # 4 e 5 -> Container
+            }
+        }
+    }
+
+
+
+}
