@@ -1,0 +1,30 @@
+aula{
+
+    # Uma  imagem  Docker  é  a  materialização  de  um  modelo  de  um  sistema  de  arquivos,  modelo  esteproduzido através de um processo chamado build.Esta imagem é representada por um ou mais arquivos e pode ser armazenada em um repositório.
+
+    # Container precisa de uma imagem para se basear.
+     
+    # Modelo de sistemas de arquivo somente-leitura usado para criar containers.
+
+    # Imagens são criadas através de um processo chamado build e de um comando chamado commit(não é uma boa prática porque não tem como replicar o que você configurou).
+
+    # São armazenadas em repositórios Registry(docker hub).
+
+    # São compostas por uma ou mais camadas layers.
+
+    # Uma camada representa uma ou mais mudanças no sistema de arquivos.
+
+    # Uma camada também é chamada de imagem intermediária.
+    
+    # A junção dessas camadas formam a imagem.
+
+    # A apenas a última camada pode ser alterada  quando o container for iniciado.
+
+    # AUFS(advanced multi-layerd unification filesystem) é muito usado.
+
+    # O grande objetivo dessa estratégia de dividir uma imagem em camadas é o reuso.
+
+    # É possível compor imagens a partir  de camadas de outras imagens.
+
+
+}
