@@ -1,0 +1,7 @@
+aula{
+
+    # Classe é um molde para criar vários objetos.
+
+    #Imagem é comparado com uma classe que é usado para startar diversos containers que seriam os objetos.
+
+}
