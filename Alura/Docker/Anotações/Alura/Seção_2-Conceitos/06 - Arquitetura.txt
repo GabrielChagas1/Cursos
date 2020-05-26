@@ -1,0 +1,6 @@
+aula{
+
+    # Daemon(server) -> responsável por pegar as imagens do registry(nuvem) e fazer um cash local dessas imagens, e através dessas imagens locais containers são criados.
+
+    # Para acessar o daemon via client temos o CLI, APP (REST API), KITEMATIC.
+}
