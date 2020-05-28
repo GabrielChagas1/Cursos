@@ -1,0 +1,13 @@
+aula{
+    # Define o gap (gutter) entre os elementos do grid.
+
+    // Define 20px entre os elementos do grid (linha e coluna).
+    gap: 20px
+
+    // Define 20px de distância entre as colunas.
+    column-gap: 20px
+
+    // Define 20px de distância entre as linhas.
+    row-gap: 20px
+
+}
