@@ -1,0 +1,6 @@
+aula{
+    # Define o tamanho das colunas do grid implícito (gerado automaticamente, quando algum elemento é posicionado em uma coluna que não foi definida).
+
+    // As colunas implícitas, geradas automaticamente, terão 100px de largura.
+    grid-auto-columns: 100px
+}
