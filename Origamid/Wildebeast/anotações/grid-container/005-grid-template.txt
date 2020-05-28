@@ -1,0 +1,19 @@
+aula{
+    # Atalho para definir o grid-template-columns, grid-template-rows e grid-template-areas.
+
+
+    grid-template: <linha> / <coluna>
+
+    grit-template: 
+        "logo nav nav <linha> " 50px<tamanho linha>
+        "sidenav content advert <linha> " 150px<tamanho linha>
+
+        / <tamanho das colunas> <grid-template-columns>
+
+    grid-template:
+    "logo nav nav" 50px
+    "sidenav content advert" 150px
+    "sidenav footer footer" 100px
+    / 100px 1fr 50px;f
+    // A primeira linha com 50px, segunda com 150px e terceira com 100px. A primeira coluna com 100px, a segunda 1fr e a terceira com 50px.
+}
