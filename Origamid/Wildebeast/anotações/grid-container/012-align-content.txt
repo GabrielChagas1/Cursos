@@ -1,0 +1,26 @@
+aula{
+    # Alinha os itens do grid em relação ao eixo y (vertical).
+
+    // Alinha os itens ao início.
+    align-content: start
+
+    // Alinha os itens ao final.
+    align-content: end
+
+    // Estica os itens.
+    align-content: stretch
+
+    // Distribui espaço entre os elementos. (O início e final são menores que os espaços internos).
+    align-content: space-around
+
+    // Cria um espaço entre os elementos, ignorando o início e final.
+    align-content: space-between
+
+    // Cria um espaço igual entre as colunas (no início e final também).
+    align-content: space-evenly
+
+    // Centraliza o conteúdo.
+    align-content: center
+
+
+}
