@@ -1,0 +1,11 @@
+aula{
+    linux = Docker Host{
+        docker client -> docker engine.
+    }
+
+    macOS X{
+        Linux VM = Docker Host{
+            rodando docker engine (Daemon)
+        }
+    }
+}
