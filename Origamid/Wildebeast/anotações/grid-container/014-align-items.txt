@@ -1,0 +1,15 @@
+aula{
+    # Alinha o conteúdo dos itens do grid em relação ao eixo y (vertical). Alinha em relação a célula.
+
+    // Alinha os itens ao início.
+    align-items: start
+
+    // Alinha os itens ao final.
+    align-items: end
+
+    // Centraliza o conteúdo.
+    align-items: center
+
+    // Estica os itens.
+    align-items: stretch
+}
