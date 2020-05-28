@@ -1,0 +1,15 @@
+aula{
+    #Atalho geral para definir o grid: grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns e grid-auto-flow
+
+
+    // Gera uma linha com 100px de altura e 2 colunas com 1fr.
+    grid: 100px / 1fr 1fr
+    
+    // Gera uma linha com 100px de altura. O grid-auto-flow é definido como column (pois está logo antes da definição das colunas). Ele também define o grid-auto-columns com 100px 50px
+    grid: 100px / auto-flow 100px 50px{
+        grid-auto-columns: 100px 50px;
+        grid-auto-flow:columns
+    }
+
+
+}
