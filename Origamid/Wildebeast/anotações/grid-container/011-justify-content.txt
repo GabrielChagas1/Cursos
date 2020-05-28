@@ -1,0 +1,25 @@
+aula{
+    # Justifica os itens do grid em relação ao eixo x (horizontal).
+
+    // Justifica os itens ao início.
+    justify-content: start
+
+    // Justifica os itens ao final.
+    justify-content: end
+
+    // Estica os itens.
+    justify-content: stretch
+
+    // Distribui espaço entre os elementos. (O início e final são menores que os espaços internos).
+    justify-content: space-around
+
+    // Cria um espaço entre os elementos, ignorando o início e final.
+    justify-content: space-between
+
+    // Cria um espaço igual entre as colunas (no início e final também).
+    justify-content: space-evenly
+
+    // Centraliza o conteúdo.
+    justify-content: center
+
+}
