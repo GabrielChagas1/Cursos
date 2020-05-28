@@ -1,0 +1,8 @@
+aula{
+    # Define o tamanho das linhas do grid implícito (gerado automaticamente, quando algum elemento é posicionado em uma linha que não foi definida).
+
+    // As linhas implícitas, geradas automaticamente, terão 100px de altura.
+    grid-auto-rows: 100px
+
+
+}
