@@ -1,0 +1,12 @@
+aula{
+    # Define o fluxo dos itens no grid. Se eles vão automaticamente gerar novas linhas ou colunas.
+
+    // Automaticamente gera novas linhas.
+    grid-auto-flow: row
+
+    // Automaticamente gera novas colunas.
+    grid-auto-flow: column
+
+    // Tenta posicionar o máximo dos elementos que existirem nas primeiras partes do grid (pode desorganizar o conteúdo).
+    grid-auto-flow: dense
+}
