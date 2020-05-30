@@ -1,0 +1,15 @@
+aula{
+    #Define a área do item do grid. É um atalho para grid-row-start, grid-column-start, grid-row-end, grid-column-end.
+
+    #O z-index pode ser utilizado para manipular a posição no eixo Z do item. Ou seja, se um item for posicionado em cima de outro, o z-index controla qual vêm na frente.
+
+    // Este é um atalho para:
+    //grid-row-start: 1;
+    //grid-column-start: 2;
+    //grid-row-end: 4;
+    //grid-column-end: 3;
+    grid-area: 1 / 2 / 4 / 3;
+
+    // Vai posicionar o item na área definida como header.
+    grid-area: header;
+}
