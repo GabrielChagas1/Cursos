@@ -1,0 +1,17 @@
+aula{
+    #Justifica o item do grid em relação ao eixo x (horizontal). Justifica em relação a célula.
+
+    # Justifica um item especifíco
+
+    // Justifica o item ao início.
+    justify-self: start
+
+    // Justifica o item ao final.
+    justify-self: end
+
+    // Centraliza o conteúdo.
+    justify-self: center
+
+    // Estica o item.
+    justify-self: stretch
+}
