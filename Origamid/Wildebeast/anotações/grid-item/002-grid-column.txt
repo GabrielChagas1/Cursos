@@ -1,6 +1,10 @@
 aula{
     # Define quais colunas serão ocupadas pelo grid item. É possível definir uma linha de início e final, assim o item irá ocupar múltiplas colunas.
 
+
+    grid-column: 1 / -1 -> barra significa que eu quero que pegue da linha(vertical) 1 e vá até o final. 
+
+
     // O item ocupará a coluna 1.
     grid-column: 1
 
