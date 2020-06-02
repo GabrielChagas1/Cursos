@@ -8,6 +8,6 @@ routes.get('/', (request, response) =>{
     return response.json({message: 'Hello World'});
 });
 
-// exportando routes para recuperar fora desse arquivo
 
+// exportando routes para recuperar fora desse arquivo
 export default routes;
