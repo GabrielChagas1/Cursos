@@ -90,3 +90,27 @@ sidenav{
 .header nav a:hover{
     background: rgba(0, 0, 0, .5);
 }
+/* Fim header */
+
+/* sidenav */
+
+.sidenav{
+    background: #FAFBFC;
+    padding: 30px;
+}
+
+.sidenav li a{
+    display: block;
+    min-width: 100px;
+    max-width: 160px;
+    margin: 0 auto 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    transition: .1s ease-out;
+}
+
+.sidenav li a:hover{
+    background: #B07DFB;
+}
