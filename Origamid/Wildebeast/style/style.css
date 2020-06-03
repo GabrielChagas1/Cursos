@@ -51,7 +51,7 @@ sidenav{
     grid-area: anuncios
 }
 
-.footer{
+footer{
     grid-area: footer;
 }
 
@@ -125,4 +125,16 @@ sidenav{
     align-content: start;
     padding: 30px;
     gap: 30px;
+}
+/* Fim Anúncios */
+
+/* Footer */
+footer{
+    background: linear-gradient(135deg, #8844ee, #b07db0);
+}
+
+footer p{
+    color: #fff;
+    text-align: center;
+    padding: 30px;
 }
