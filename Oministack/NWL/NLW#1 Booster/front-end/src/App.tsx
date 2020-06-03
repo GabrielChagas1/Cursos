@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
 
+// importação de componentes
+import Home from './pages/Home';
+
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Home />
   );
 }
 
 export default App;
+
+// JSX -> escrever HTML junto com JS
