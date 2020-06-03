@@ -19,7 +19,9 @@ a{
 }
 
 img{
+    display: block;
     max-width: 100%;
+    border-radius: 5px;
 }
 
 /* Grid Geral */
@@ -113,4 +115,14 @@ sidenav{
 
 .sidenav li a:hover{
     background: #B07DFB;
+}
+/* Fim sidenav */
+
+/* Anuncios */
+.anuncios{
+    background: #FAFBFC;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    gap: 30px;
 }
