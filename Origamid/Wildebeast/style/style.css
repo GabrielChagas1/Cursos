@@ -126,6 +126,7 @@ footer{
     align-content: start;
     padding: 30px;
     gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 /* Fim Anúncios */
 
@@ -347,4 +348,10 @@ p{
         margin: 30px 30px 30px 0;
     }
 
+}
+
+@media(max-width: 600px){
+    .content{
+        grid-template-columns: auto;
+    }
 }
