@@ -1,0 +1,14 @@
+aula{
+    # Define o elemento como um flex container, tornando os seus filhos flex-itens.
+
+    // Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+    display: flex;
+
+    // Definir se os item quebrem em outra linha
+    flex-wrap: wrap;
+
+    //faz com que os elementos se adequem totalmente o "container"
+    flex: 1;
+
+
+}
