@@ -1,0 +1,14 @@
+aula{
+    # Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+
+    # Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar o container é distribuído ao redor do conteúdo do flex-item.
+
+    // Esse é o padrão, ele faz com que a largura da base seja igual a do item. Se o item não tiver tamanho especificado, o tamanho será de acordo com o conteúdo.
+    flex-basis: auto;
+
+    // Pode ser em %, em, px e etc.
+    flex-basis: unidade;
+
+    // Se o grow for igual ou maior que 1, ele irá tentar manter todos os elementos com a mesma largura, independente do conteúdo (por isso 0 é o valor mais comum do flex-basis). Caso contrário o item terá a largura do seu conteúdo.
+    flex-basis: 0;
+}
