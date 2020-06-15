@@ -1,0 +1,23 @@
+aula{
+    # O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container. Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+
+    # Vale lembrar que o alinhamento acontece tanto em linha quanto em colunas. Por exemplo o flex-start quando os itens estão em linhas, alinha o item ao topo da sua linha. Quando em colunas, alinha o item ao início (esquerda) da coluna.
+
+    // Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.
+    align-self: auto;
+
+    // Alinha o item ao início.
+    align-self: flex-start;
+
+    // Alinha o item ao final.
+    align-self: flex-end;
+
+    // Alinha o item ao centro.
+    align-self: center;
+    
+    // Alinha o item a linha de base.
+    align-self: baseline;
+
+    // Estica o item.
+    align-self: stretch;
+}
