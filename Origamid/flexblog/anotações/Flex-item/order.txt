@@ -1,0 +1,9 @@
+aula{
+    # Modifica a ordem dos flex itens. Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.
+
+    // Número para modificar a ordem padrão. Pode ser negativo.
+    order: número;
+
+    // 0 é o valor padrão e isso significa que a ordem dos itens será a ordem apresentada no HTML. Se você quiser colocar um item do meio da lista no início da mesma, sem modificar os demais, o ideal é utilizar um valor negativo para este item, já que todos os outros são 0.
+    order: 0;
+}
