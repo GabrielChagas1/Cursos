@@ -1,0 +1,12 @@
+aula{
+    # Define a capacidade de redução de tamanho do item.
+
+    // Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
+    flex-shrink: 1;
+
+    // Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.
+    flex-shrink: 0;
+
+    // Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+    flex-shrink: número;
+}
