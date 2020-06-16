@@ -86,3 +86,47 @@ body{
 .menu-nav a:hover{
     color: #122ab2;
 }
+
+/* estilos introdução */
+
+.introducao{
+    font-size: 3em;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+/* estilizando sobre */
+.sobre{
+    border-top: 2px solid #122ab2;
+    border-bottom: 2px solid #122ab2;
+    max-width: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.sobre-info{
+    flex: 2 1 300px;
+    margin: 0 10px;
+}
+
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+.sobre-img{
+    flex: 1 1 160px;
+    margin: 0 10px;
+}
