@@ -1,3 +1,3 @@
 # FlexBlog
 
-![alt text](https://raw.githubusercontent.com/gabrielchagas1/Cursos/Origamid/flexblog/master/screen.png)
+![alt text](https://raw.githubusercontent.com/GabrielChagas1/Cursos/master/Origamid/flexblog/screen.png)
