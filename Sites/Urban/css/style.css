@@ -38,6 +38,7 @@ body{
 #banner img{
     object-fit: cover;
     opacity: 0.4;
+    margin: 0 auto;
 }
 
 #banner .inner{
@@ -81,7 +82,7 @@ body{
     flex-wrap: wrap;
     max-width: 960px;
     margin: 0 auto;
-    padding: 90px 0;
+    padding: 70px 0;
 }
 
 .action-photo img{
@@ -98,7 +99,7 @@ body{
 .action-text h3{
     color: #000;
     font-size: 1.56em;
-    margin-bottom: 25px;
+    margin: 25px 0;
 }
 
 .action-text p{
@@ -112,4 +113,14 @@ body{
     border-radius: 4px;
     font-size: 1em;
     font-weight: bold;
+}
+
+@media(max-width: 600px){
+    .action-container{
+        text-align: center;
+    }
+
+    .action-photo{
+        margin: 0 auto;
+    }
 }
