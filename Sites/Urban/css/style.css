@@ -124,3 +124,134 @@ body{
         margin: 0 auto;
     }
 }
+
+/* Action parte 2 */
+
+#action-2{
+    background: #3498db;
+    color: #aed6f1;
+}
+
+#action-2 .action-text h3{
+    color: #fff;
+}
+
+#action-2 .action-text a{
+    color: #3498db;
+    background: #fff;
+}
+
+#action-2 .action-photo img{
+    box-shadow: 0 0 0 7px #3498db, 0px 0px 0px 8px rgba(255, 255, 255, 0.25);
+}
+
+@media(max-width: 600px){
+    #action-2 .action-photo{
+        order: -1;
+    }
+}
+
+/* Products */
+
+#products{
+    background-color: #fafafa;
+    color: #999999;
+}
+
+.products-container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.products-container  h2{
+    color: #000;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.products-container p{
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.list-products{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.product{
+    flex: 1 1 260px;
+    padding: 0px 30px;
+}
+
+.product img{
+    border-radius: 100%;
+    box-shadow: 0 0 0 7px #fff, 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.product p{
+    text-align: center;
+    font-size: 1rem;
+    margin: 30px 0;
+}
+
+.product a{
+    color: #fff;
+    background: #3498db;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+@media(max-width: 600px){
+    .product{
+        padding: 30px 30px;
+    }
+
+    .product img{
+        margin: 0 auto;
+    }
+}
+
+/* footer */
+
+#footer{
+    padding: 60px 0;
+    display: block;
+    text-align: center;
+}
+
+
+footer .redes ul li{
+    display: inline-block;
+}
+
+#footer .redes{
+    padding: 30px 0;
+
+}
+
+
+#footer a{
+    height: 45px;
+    width: 45px;
+    display: block;
+    color: #999;
+    border-radius: 100%;
+    font-size: 2rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 
+    0px 0px 0px 4px #fff, 
+    0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 0px 15px;
+}
+
+#footer p{
+    font-size: 1rem;
+    color: #999;
+}
