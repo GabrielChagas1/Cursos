@@ -189,6 +189,12 @@ body{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
+.details-button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .details-button a{
     color: #fff;
     font-size: 1.5em;
@@ -208,6 +214,83 @@ body{
 
 @media(max-width: 720px){
     .details-card .card-one{
-        padding: 30px 30px;
+        margin: 30px 30px;
     }
+}
+
+@media(max-width: 400px){
+    .details-button a:first-child{
+        margin-bottom: 40px;
+    }
+}
+
+/* Land */
+
+.land-container{
+    margin: 30px 0;
+}
+
+.land-container .land-text h2{
+    color: #484848;
+    font-size: 2.5em;
+    line-height: 1.5;
+    padding: 0px 20px;
+    text-transform: uppercase;
+}
+
+.land-container .land-text p{
+    color: #aaa;
+    font-size: 1.5em;
+    line-height: 1.5;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.land-itens{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto;
+    
+}
+
+.land-item{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    margin-top: 50px;
+    flex: 1 1 300px;
+}
+
+.land-img{
+    flex: 1 1 190px;
+}
+
+.land-img img{
+    border-radius: 100%;
+    border: solid 0.5em rgba(144, 144, 144, 0.25)
+}
+
+.land-item-text{
+    flex: 6 1 190px;
+    
+}
+
+.land-item-text h4{
+    font-size: 1.5em;
+    color: #484848;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.land-item-text p.subtitulo{
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.land-item-text p{
+    color: #666;
+    line-height: 1.5;
 }
