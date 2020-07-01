@@ -22,3 +22,35 @@ body{
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
 }
+
+/* banner */
+.hero {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.hero:after{
+    content: "";
+    background-color: #000;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.banner{
+    background-image: url(../img/banner.jpg);
+    object-fit: cover;
+}
+
+.parallax {
+    background-attachment: fixed;
+ }
