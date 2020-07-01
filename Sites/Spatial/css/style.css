@@ -73,3 +73,44 @@ body{
     padding: 20px 20px;
     border-radius: 4px;
 }
+
+/* chamada */
+
+.action{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.action-one{
+    flex: 1 1 220px;
+}
+
+.action-one h2{
+    color: #484848;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    
+}
+
+.action-one p{
+    color: #aaa;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.action-two{
+    flex: 1 1 260px;
+}
+
+.action-two p{
+    color: #666;
+    line-height: 2;
+    margin-bottom: 30px;
+}
