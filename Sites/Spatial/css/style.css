@@ -48,6 +48,12 @@ body{
     position: relative;
 }
 
+@media(max-width: 720px){
+    .hero-2 {
+        height: 400px;
+    }
+}
+
 
 
 .banner{
@@ -229,7 +235,7 @@ body{
     }
 }
 
-@media(max-width: 400px){
+@media(max-width: 430px){
     .details-button a:first-child{
         margin-bottom: 40px;
     }
@@ -304,4 +310,26 @@ body{
 .land-item-text p{
     color: #666;
     line-height: 1.5;
+}
+
+/* footer */
+
+#footer{
+    background: #f6f6f6;
+    color: #aaa;
+    padding: 60px 0;
+    text-align: center;
+} 
+
+#footer .redes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+#footer .redes a {
+    font-size: 2.5em;
+    padding: 0px 40px;
+    color: #aaa;
 }
