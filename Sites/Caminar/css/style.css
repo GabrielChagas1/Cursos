@@ -17,3 +17,44 @@ img{
     display: block;
     max-width: 100%;
 }
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+body{
+    content: '';
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* visibility: hidden; */
+    opacity: 1;
+}
+
+header{
+    width: 100%;
+    height: 100%;
+}
+
+header .logo{
+    text-align: center;
+    padding: 60px 0;
+}
+
+header .logo a{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+}
