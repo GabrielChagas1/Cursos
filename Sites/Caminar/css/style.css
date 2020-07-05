@@ -65,7 +65,7 @@ header .logo a{
 .container{
     max-width: 1100px;
     margin: 60px auto;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -84,6 +84,7 @@ header .logo a{
 .special{
     padding: 60px 0;
     text-align: center;
+    background: #fff;
 }
 
 .special h2{
@@ -114,4 +115,16 @@ header .logo a{
     letter-spacing: .25rem;
     margin: 0;
     color: #bbb;
+}
+
+/* special text */
+
+.special-text{
+    padding: 60px 60px;
+}
+
+.special-text p{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
 }
