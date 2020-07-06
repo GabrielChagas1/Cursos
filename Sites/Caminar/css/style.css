@@ -175,3 +175,39 @@ header .logo a{
 .gallery-container .gallery-photo{
     display: flex;
 }
+
+/* spotlight */
+.spot-one{
+    display: flex;
+}
+
+.spot-one:nth-child(2n+2){
+    background: #1e1f23;
+}
+
+.spot-one img{
+    width: 50%;
+}
+
+.spot-one .inner{
+    align-self: center;
+}
+
+.spot-one .inner h3{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.spot-one:nth-child(2n+2) .inner h3{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.spot-one .inner p{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.spot-one:nth-child(2n+2) .inner p{
+    color: rgba(255, 255, 255, 0.25);
+}
