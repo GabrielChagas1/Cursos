@@ -11,17 +11,17 @@ namespace GameTop
         }
         public string chuta()
         {
-            return $"{_Nome} está chutando!"
+            return $"{_Nome} está chutando!";
         }
 
         public string corre()
         {
-            return $"{_Nome} está correndo"
+            return $"{_Nome} está correndo";
         }
 
         public string passe()
         {
-            return $"{_Nome} está passando"
+            return $"{_Nome} está passando";
         }
     }
 }
