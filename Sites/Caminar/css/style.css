@@ -211,3 +211,26 @@ header .logo a{
 .spot-one:nth-child(2n+2) .inner p{
     color: rgba(255, 255, 255, 0.25);
 }
+
+/* footer */
+
+#footer{
+    text-align: center;
+}
+
+#footer .redes{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#footer .redes a{
+    padding: 0 30px;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#footer p{
+    color: rgba(255, 255, 255, 0.75);
+    padding-bottom: 30px;
+}
