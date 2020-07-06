@@ -128,3 +128,50 @@ header .logo a{
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
 }
+
+/* gallery */
+
+.gallery-container{
+    background: #1e1f23;
+    padding: 6rem;
+}
+
+.gallery-container .gallery-text{
+    background: #000;
+    text-align: center;
+}
+
+.gallery-container .gallery-text h2{
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 700;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.gallery-container .gallery-text h2::after{
+    content: '';
+    position: absolute;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+.gallery-container .gallery-text p{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.25);
+    padding-bottom: 20px;
+}
+
+.gallery-container .gallery-photo{
+    display: flex;
+}
