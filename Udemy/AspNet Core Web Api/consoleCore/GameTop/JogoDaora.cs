@@ -3,17 +3,17 @@ namespace GameTop
     class jogoDaora
     {
          // construtor
-        private readonly Jogador1 _jogador;
+        private readonly iJogador _jogador;
         
-        public jogoDaora(Jogador1 jogador){
+        public jogoDaora(iJogador jogador){
             _jogador = jogador;
         }
 
         public void iniciarJogo()
         {
             _jogador.corre();
-            _jogador.passa();
-            _jogador.chutar();
+            _jogador.chuta();
+            _jogador.passe();
         }
     }
 }
