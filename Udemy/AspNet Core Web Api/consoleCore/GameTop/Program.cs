@@ -6,7 +6,7 @@ namespace GameTop
     {
         static void Main(string[] args)
         {
-            var jogo = new jogoDaora(new Jogador("Ronaldo"));
+            var jogo = new jogoDaora(new Jogador1("Ronaldo"));
 
             jogo.iniciarJogo();
         }
