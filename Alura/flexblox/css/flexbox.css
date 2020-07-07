@@ -32,3 +32,15 @@
 .rodapePrincipal-contatoForm-fieldset{
     display: flex;
 }
+
+/* mapa de cursos */
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listaCursos{
+    display: flex;
+    flex-direction: column;
+  }
