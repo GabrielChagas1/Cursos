@@ -38,9 +38,22 @@
 .rodapePrincipal-navMap-list{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .listaCursos{
     display: flex;
     flex-direction: column;
-  }
+}
+
+/* cursos */
+
+.conteudoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link{
+    width: 23%;
+    margin: 1%;
+}
