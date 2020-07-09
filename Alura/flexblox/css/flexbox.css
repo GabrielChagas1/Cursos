@@ -70,7 +70,11 @@
 
 
 /* mobile */
-@media(max-width: 768px){
+@media(max-width: 740px){
+
+    .cabecalhoPrincipal-nav-link-app{
+        order: -1;
+    }
 
     .cabecalhoPrincipal .container, .cabecalhoPrincipal-nav{
         flex-direction: column;
@@ -95,7 +99,7 @@
    
 }
 
-@media(min-width: 769px) and (max-width: 1200px){
+@media(min-width: 768px) and (max-width: 1200px){
 
     /* .cabecalhoPrincipal .container, .cabecalhoPrincipal-nav{
         flex-direction: column;
