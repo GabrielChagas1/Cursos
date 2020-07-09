@@ -270,13 +270,13 @@ body {
 		margin-left: 1.333%;
 	} */
 
-	.conteudoPrincipal-cursos-link:nth-child(4n) {
+	/* .conteudoPrincipal-cursos-link:nth-child(4n) {
 		margin-right: 0;
 	}
 
 	.conteudoPrincipal-cursos-link:nth-child(4n+1) {
 		margin-left: 0;
-	}
+	} */
 
 	.videoSobre-sobre {
 		margin-left: 1.5em;

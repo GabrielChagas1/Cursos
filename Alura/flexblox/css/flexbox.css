@@ -31,6 +31,7 @@
 
 .rodapePrincipal-contatoForm-fieldset{
     display: flex;
+    justify-content: center ;
 }
 
 /* mapa de cursos */
@@ -69,8 +70,7 @@
 
 
 /* mobile */
-
-@media(max-width: 450px){
+@media(max-width: 768px){
 
     .cabecalhoPrincipal .container, .cabecalhoPrincipal-nav{
         flex-direction: column;
@@ -83,9 +83,19 @@
         width: 100%;
         margin: 1%;
     }
+
+    .rodapePrincipal-patrocinadores-list{
+        width: 100%;
+     }
+
+    .conteudoPrincipal, .rodapePrincipal-navMap-list, .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+   
 }
 
-@media(min-width: 800px){
+@media(min-width: 769px) and (max-width: 1200px){
 
     /* .cabecalhoPrincipal .container, .cabecalhoPrincipal-nav{
         flex-direction: column;
