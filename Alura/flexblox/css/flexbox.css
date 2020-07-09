@@ -113,6 +113,14 @@
         flex-direction: column;
     }
 
+    .videoSobre .container{
+        flex-direction: column;
+    }
+
+    .videoSobre-video{
+        margin: 0 auto;
+    }
+
    
 }
 
@@ -124,7 +132,14 @@
         text-align: center;
     } */
 
+    .videoSobre .container{
+        flex-direction: column;
+    }
 
+    .videoSobre-video{
+        margin: 0 auto;
+    }
+ 
     .conteudoPrincipal-cursos-link{
         width: 31%;
         margin: 1%;
