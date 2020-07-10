@@ -1,36 +1,7 @@
 /* Header */
 
-header{
-    background: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-}
 
-header img{
-    margin: 0 30px;
-}
 
-header nav ul{
-    display: flex;
-}
 
-header nav ul li a{
-    margin-right: 1.25em;
-    color: #808080;
-    text-transform: lowercase;
-}
 
-header nav ul li:last-child a{
-    margin-right: 0;
-}
 
-header nav ul li a#ativo{
-    color: #333333;
-    font-weight: bold;
-}
-
-header nav ul li a:hover{
-    text-decoration: underline;
-}
