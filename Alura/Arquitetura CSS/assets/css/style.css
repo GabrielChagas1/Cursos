@@ -19,3 +19,12 @@
 @import "./sobre/sobre.css";
 @import "./sobre/sobre-titulo.css";
 @import "./sobre/sobre-descricao.css";
+
+/* receita */
+@import "./receitas/receitas.css";
+@import "./receitas/receita.css";
+@import "./receitas/receita-conteudo.css";
+@import "./receitas/receita-imagem.css";
+@import "./receitas/receita-decricao.css";
+@import "./receitas/receita-titulo.css";
+@import "./receitas/receita-botao.css";
