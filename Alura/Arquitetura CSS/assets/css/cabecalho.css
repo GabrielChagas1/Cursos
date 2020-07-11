@@ -1,7 +1,17 @@
 .cabecalho{
     background: #f9f9f9;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+}
+
+/* responsividade */
+
+@media screen and (max-width: 768px){
+    .cabecalho {
+        justify-content: center;
+        padding-top: 1rem;
+    }
 }
