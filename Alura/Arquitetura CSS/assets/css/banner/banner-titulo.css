@@ -10,3 +10,11 @@
     transform: translate(-50%, -50%);
     width: 100%;
 }
+
+/* responsividade */
+
+@media screen and (max-width: 768px){
+    .banner__titulo {
+        font-size: 4rem;
+    }
+}
