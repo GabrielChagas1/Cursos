@@ -3,3 +3,10 @@
     font-size: 1.75rem;
     font-weight: 300;
 }
+
+/* responsividade */
+@media screen and (max-width: 768px){
+    .sobre__descricao{
+        font-size: 1rem;
+    }
+}

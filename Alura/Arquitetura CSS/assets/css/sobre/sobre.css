@@ -4,3 +4,10 @@
     max-width: 960px;
     margin: 0 auto;
 }
+
+/* responsividade */
+@media screen and (max-width: 768px){
+    .sobre{
+        padding: 1.5rem;
+    }
+}
