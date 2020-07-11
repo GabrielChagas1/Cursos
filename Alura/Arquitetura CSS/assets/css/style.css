@@ -11,6 +11,11 @@
 @import "./menu/menu-lista.css";    
 
 /* banner */
-@import "banner/banner.css";
-@import "banner/banner-imagem.css";
-@import "banner/banner-titulo.css";
+@import "./banner/banner.css";
+@import "./banner/banner-imagem.css";
+@import "./banner/banner-titulo.css";
+
+/* sobre */
+@import "./sobre/sobre.css";
+@import "./sobre/sobre-titulo.css";
+@import "./sobre/sobre-descricao.css";
