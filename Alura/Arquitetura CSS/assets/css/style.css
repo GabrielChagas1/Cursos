@@ -1,7 +1,16 @@
-/* Header */
+/* reset e normalize */
+@import "./normalize.css";
+@import "./reset.css";
 
+/* cabecalho */
+@import "./cabecalho.css";
 
+/* menu */
+@import "./menu/menu-item.css";
+@import "./menu/menu-link.css";
+@import "./menu/menu-lista.css";    
 
-
-
-
+/* banner */
+@import "banner/banner.css";
+@import "banner/banner-imagem.css";
+@import "banner/banner-titulo.css";
