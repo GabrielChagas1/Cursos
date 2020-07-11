@@ -1,0 +1,9 @@
+.receita{
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 2.5rem;
+    margin-bottom: 5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}

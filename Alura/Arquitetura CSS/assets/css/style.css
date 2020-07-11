@@ -21,7 +21,7 @@
 @import "./sobre/sobre-descricao.css";
 
 /* receita */
-@import "./receitas/receitas.css";
+@import "./receitas.css";
 @import "./receitas/receita.css";
 @import "./receitas/receita-conteudo.css";
 @import "./receitas/receita-imagem.css";
