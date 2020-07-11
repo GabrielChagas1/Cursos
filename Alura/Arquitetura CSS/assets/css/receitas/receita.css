@@ -7,3 +7,16 @@
     margin-bottom: 5rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
+
+/* responsividade */
+@media (min-width: 685px) and (max-width: 975px){
+    .receita{
+        width: 38%;
+    }
+}
+
+@media screen and (max-width: 684px){
+    .receita{
+        width: 75%;
+    }
+}
