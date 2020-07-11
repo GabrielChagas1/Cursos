@@ -33,3 +33,10 @@
 @import "./quemSomos/quemSomos.css";
 @import "./quemSomos/quemSomos-titulo.css";
 @import "./quemSomos/quemSomos-descricao.css";
+
+/* Pessoa */
+@import "./pessoas.css";
+@import "./pessoa/pessoa.css";
+@import "./pessoa/pessoa-imagem.css";
+@import "./pessoa/pessoa-nome.css";
+@import "./pessoa/pessoa-funcao.css";
