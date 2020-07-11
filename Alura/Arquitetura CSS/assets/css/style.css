@@ -40,3 +40,6 @@
 @import "./pessoa/pessoa-imagem.css";
 @import "./pessoa/pessoa-nome.css";
 @import "./pessoa/pessoa-funcao.css";
+
+/* Rodapé */
+@import "./rodape.css";
