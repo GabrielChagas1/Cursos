@@ -28,3 +28,8 @@
 @import "./receitas/receita-decricao.css";
 @import "./receitas/receita-titulo.css";
 @import "./receitas/receita-botao.css";
+
+/* Quem Somos */
+@import "./quemSomos/quemSomos.css";
+@import "./quemSomos/quemSomos-titulo.css";
+@import "./quemSomos/quemSomos-descricao.css";
