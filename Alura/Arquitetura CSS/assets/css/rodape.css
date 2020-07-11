@@ -5,3 +5,11 @@
     text-transform: lowercase;
     text-align: right;
 }
+
+/* responsividade */
+@media screen and (max-width: 768px){
+    .rodape{
+        padding: 1.5625rem 2rem;
+        text-align: center;
+    }
+}
