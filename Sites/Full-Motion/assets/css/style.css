@@ -12,3 +12,11 @@
 @import "../css/card/card-titulo.css";
 @import "../css/card/card-paragrafo.css";
 @import "../css/card/card-button.css";
+
+/* footer */
+@import "./footer/footer.css";
+@import "./footer/footer-titulo.css";
+@import "./footer/footer-paragrafo.css";
+@import "./footer/footer-redes.css";
+@import "./footer/footer-redesItem.css";
+@import "./footer/footer-desenvolvido.css";
