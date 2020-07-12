@@ -1,0 +1,36 @@
+.card__button{
+    cursor: pointer;
+    color: #fff;
+    padding: 0.9rem 1.25rem;
+    border-radius: 4px;
+    width: 85%;
+    margin-bottom: 1.25rem;
+    align-self: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.card__button--azul{
+    background: #7f92cf;
+}
+
+.card__button--azul:hover{
+    background-color: #92a2d6;
+}
+
+.card__button--verde{
+    background: #70c7be;
+}
+
+.card__button--verde:hover{
+    background-color: #82cec6;
+}
+
+.card__button--roxo{
+    background: #9d7ed0;
+}
+
+.card__button--roxo:hover{
+    background-color: #ab91d7;
+}
