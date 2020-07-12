@@ -4,3 +4,11 @@
 @import "../css/banner/banner-conteudo.css";
 @import "../css/banner/banner-titulo.css";
 @import "../css/banner/banner-paragrafo.css";
+
+/* Cards */
+@import "../css/cards.css";
+@import "../css/card/card.css";
+@import "../css/card/card-imagem.css";
+@import "../css/card/card-titulo.css";
+@import "../css/card/card-paragrafo.css";
+@import "../css/card/card-button.css";
