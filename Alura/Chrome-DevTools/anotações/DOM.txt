@@ -1,0 +1,6 @@
+Aula{
+    #Aba "Elements" -> representa todos os elementos do nosso HTML.   
+
+    #Quando o navegador lê o HTML, ele cria elementos em memória que cada elemento representa uma tag, criando uma estrutura que reprensenta nosso documento. 
+
+}

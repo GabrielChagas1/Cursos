@@ -1,5 +1,0 @@
-aula 02{
-    #Estilos Internos{
-        criar um arquivo separado para todos os estilos
-    }
-}
