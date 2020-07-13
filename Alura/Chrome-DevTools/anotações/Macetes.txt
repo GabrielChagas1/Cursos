@@ -1,0 +1,7 @@
+#1{
+    adicionar classes ao elemento{
+        1-selecionar o elemento.
+        2-clicar no botão .cls.
+        3-digitar classe.
+    }
+}
