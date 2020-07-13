@@ -1,0 +1,9 @@
+aula 01{
+    #CSS inline{
+        #estilos diretos nas tags HTML
+    }
+
+    #Css interno{
+        #estilos aplicados dentro da tag style dentro arquivo HTML
+    }
+}
