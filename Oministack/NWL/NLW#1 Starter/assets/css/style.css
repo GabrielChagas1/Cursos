@@ -3,3 +3,11 @@
 
 /* importando o reset */
 @import "./reset.css";
+
+/* importando o container */
+@import "container.css";
+
+/* importando o header */
+@import "header/header.css";
+@import "header/header-titulo.css";
+@import "header/header-button.css";
