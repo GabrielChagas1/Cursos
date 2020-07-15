@@ -1,0 +1,38 @@
+.main__button{
+    margin-top: 1.5rem;
+    max-width: 360px;
+    background: var(--primary-color);
+    color: #fff;
+    height: 4.375rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: 400ms;
+}
+
+.main__button strong{
+    flex: 1;
+    text-align: center;
+}
+
+.main__button span{
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__button span::after{
+    content: '';
+    background: url('../../img/search.svg');
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.main__button:hover{
+    background: #2fb86e;
+}
