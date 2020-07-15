@@ -1,5 +1,6 @@
 #page-home{
-    background: url('../img/home-background.svg') no-repeat;
-    background-position: 35vw bottom;
     height: 100vh;
+    background: url('../img/home-background.svg') no-repeat rgba(37, 27, 27, 0.08);
+    background-position: 35vw bottom;
+    background-position: 35vw 18vh;
 }
