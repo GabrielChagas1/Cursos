@@ -13,3 +13,9 @@
 @import "header/header.css";
 @import "header/header-logo.css";
 @import "header/header-titulo.css";
+
+/* importando o main */
+@import "main/main.css";
+@import "main/main-titulo.css";
+@import "main/main-paragrafo.css";
+@import "main/main-button.css";
