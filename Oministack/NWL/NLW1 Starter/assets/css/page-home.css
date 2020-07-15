@@ -4,3 +4,9 @@
     background-position: 35vw bottom;
     background-position: 35vw 18vh;
 }
+
+@media screen and (max-width: 900px){
+    #page-home{
+        background-position-x: 70vw;
+    }
+}
