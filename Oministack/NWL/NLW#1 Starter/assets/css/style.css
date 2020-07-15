@@ -4,10 +4,12 @@
 /* importando o reset */
 @import "./reset.css";
 
+@import "./page-home.css";
+
 /* importando o container */
 @import "container.css";
 
 /* importando o header */
 @import "header/header.css";
+@import "header/header-logo.css";
 @import "header/header-titulo.css";
-@import "header/header-button.css";

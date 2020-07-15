@@ -1,0 +1,12 @@
+.header__titulo{
+    display: flex;
+    font-weight: 700;
+    color: #322153;
+}
+
+.header__titulo span{
+    background-image: url('../../img/log-in.svg');
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+}

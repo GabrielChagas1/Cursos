@@ -1,0 +1,5 @@
+#page-home{
+    background: url('../img/home-background.svg') no-repeat;
+    background-position: 35vw bottom;
+    height: 100vh;
+}
