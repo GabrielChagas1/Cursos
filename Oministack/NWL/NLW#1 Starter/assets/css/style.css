@@ -1,0 +1,5 @@
+/* Importando normalize */
+@import "./normalize.css";
+
+/* importando o reset */
+@import "./reset.css";
