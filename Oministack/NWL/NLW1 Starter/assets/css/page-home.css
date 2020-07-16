@@ -10,3 +10,21 @@
         background-position-x: 70vw;
     }
 }
+
+@media screen and (min-width: 1700px){
+    #page-home{
+        background-position-x: 40vw;
+    }
+}
+
+@media (max-height: 760px){
+    #page-home{
+        background-position-y: 200px;
+    }
+}
+
+@media (min-height: 800px){
+    #page-home{
+        background-position-y: bottom;
+    }
+}
