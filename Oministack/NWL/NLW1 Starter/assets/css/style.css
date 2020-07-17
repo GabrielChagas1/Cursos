@@ -4,18 +4,18 @@
 /* importando o reset */
 @import "./reset.css";
 
-@import "./page-home.css";
+@import "./home/page-home.css";
 
 /* importando o container */
-@import "container.css";
+@import "./container.css";
 
 /* importando o header */
-@import "header/header.css";
-@import "header/header-logo.css";
-@import "header/header-titulo.css";
+@import "./home/header/header.css";
+@import "./home/header/header-logo.css";
+@import "./home/header/header-titulo.css";
 
 /* importando o main */
-@import "main/main.css";
-@import "main/main-titulo.css";
-@import "main/main-paragrafo.css";
-@import "main/main-button.css";
+@import "./home/main/main.css";
+@import "./home/main/main-titulo.css";
+@import "./home/main/main-paragrafo.css";
+@import "./home/main/main-button.css";
