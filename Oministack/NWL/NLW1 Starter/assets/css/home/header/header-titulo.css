@@ -5,7 +5,7 @@
 }
 
 .header__titulo span{
-    background-image: url('../../img/log-in.svg');
+    background-image: url('../../../img/log-in.svg');
     width: 20px;
     height: 20px;
     margin-right: 1rem;
