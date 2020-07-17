@@ -19,3 +19,7 @@
 @import "./home/main/main-titulo.css";
 @import "./home/main/main-paragrafo.css";
 @import "./home/main/main-button.css";
+
+/* importando o css do create point */
+@import "./create-point/create-point.css";
+@import "./create-point/header-titulo.css";
