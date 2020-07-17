@@ -23,3 +23,6 @@
 /* importando o css do create point */
 @import "./create-point/create-point.css";
 @import "./create-point/header-titulo.css";
+
+/* importando o form do create point */
+@import "./create-point/form/form-titulo.css";
