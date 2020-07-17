@@ -20,6 +20,8 @@ img{
 body{
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
+    background: rgba(37, 27, 27, 0.08);
+
 }
 
 h1, h2, h3, h4, h5, h6{
