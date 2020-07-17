@@ -28,7 +28,7 @@
 
 .main__button span::after{
     content: '';
-    background: url('../../img/search.svg');
+    background: url('../../../img/search.svg');
     width: 1.25rem;
     height: 1.25rem;
 }
