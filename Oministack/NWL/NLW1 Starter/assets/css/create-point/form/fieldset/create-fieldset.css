@@ -1,0 +1,44 @@
+.create__fieldset{
+    border: 0;
+    margin-top: 4rem;
+}
+
+.create__fieldset__titulo{
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.create__field{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.create__field + .create__field{
+    margin-left: 1.5rem;
+}
+
+.create__field label{
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.create__field input, .create__field select{
+    background: #f0f0f5;
+    border: 0;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.create__field select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.create__field-group{
+    display: flex;
+    flex-wrap: wrap;
+}
