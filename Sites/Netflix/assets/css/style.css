@@ -1,0 +1,61 @@
+.main{
+    height: 100vh;
+    background: url("../img/bg.jpg") no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.main h1{
+    font-size: 3.125rem;
+    max-width: 510px;
+}
+
+.main span{
+    font-size: 1.625rem;
+}
+
+.main p{
+    font-size: 1.1875rem;
+}
+
+.main-child{
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+}
+
+.form-cta{
+    width: 100%;
+    display: flex;
+    margin-top: 1.875rem;
+    margin-bottom: 0.625rem;
+}
+
+.form-cta input{
+    flex-grow: 8;
+    padding: 1.125rem 0.625rem;
+    font-size: 1.125rem;
+}
+
+.form-cta button{
+    flex-grow: 2;
+    border: 0;
+    background:#e50914;
+    color: #fff;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.gradient{
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%);
+}
