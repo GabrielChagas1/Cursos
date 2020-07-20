@@ -4,10 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    top: 30px;
-    left: 56px;
+    width: 100%;
+    padding: 20px 45px;
+}
 
+.header img{
+    width: 108px;
 }
 
 .header a{
@@ -30,7 +32,7 @@
 
 .main h1{
     font-size: 3.125rem;
-    max-width: 510px;
+    max-width: 665px;
 }
 
 .main span{
@@ -45,6 +47,7 @@
     z-index: 1;
     display: grid;
     justify-items: center;
+    margin-top: 60px;
 }
 
 .form-cta{
@@ -56,7 +59,7 @@
 
 .form-cta input{
     flex-grow: 8;
-    padding: 1.125rem 0.625rem;
+    padding: 1rem 0.625rem;
     font-size: 1.125rem;
 }
 
@@ -68,6 +71,14 @@
     font-size: 1.75rem;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.form-cta button::after{
+    content: '';
+    background: url("../img/seta.svg");
+    width: 10px;
+    height: 19px;
+    display: inline-block;
 }
 
 .gradient{
