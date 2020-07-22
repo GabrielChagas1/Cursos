@@ -112,8 +112,10 @@
     border: 2px solid #34cb79;
 }
 
-
-
+.items-grid ul li img,
+.items-grid ul li span{
+    pointer-events: none;
+}
 
 
 /* responsivo */

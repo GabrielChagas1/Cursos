@@ -40,9 +40,25 @@ function getCities(event){
 
 }
 
-
+// chamando função ao navegador ler o documento
 populateUFs();
 
 // código para chamar a função que popula as cidades
 document.querySelector(".create__field select[name=uf]")
     .addEventListener("change", getCities);
+
+// Itens de coleta
+let itemsToCollect = document.querySelectorAll(".items-grid li");
+for(let item of itemsToCollect){
+    item.addEventListener('click', handleSelectedItem);
+}  
+
+function handleSelectedItem(event){
+    let itemId = event.target.dataset.id;
+    // recuperando o target do evento
+    let itemLi = event.target;
+
+    // adicionar ou remover uma classe com javascript
+    itemLi.classList.toggle('selected')
+
+}
