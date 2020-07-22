@@ -53,10 +53,10 @@ for(let item of itemsToCollect){
     item.addEventListener('click', handleSelectedItem);
 }  
 
-
-
 let selectedItems = [];
 const collectedItems = document.querySelector("input[name=items]");
+
+// função que vai ser executada toda vez que um item for clicado
 function handleSelectedItem(event){
     // recuperando o target do evento
     let itemLi = event.target;
@@ -64,10 +64,13 @@ function handleSelectedItem(event){
     // adicionar ou remover uma classe com javascript
     itemLi.classList.toggle('selected')
     
+    // recupera o id do item selecionado
     let itemId = itemLi.dataset.id;
 
+    // recupera o index do item, se ele não estiver no array ele volta com -1, senão ele volta com o index do item
     let alreadySelected = selectedItems.findIndex(item => item === itemId);
 
+    // se ele já existir no array, ele remove
     if(alreadySelected >= 0){
         let filteredItems = selectedItems.filter(item =>{
             let itemIsDifferent = item != itemId;
@@ -75,8 +78,9 @@ function handleSelectedItem(event){
         });
         selectedItems = filteredItems;
     }else{
+        // senão ele adiciona no array
         selectedItems.push(itemId);
     }
-
+    // adicionando o array dentro do input
     collectedItems.value = selectedItems;
 }
