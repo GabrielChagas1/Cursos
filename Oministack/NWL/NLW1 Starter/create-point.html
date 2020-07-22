@@ -1,105 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar um ponto de coleta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar um ponto de coleta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&family=Ubuntu:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-    <div id="page-create-point">
-        <header class="header">
-            <img src="./assets/img/logo.svg" class="header__logo" alt="Logo">
-            <a href="#" class="create-header__titulo">
-                <span></span>
-                Voltar para a home
-            </a>
-        </header>
+  <div id="page-create-point">
+    <header class="header">
+      <img src="./assets/img/logo.svg" class="header__logo" alt="Logo">
+      <a href="#" class="create-header__titulo">
+        <span></span>
+        Voltar para a home
+      </a>
+    </header>
 
-        <form action="" class="create__form">
-            <h1 class="create-form__titulo">Cadastro do ponto de coleta</h1>
-        
+    <form action="" class="create__form">
+      <h1 class="create-form__titulo">Cadastro do ponto de coleta</h1>
 
-            <fieldset class="create__fieldset">
-                <legend>
-                    <h2 class="create__fieldset__titulo">Dados da entidade</h2>
-                </legend>
 
-                <div class="create__field">
-                    <label for="name">Nome da entidade</label>
-                    <input type="text" name="name" required>
-                </div>
+      <fieldset class="create__fieldset">
+        <legend>
+          <h2 class="create__fieldset__titulo">Dados da entidade</h2>
+        </legend>
 
-                <div class="create__field-group">
-                    <div class="create__field">
-                        <label for="address">Endereço</label>
-                        <input type="text" name="address" required>
-                    </div>
-                    <div class="create__field"> 
-                        <label for="address2">Número</label>
-                        <input type="number" name="address2" required>
-                    </div>
-                </div>
+        <div class="create__field">
+          <label for="name">Nome da entidade</label>
+          <input type="text" name="name" required>
+        </div>
 
-                <div class="create__field-group">
+        <div class="create__field-group">
+          <div class="create__field">
+            <label for="address">Endereço</label>
+            <input type="text" name="address" required>
+          </div>
+          <div class="create__field">
+            <label for="address2">Número</label>
+            <input type="number" name="address2" required>
+          </div>
+        </div>
 
-                    <div class="create__field">
-                        <label for="uf">Estado</label>
-                        <select name="uf" id="0" required>
-                            <option value="">Escolha um estado</option>
-                        </select>
-                        <input type="hidden" name="state">
-                    </div>
-                    <div class="create__field">
-                        <label for="city">Cidade</label>
-                        <select name="city" id="0" disabled required>
-                            <option value="">Escolha uma cidade</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
+        <div class="create__field-group">
 
-            <fieldset class="create__coleta">
-                <legend>
-                    <h2>Ítens de Coleta</h2>
-                </legend>
-                <div class="items-grid">
-                   <ul>
-                    <li data-id="1">
-                        <img src="./assets/img/lampadas.svg" alt="Lâmpadas">
-                        <span>Lâmpadas</span>
-                    </li>
-                    <li data-id="2">
-                        <img src="./assets/img/baterias.svg" alt="Pilhas e Baterias">
-                        <span>Pilhas e Baterias</span>
-                    </li>
-                    <li data-id="3">
-                        <img src="./assets/img/papeis-papelao.svg" alt="Papéis e Papelão">
-                        <span>Papéis e Papelão</span>
-                    </li>
-                    <li data-id="4">
-                        <img src="./assets/img/eletronicos.svg" alt="Resíduos Eletrônicos">
-                        <span>Resíduos Eletrônicos</span>
-                    </li>
-                    <li data-id="5">
-                        <img src="./assets/img/organicos.svg" alt="Resíduos Orgânicos">
-                        <span>Resíduos Orgânicos</span>
-                    </li>
-                    <li data-id="6">
-                        <img src="./assets/img/oleo.svg" alt="Óleo de Cozinha">
-                        <span>Óleo de Cozinha</span>
-                    </li>
-                   </ul>
-                </div>
-                <input type="hidden" name="items">
-            </fieldset>
+          <div class="create__field">
+            <label for="uf">Estado</label>
+            <select name="uf" id="0" required>
+              <option value="">Escolha um estado</option>
+            </select>
+            <input type="hidden" name="state">
+          </div>
+          <div class="create__field">
+            <label for="city">Cidade</label>
+            <select name="city" id="0" disabled required>
+              <option value="">Escolha uma cidade</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
 
-            <button type="submit" class="create__button">Cadastrar ponto de coleta</button>
-        </form>
-    </div>
-   
-    <script src="./assets/scripts/create-point.js"></script>
+      <fieldset class="create__coleta">
+        <legend>
+          <h2>Ítens de Coleta</h2>
+        </legend>
+        <div class="items-grid">
+          <ul>
+            <li data-id="1">
+              <img src="./assets/img/lampadas.svg" alt="Lâmpadas">
+              <span>Lâmpadas</span>
+            </li>
+            <li data-id="2">
+              <img src="./assets/img/baterias.svg" alt="Pilhas e Baterias">
+              <span>Pilhas e Baterias</span>
+            </li>
+            <li data-id="3">
+              <img src="./assets/img/papeis-papelao.svg" alt="Papéis e Papelão">
+              <span>Papéis e Papelão</span>
+            </li>
+            <li data-id="4">
+              <img src="./assets/img/eletronicos.svg" alt="Resíduos Eletrônicos">
+              <span>Resíduos Eletrônicos</span>
+            </li>
+            <li data-id="5">
+              <img src="./assets/img/organicos.svg" alt="Resíduos Orgânicos">
+              <span>Resíduos Orgânicos</span>
+            </li>
+            <li data-id="6">
+              <img src="./assets/img/oleo.svg" alt="Óleo de Cozinha">
+              <span>Óleo de Cozinha</span>
+            </li>
+          </ul>
+        </div>
+        <input type="hidden" name="items">
+      </fieldset>
+
+      <button type="submit" class="create__button">Cadastrar ponto de coleta</button>
+    </form>
+  </div>
+
+  <script src="./assets/scripts/create-point.js"></script>
 </body>
+
 </html>
