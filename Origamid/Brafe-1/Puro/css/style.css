@@ -24,3 +24,40 @@ body{
 }
 /* Fim do Reset */
 
+/* Menu */
+.menu{
+    background: #252525;
+    padding: 1.25rem 0;
+}
+
+.menu__container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.menu__container::after, .menu__container::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.menu__logo{
+    float: left;
+}
+
+.menu__nav{
+    float: right;
+}
+
+.menu__nav ul li{
+    display: inline-block;
+}
+
+.menu__nav li a{
+    display: block;
+    padding: 0.625rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125rem;
+}
