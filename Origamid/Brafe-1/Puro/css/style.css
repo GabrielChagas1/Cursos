@@ -1,60 +1,62 @@
 /* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     list-style: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
 }
 
-body{
+body {
     font-family: Georgia, serif;
     color: #252525;
 }
+
 /* Fim do Reset */
 
 /* Menu */
-.menu{
+.menu {
     background: #252525;
     padding: 1.25rem 0;
 }
 
-.menu__container{
+.menu__container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-.menu__container::after, .menu__container::before{
+.menu__container::after,
+.menu__container::before {
     content: '';
     display: table;
     clear: both;
 }
 
-.menu__logo{
+.menu__logo {
     float: left;
 }
 
-.menu__nav{
+.menu__nav {
     float: right;
 }
 
-.menu__nav ul li{
+.menu__nav ul li {
     display: inline-block;
 }
 
-.menu__nav li a{
+.menu__nav li a {
     display: block;
     padding: 0.625rem;
     text-decoration: none;
@@ -66,20 +68,20 @@ body{
 
 /* Main */
 
-.intro{
+.intro {
     background: url('../img/bg-intro.jpg') no-repeat center / cover;
     padding: 9.375rem 0;
     text-align: center;
     color: #fff;
 }
 
-.intro h1{
+.intro h1 {
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.intro h1::after{
+.intro h1::after {
     content: '';
     width: 20px;
     height: 4px;
@@ -88,7 +90,7 @@ body{
     margin: 0.625rem auto;
 }
 
-.intro p{
+.intro p {
     font-style: italic;
     font-size: 1.125rem;
 }
@@ -97,35 +99,36 @@ body{
 
 /* Sobre */
 
-.sobre{
+.sobre {
     padding: 3.75rem 0;
 }
 
-.sobre__container{
+.sobre__container {
     max-width: 960px;
     margin: 0 auto;
 }
 
-.sobre__container::after, .sobre__container::before{
+.sobre__container::after,
+.sobre__container::before {
     content: '';
     display: table;
     clear: both;
 }
 
-.sobre h2{
+.sobre h2 {
     text-align: center;
     font-weight: bold;
     font-size: 2.25rem;
     margin-bottom: 2.25rem;
 }
 
-.sobre__item{
+.sobre__item {
     width: 460px;
     float: left;
     margin: 0 10px;
 }
 
-.sobre__item h3{
+.sobre__item h3 {
     background: #252525;
     color: #fff;
     font-size: 2.25rem;
@@ -139,7 +142,7 @@ body{
     top: -25px;
 }
 
-.sobre > p{
+.sobre>p {
     max-width: 460px;
     margin: 1.25rem auto;
     font-size: 1.125rem;
@@ -147,42 +150,44 @@ body{
     font-style: italic;
     text-align: center;
 }
+
 /* Fim Sobre */
 
 /* Produtos */
 
-.produtos{
+.produtos {
     background: #e7e4d8;
     padding: 3.75rem 0;
     border-top: 3px solid #d6d3c8;
     border-bottom: 3px solid #d6d3c8;
 }
 
-.produtos__container::after, .produtos__container::before{
+.produtos__container::after,
+.produtos__container::before {
     content: '';
     display: table;
     clear: both;
 }
 
 
-.produtos__container{
+.produtos__container {
     max-width: 960px;
     margin: 0 auto;
 }
 
-.produtos__item{
+.produtos__item {
     width: 300px;
     float: left;
     margin: 0 10px 20px 0;
 }
 
-.produtos__item h2{
+.produtos__item h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 1.25rem;
 }
 
-.produtos__item h2::before{
+.produtos__item h2::before {
     content: '';
     display: block;
     width: 100px;
@@ -195,24 +200,24 @@ body{
     box-shadow: 0 0 0 10px currentColor;
 }
 
-h2.produtos--paulista::before{
-   color: #492901;
+h2.produtos--paulista::before {
+    color: #492901;
 }
 
-h2.produtos--carioca::before{
+h2.produtos--carioca::before {
     color: #c17139;
 }
 
-h2.produtos--mineiro::before{
+h2.produtos--mineiro::before {
     color: #d7a54d;
 }
 
-.produtos__item p{
+.produtos__item p {
     font-size: 0.875rem;
     line-height: 1.4rem;
 }
 
-.produtos__btn{
+.produtos__btn {
     width: 180px;
     border: 3px solid #252525;
     color: #252525;
@@ -230,52 +235,121 @@ h2.produtos--mineiro::before{
 
 /* Locais */
 
-.locais{
+.locais {
     max-width: 960px;
     margin: 0 auto;
     padding: 60px 0;
 }
 
-.locais-item{
+.locais-item {
     margin: 20px auto;
 }
 
-.locais-item::before, .locais-item::after{
+.locais-item::before,
+.locais-item::after {
     content: '';
     display: table;
     clear: both;
 }
 
-.locais-item img{
+.locais-item img {
     width: 460px;
     display: block;
     float: left;
     margin: 0 10px;
 }
 
-.locais-item > div{
+.locais-item>div {
     width: 460px;
     float: left;
     margin: 0 10px;
 }
 
-.locais-item > div > h2{
+.locais-item>div>h2 {
     font-size: 2.25rem;
     margin-bottom: 20px;
 }
 
-.locais-item > div p{
+.locais-item>div p {
     font: 1.125rem;
     line-height: 1.4em;
     max-width: 320px;
     margin-bottom: 40px;
 }
 
-.locais-item a{
+.locais-item a {
     font-size: 1.125rem;
     text-transform: uppercase;
     text-decoration: none;
     border: 3px solid;
     color: #252525;
     padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Fim Locais */
+
+/* Newsletter */
+.assine {
+    background: #e7e4d8;
+    padding: 30px 0;
+}
+
+.assine__container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.assine__container::after,
+.assine__container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.assine__info{
+    width: 460px;
+    margin: 0 10px;
+    float: left;
+}
+
+.assine__info h2{
+    font-size: 2.25rem;
+}
+
+.assine__info p{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.assine form{
+    width: 460px;
+    margin: 0 10px;
+    float: left;
+}
+
+.assine form label{
+    display: none;
+}
+
+.assine input{
+    width: 320px;
+    border: 3px solid #252525;
+    font-size: 1.5rem;
+    padding: 10px;
+    background: none;
+    font-family: Georgia, serif;
+    float: left;
+}
+
+.assine button{
+    background: #252525;
+    border: 0;
+    font-family: Georgia, serif;
+    color: #fff;
+    padding: 13px 0;
+    width: 130px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
 }
