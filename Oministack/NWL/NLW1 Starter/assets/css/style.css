@@ -31,3 +31,6 @@
 
 /* importando o css do modal */
 @import "./modal/modal.css";
+
+/* importando o css do search result */
+@import "./search-result/search-result.css";
