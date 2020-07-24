@@ -225,3 +225,57 @@ h2.produtos--mineiro::before{
     text-align: center;
     text-decoration: none;
 }
+
+/* Fim Produtos */
+
+/* Locais */
+
+.locais{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.locais-item{
+    margin: 20px auto;
+}
+
+.locais-item::before, .locais-item::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.locais-item img{
+    width: 460px;
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+.locais-item > div{
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.locais-item > div > h2{
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+}
+
+.locais-item > div p{
+    font: 1.125rem;
+    line-height: 1.4em;
+    max-width: 320px;
+    margin-bottom: 40px;
+}
+
+.locais-item a{
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid;
+    color: #252525;
+    padding: 10px 20px;
+}
