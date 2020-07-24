@@ -353,3 +353,38 @@ h2.produtos--mineiro::before {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+/* Fim Assine */
+
+/* Footer */
+
+.footer{
+    background: #d6d3c8;
+    padding: 40px 0;
+}
+
+.footer__container{
+    max-width: 960px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.footer p{
+    float: left;
+    margin: 0 10px;
+    font-size: 1.125rem;
+    line-height: 1.4rem;
+}
+
+.footer img{
+    float: right;
+    margin: 0 10px;
+}
+
+.footer__container::before,
+.footer__container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
