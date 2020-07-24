@@ -61,3 +61,34 @@ body{
     color: #fff;
     font-size: 1.125rem;
 }
+
+/* Fim Menu */
+
+/* Main */
+
+.intro{
+    background: url('../img/bg-intro.jpg') no-repeat center / cover;
+    padding: 9.375rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.intro h1{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro h1::after{
+    content: '';
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    margin: 0.625rem auto;
+}
+
+.intro p{
+    font-style: italic;
+    font-size: 1.125rem;
+}
