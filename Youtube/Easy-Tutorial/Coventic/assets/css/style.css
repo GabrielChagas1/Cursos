@@ -41,6 +41,32 @@
     position: absolute;
     top: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column
+}
+
+.menu{
+    width: 25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+.social-links{
+    width: 50px;
+    text-align: center;
+}
+
+.useful-links{
+    width: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.social-links img, .useful-links img{
+    width: 30px;
+    margin: 5px auto;
+    cursor: pointer;
 }
 
 button{
