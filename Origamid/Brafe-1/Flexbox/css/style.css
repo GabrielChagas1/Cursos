@@ -29,12 +29,32 @@ body {
 
 .menu {
 	background: #252525;
+	padding: 20px 0;
+}
+
+.menu__container{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.menu-nav ul{
+	display: flex;
 }
 
 .menu-nav a {
+	padding: 0px 10px;
 	text-decoration: none;
 	color: #fff;
 	font-size: 1.125em;
+}
+
+@media(max-width: 960px){
+
 }
 
 /* Intro */
@@ -43,6 +63,8 @@ body {
 	background: url('../img/bg-intro.jpg') no-repeat center center;
 	background-size: cover;
 	color: #fff;
+	padding: 150px 0;
+	text-align: center;
 }
 
 .intro h1 {
@@ -56,6 +78,7 @@ body {
 	width: 20px;
 	height: 4px;
 	background: #fff;
+	margin: 10px auto;
 }
 
 .intro p {
