@@ -216,6 +216,7 @@ h2.produtos-mineiro::before {
 	margin-bottom: 40px;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 0 10px;
 }
 
 .locais__info{
@@ -247,6 +248,20 @@ h2.produtos-mineiro::before {
 
 .assine {
 	background: #e7e4d8;
+	padding: 30px 0;
+}
+
+.assine__container{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.assine-info{
+	flex: 1 0 240px;
+	padding: 0 10px;
 }
 
 .assine-info h2 {
@@ -256,6 +271,12 @@ h2.produtos-mineiro::before {
 .assine-info p {
 	font-size: 1.5em;
 	font-style: italic;
+}
+
+.assine form{
+	padding: 0 10px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .assine form label {
@@ -268,6 +289,9 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	font-style: italic;
 	font-family: Georgia, serif;
+	padding: 10px;
+	flex: 1;
+	align-self: flex-start;
 }
 
 .assine button {
@@ -278,6 +302,9 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	color: #fff;
 	cursor: pointer;
+	width: 140px;
+	padding: 13px 0;
+	flex: 1;
 }
 
 /*Footer*/
