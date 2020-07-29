@@ -319,6 +319,12 @@ h2.produtos-mineiro::before {
 	flex: 1;
 }
 
+@media only screen and (max-width: 500px){
+	.assine-info{
+		margin-bottom: 30px;
+	}
+}
+
 /*Footer*/
 
 .footer {
