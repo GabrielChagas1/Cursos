@@ -340,4 +340,10 @@ h2.produtos-mineiro::before {
 	font-size: 1.125em;
 	line-height: 1.4em;
 }
+
+@media only screen and (max-width: 500px){
+	.footer__container{
+		flex-direction: column;
+	}
+}
  
