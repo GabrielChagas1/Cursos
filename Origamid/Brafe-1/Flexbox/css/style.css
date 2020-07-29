@@ -54,10 +54,15 @@ body {
 	font-size: 1.125em;
 }
 
-@media(max-width: 960px){
+@media only screen and (max-width: 500px){
+	.menu__container{
+		flex-direction: column;
+	}
 
+	.menu-logo{
+		margin-bottom: 30px;
+	}
 }
-
 /* Intro */
 
 .intro {
@@ -85,6 +90,13 @@ body {
 .intro p {
 	font-style: italic;
 	font-size: 1.125em;
+}
+
+
+@media only screen and (max-width: 500px){
+	.intro{
+		padding: 60px 0
+	}
 }
 
 /* Sobre */
