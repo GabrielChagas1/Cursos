@@ -79,6 +79,7 @@ img{
 .intro h1 {
 	text-transform: uppercase;
 	font-size: 3em;
+	font-weight: bold;
 }
 
 .intro h1::after {
@@ -104,8 +105,15 @@ img{
 
 /* Sobre */
 
+.sobre{
+	padding: 60px 0;
+}
+
 .sobre h2 {
 	font-size: 2.25em;
+	text-align: center;
+	margin-bottom: 60px;
+	font-weight: bold;
 }
 
 .sobre-item h3 {
@@ -117,12 +125,18 @@ img{
 	font-weight: normal;
 	text-align: center;
 	position: relative;
+	width: 220px;
+	padding: 5px 0 10px 0;
+	top: -25px;
 }
 
 .sobre > p {
 	font-size: 1.125em;
 	line-height: 1.4em;
 	font-style: italic;
+	max-width: 460px;
+	margin: 20px auto;
+	text-align: center;
 }
 
 /* Produtos */
