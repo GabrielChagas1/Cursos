@@ -31,12 +31,39 @@ img{
 
 .menu {
 	background: #252525;
+	padding: 20px 0;
+}
+
+.menu-nav{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .menu-nav a {
 	text-decoration: none;
 	color: #fff;
 	font-size: 1.125em;
+}
+
+.menu-nav ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu nav li{
+	padding: 10px;
+}
+
+
+@media(max-width: 770px){
+	.menu-nav{
+		justify-content: center;
+	}
+
+	.menu-logo img{
+		margin: 0 auto;
+	}
 }
 
 /* Intro */
