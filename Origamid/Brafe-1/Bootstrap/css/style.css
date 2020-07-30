@@ -56,7 +56,7 @@ img{
 }
 
 
-@media(max-width: 770px){
+@media(max-width: 768px){
 	.menu-nav{
 		justify-content: center;
 	}
@@ -72,6 +72,8 @@ img{
 	background: url('../img/bg-intro.jpg') no-repeat center center;
 	background-size: cover;
 	color: #fff;
+	padding: 150px 0;
+	text-align: center;
 }
 
 .intro h1 {
@@ -85,12 +87,20 @@ img{
 	width: 20px;
 	height: 4px;
 	background: #fff;
+	margin: 20px auto;
 }
 
 .intro p {
 	font-style: italic;
 	font-size: 1.125em;
 }
+
+@media(max-width: 768px){
+	.intro{
+		padding: 60px 0;
+	}
+}
+
 
 /* Sobre */
 
