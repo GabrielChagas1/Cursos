@@ -1,0 +1,36 @@
+/* Importando normalize */
+@import "./normalize.css";
+
+/* importando o reset */
+@import "./reset.css";
+
+@import "./home/page-home.css";
+
+/* importando o container */
+@import "./container.css";
+
+/* importando o header */
+@import "./home/header/header.css";
+@import "./home/header/header-logo.css";
+@import "./home/header/header-titulo.css";
+
+/* importando o main */
+@import "./home/main/main.css";
+@import "./home/main/main-titulo.css";
+@import "./home/main/main-paragrafo.css";
+@import "./home/main/main-button.css";
+
+/* importando o css do create point */
+@import "./create-point/create-point.css";
+@import "./create-point/header-titulo.css";
+
+/* importando o form do create point */
+@import "./create-point/form/form-titulo.css";
+@import "./create-point/form/create-form.css";
+@import "./create-point/form/fieldset/create-fieldset.css";
+
+/* importando o css do modal */
+@import "./modal/modal.css";
+
+/* importando o css do search result */
+@import "./search-result/search-result.css";
