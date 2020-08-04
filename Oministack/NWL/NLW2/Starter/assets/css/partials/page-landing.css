@@ -41,7 +41,6 @@
     width: 30rem;
     height: 10.4rem;
     border-radius: .8rem;
-    background: tomato;
     margin-right: 1.6rem;
     font: 700 2.4rem Archivo;
     display: flex;
@@ -71,4 +70,15 @@
 
 .buttons-container a.give-classes:hover{
     background: var(--color-secondary-dark);
+}
+
+.total-connections{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img{
+    margin-left: 0.8rem;
 }
