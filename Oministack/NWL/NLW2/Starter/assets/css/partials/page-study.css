@@ -38,6 +38,11 @@
     opacity: 0.6;
 }
 
+.voltar{
+    animation: arrow-jump 1s infinite alternate;
+}
+
+
 .top-bar-container img {
     height: 1.6rem;
 }
