@@ -1,15 +1,15 @@
-#page-study #container{
+#page-study #container {
     width: 100vw;
     height: 100vh;
 }
 
-.page-header{
+.page-header {
     background: var(--color-primary);
     display: flex;
     flex-direction: column;
 }
 
-.top-bar-container{
+.top-bar-container {
     width: 90%;
     margin: 1.6rem auto;
     display: flex;
@@ -17,39 +17,39 @@
     justify-content: space-between;
 }
 
-.top-bar-container a{
+.top-bar-container a {
     height: 3.2rem;
     transition: opacity 0.2s;
 }
 
-.top-bar-container a:hover{
+.top-bar-container a:hover {
     opacity: 0.6;
 }
 
-.top-bar-container img{
+.top-bar-container img {
     height: 1.6rem;
 }
 
-.header-content{
+.header-content {
     width: 90%;
     margin: 3.2rem auto;
 }
 
-.header-content strong{
+.header-content strong {
     font: 700 3.6rem Archivo;
     color: var(--color-title-in-primary);
     line-height: 4.2rem;
 }
 
-#search-teachers{
+#search-teachers {
     margin-top: 3.2rem;
 }
 
-#search-teachers label{
+#search-teachers label {
     color: var(--color-text-in-primary);
 }
 
-#search-teachers button{
+#search-teachers button {
     width: 100%;
     height: 5.6rem;
     background: var(--color-secondary);
@@ -65,18 +65,18 @@
     margin-top: 3.2rem;
 }
 
-#search-teachers button:hover{
+#search-teachers button:hover {
     background-color: var(--color-secondary-dark);
 }
 
 .select-block label,
-.input-block label{
+.input-block label {
     font-size: 1.4rem;
     color: var(--color-text-complement);
 }
 
 .input-block input,
-.select-block select{
+.select-block select {
     width: 100%;
     height: 5.6rem;
     margin-top: 0.8rem;
@@ -88,13 +88,22 @@
     font: 1.6rem Archivo;
 }
 
+/* .select-block select {
+    appearance: none;
+    background-image: url(../../images/icons/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 10px;
+} */
+
+
 .input-block,
-.select-block{
+.select-block {
     position: relative;
 }
 
 .input-block:focus-within::after,
-.select-block:focus-within::after{
+.select-block:focus-within::after {
     content: '';
     width: calc(100% -3.2rem);
     height: 2px;
