@@ -59,11 +59,6 @@
 }
 
 @media (min-width: 700px){
-    .teacher-item header,
-    .teacher-item footer{
-        padding: 32px;
-    }
-
     .page-header{
         height: 340px;
     }
