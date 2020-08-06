@@ -244,11 +244,14 @@ h2.produtos-mineiro::before {
 /* Assine */
 
 .assine {
+	padding-top: 30px;
+	padding-bottom: 30px;
 	background: #e7e4d8;
 }
 
 .assine-info h2 {
 	font-size: 2.25em;
+	font-weight: bold;
 }
 
 .assine-info p {
@@ -260,12 +263,21 @@ h2.produtos-mineiro::before {
 	display: none;
 }
 
+.assine form{
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
 .assine input {
 	border: 3px solid #252525;
 	background: none;
 	font-size: 1.5em;
 	font-style: italic;
 	font-family: Georgia, serif;
+	align-self: flex-start;
+	padding: 10px;
 }
 
 .assine button {
@@ -276,6 +288,8 @@ h2.produtos-mineiro::before {
 	font-size: 1.5em;
 	color: #fff;
 	cursor: pointer;
+	align-self: flex-start;
+	padding: 10px;
 }
 
 /*Footer*/
