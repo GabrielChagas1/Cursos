@@ -45,7 +45,7 @@ O projeto está desenvolvido utilizando as seguintes tecnologias:
 
 ```bash
 # Clonar o repositório
-git clone 
+git clone https://github.com/GabrielChagas1/Cursos/tree/master/Oministack/NWL/NLW2/Starter
 
 # Entrar no diretório
 cd proffy-discovery
