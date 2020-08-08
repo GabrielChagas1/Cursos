@@ -1,6 +1,12 @@
 const Database = require('./database/db');
 
-const {subjects, weekDays, getSubject, convertHoursToMinutes} = require('./utils/format');
+const {
+    subjects,
+    weekDays,
+    getSubject,
+    convertHoursToMinutes
+} = require('./utils/format');
+const { query } = require('express');
 // função que vai ser executada ao ser chamada a / 
 function pageLanding(req, res) {
     return res.render("index.html");
@@ -11,12 +17,11 @@ async function pageStudy(req, res) {
     const filters = req.query;
 
 
-    if(!filters.subject || !filters.weekday || !filters.time){
+    if (!filters.subject || !filters.weekday || !filters.time) {
         return res.render("study.html", {
             filters,
             subjects,
             weekDays,
-            proffys
         });
     }
 
@@ -42,8 +47,18 @@ async function pageStudy(req, res) {
     try {
         const db = await Database;
         const proffys = await db.all(query);
-        return res.render('study.html', {proffys, subjects, filters, weekDays})
-        
+
+        proffys.map((proffy) =>{
+            proffy.subject = getSubject(proffy.subject);
+        })
+
+        return res.render('study.html', {
+            proffys,
+            subjects,
+            filters,
+            weekDays
+        });
+
     } catch (err) {
         console.log(err)
     }
@@ -52,26 +67,58 @@ async function pageStudy(req, res) {
 // função que vai ser executada ao ser chamada a page de give classes
 function pageGiveClasses(req, res) {
 
-    const data = req.query;
-    const isNotEmpty = Object.keys(data).length > 0; 
-
-    // se tiver dados ele insere na lista de proffys
-    if(isNotEmpty){
-        data.subject = getSubject(data.subject);
-
-        proffys.push(data);
-        return res.redirect("/study");
-    }
-
-    // senão mostrar a página
     return res.render("give-classes.html", {
         subjects,
         weekDays
     });
 }
 
+async function saveClasses(req, res) {
+    const data = req.body;
+
+    const createProffy = require('./database/createProffy');
+
+    const proffyValue = {
+        name: data.name,
+        avatar: data.avatar,
+        bio: data.bio,
+        whatsapp: data.whatsapp
+    };
+
+    const classValue = {
+        subject: data.subject,
+        cost: data.cost
+    };
+
+    const classScheduleValues = data.weekday.map((weekday, index) => {
+        return {
+            weekday,
+            time_from: convertHoursToMinutes(data.time_from[index]),
+            time_to: convertHoursToMinutes(data.time_to[index])
+        }
+    });
+
+    try {
+        const db = await Database;
+        await createProffy(db, {
+            proffyValue,
+            classValue,
+            classScheduleValues
+        });
+
+        let queryString = "?subject=" + data.subject;
+        queryString += "&weekday=" + data.weekday[0];
+        queryString += "&time=" + data.time_from[0]
+
+        return res.redirect('study' + queryString);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 module.exports = {
     pageLanding,
     pageStudy,
-    pageGiveClasses
+    pageGiveClasses,
+    saveClasses
 }
