@@ -1,2 +1,40 @@
 /* importando o arquivo reset para dentro do style */
 @import "./reset.css";
+
+/* menu */
+.header-informacoes{
+    font-size: 0.875rem;
+    background: var(--bg-color-header);
+    text-align: center;
+    padding: 5px;
+    text-transform: lowercase;
+}
+
+.logo img{
+    margin: 40px auto;
+}
+
+.header-menu{
+    border-top: 3px solid var(--bg-color-header);
+    border-bottom: 3px solid var(--bg-color-header);
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.header-menu ul li{
+    display: inline-block;
+}
+
+.header-menu ul li a{   
+    padding: 5px 10px 5px 0;
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    text-transform: lowercase;
+    display: block;
+}
+
+.header-menu li:not(:first-child) a::before{
+    content: '•';
+    padding-right: 10px;
+}
