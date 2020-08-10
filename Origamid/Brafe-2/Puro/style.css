@@ -2,31 +2,31 @@
 @import "./reset.css";
 
 /* menu */
-.header-informacoes{
+.header-informacoes {
     font-size: 0.875rem;
-    background: var(--bg-color-header);
+    background: var(--color-primary-light);
     text-align: center;
     padding: 5px;
     text-transform: lowercase;
 }
 
-.logo img{
+.logo img {
     margin: 40px auto;
 }
 
-.header-menu{
-    border-top: 3px solid var(--bg-color-header);
-    border-bottom: 3px solid var(--bg-color-header);
+.header-menu {
+    border-top: 3px solid var(--color-primary-light);
+    border-bottom: 3px solid var(--color-primary-light);
     text-align: center;
     padding: 20px 0;
     margin-bottom: 40px;
 }
 
-.header-menu ul li{
+.header-menu ul li {
     display: inline-block;
 }
 
-.header-menu ul li a{   
+.header-menu ul li a {
     padding: 5px 10px 5px 0;
     color: var(--color-primary);
     font-size: 1.125rem;
@@ -34,10 +34,11 @@
     display: block;
 }
 
-.header-menu li:not(:first-child) a::before{
+.header-menu li:not(:first-child) a::before {
     content: '•';
     padding-right: 10px;
 }
+
 /* filtro */
 
 .container {
@@ -155,4 +156,14 @@
 .produtos li h2{
     font-size: 0.875rem;
     font-weight: normal;
+}
+
+/* footer */
+
+.footer{
+    background: var(--color-secondary);
+    padding: 60px 0;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-top: 80px;
 }
