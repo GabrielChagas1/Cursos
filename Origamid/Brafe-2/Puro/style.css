@@ -179,6 +179,27 @@
     font-weight: normal;
 }
 
+@media (min-width: 740px) and (max-width: 980px){
+    .produtos{
+        width: 460px;
+    }
+
+    .produtos li{
+        width: 220px;
+    }
+}
+
+@media (max-width: 739px){
+    .produtos{
+        width: 300px;
+    }
+
+    .produtos li{
+        width: 140px;
+    }
+}
+
+
 /* footer */
 
 .footer{
