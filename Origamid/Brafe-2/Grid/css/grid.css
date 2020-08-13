@@ -1,0 +1,10 @@
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container::after, .container::before{
+    content: '';
+    clear: both;
+    display: table;
+}
