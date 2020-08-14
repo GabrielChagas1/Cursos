@@ -26,3 +26,29 @@ body{
 }
 
 /* Menu */
+
+.header{
+    background: #d6d3c8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header-menu ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-menu li:first-child{
+    padding-left: 0;
+}
+
+
+.header-menu li{
+     /* border: 1px solid tomato; */
+     padding: 10px;
+     cursor: pointer;
+     color: #252525
+}
