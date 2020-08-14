@@ -59,3 +59,57 @@ body{
         margin-bottom: 20px;
     }
 }
+/* main */
+.main{
+    display: flex;
+}
+/* sidenav */
+.sidenav{
+    flex: 1 0 300px;
+    /* width: 300px; */
+    /* margin: 0 15px 0 0; */
+    background: #252525;
+}
+
+.sidenav li a{
+    display: block;
+    color: #fff;
+    border-bottom: 2px solid #484846;
+    font: 1.125rem;
+    padding: 20px;
+}
+
+.sidenav li a::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/icones.png');
+    position: relative;
+    top: 5px;
+    margin-right: 15px;
+}
+
+.nav-contabilidade::before{
+    background-position: 0 -0px;
+}
+
+.nav-produtos::before{
+    background-position: 0 -24px;
+}
+
+.nav-paginas::before{
+    background-position: 0 calc(-24px * 2);
+}
+
+.nav-plugins::before{
+    background-position: 0 calc(-24px * 3);
+}
+
+.nav-formularios::before{
+    background-position: 0 calc(-24px * 4);
+}
+
+.nav-hospedagem::before{
+    background-position: 0 calc(-24px * 5);
+}
