@@ -18,3 +18,11 @@ ul{
 a{
     text-decoration: none;
 }
+
+body{
+    font-family: Georgia, serif;
+    color: #252525;
+    background: #e7e4d8;
+}
+
+/* Menu */
