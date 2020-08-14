@@ -52,3 +52,10 @@ body{
      cursor: pointer;
      color: #252525
 }
+
+@media(max-width: 420px){
+    .header-logo{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
