@@ -31,6 +31,16 @@ a {
 .header {
 	background: #d6d3c8;
 	padding: 20px;
+	display: flex;
+}
+
+.header-logo{
+	flex-grow: 1;
+}
+
+.header-menu ul{
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .header-menu li a {
@@ -44,11 +54,11 @@ a {
 }
 
 @media (max-width: 739px) {
-	.header-logo {
-		float: none;
+	.header{
+		flex-direction: column;
 	}
-	.header-menu ul {
-		float: none;
+
+	.header-menu{
 		margin-top: 10px;
 	}
 }
