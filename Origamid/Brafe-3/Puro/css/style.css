@@ -59,6 +59,11 @@ body{
 }
 
 @media(max-width: 420px){
+
+    .header{
+        flex-direction: column;
+    }
+
     .header-logo{
         margin: 0 auto;
         margin-bottom: 20px;
@@ -73,9 +78,9 @@ body{
 
 
 @media(max-width: 768px){
-    .main{
+    /* .main{
         flex-direction: column;
-    }
+    } */
 }
 
 
@@ -128,6 +133,40 @@ body{
 
 .nav-hospedagem::before{
     background-position: 0 calc(-24px * 5);
+}
+
+@media(min-width: 740px) and (max-width: 980px){
+    .sidenav{
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 739px){
+    .sidenav{
+        margin: 20px 0 0 20px;
+        background: transparent;
+    }
+
+    .sidenav li{
+        display: inline-block;
+    }
+
+    .sidenav li a::before{
+        display: block;
+        margin: 0;
+        top: 0;
+    }
+
+    .sidenav li a{
+        width: 44px;
+        height: 44px;
+        overflow: hidden;
+        padding: 10px;
+        border: none;
+        color: #252525;
+        background: #252525;
+        border-radius: 4px;
+    }
 }
 
 
@@ -203,7 +242,7 @@ body{
 
 .produtos-item a{
     position: absolute;
-    width: 24px;
+    width: 26px;
     height: 24px;
     text-indent: -200px;
     overflow: hidden;
