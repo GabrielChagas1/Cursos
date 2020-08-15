@@ -81,7 +81,7 @@ body{
 
 /* sidenav */
 .sidenav{
-    flex: 1 0 300px;
+    flex: 0 0 300px;
     /* width: 300px; */
     /* margin: 0 15px 0 0; */
     background: #252525;
@@ -214,4 +214,14 @@ body{
 
 .produtos-item a:hover {
     background: url('../img/edit-hover.svg');
+}
+
+/* footer */
+
+.footer{
+    padding: 40px 0;
+    text-align: center;
+    background: #d6d3c8;
+    font-size: 1.125rem;
+    line-height: 1.4;
 }
