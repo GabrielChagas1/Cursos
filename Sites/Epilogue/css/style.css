@@ -103,3 +103,12 @@ body{
     border-color: #EF6480;
     color: #EF6480 ;
 }
+/* cards */
+
+.cards{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
