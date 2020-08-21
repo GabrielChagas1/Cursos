@@ -45,10 +45,10 @@ body{
 .main{
     background: #fff;
     border-radius: 4px;
-    padding: 64px;
+    padding: 64px 0;
+    width: 90%;
     text-align: center;
     margin: 60px auto;
-    width: 90%;
     /* box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, 0.16); */
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
@@ -82,6 +82,8 @@ body{
 .main p{
     font-size: 1rem;
     margin-bottom: 2rem;
+    line-height: 1.7;
+    color: #6666;
 }
 
 .main a{
