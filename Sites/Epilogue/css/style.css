@@ -103,6 +103,7 @@ body{
     border-color: #EF6480;
     color: #EF6480 ;
 }
+
 /* cards */
 
 .cards{
@@ -112,3 +113,33 @@ body{
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
+
+.card{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+.card__header{
+    position: relative;
+}
+
+.card__header h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.25rem;
+    
+}
+
+.card__header img{
+    border-radius: 4px 4px 0 0;
+    filter: brightness(0.7);
+}
+
