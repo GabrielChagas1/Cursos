@@ -139,7 +139,7 @@ body{
     font-size: 1.25rem;
     letter-spacing: 6px;
     text-transform: uppercase;
-    
+
 }
 
 .card__header img{
@@ -147,5 +147,8 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
+
+.card__header:hover img{
+    transform: scale(1.1);
 }
 
