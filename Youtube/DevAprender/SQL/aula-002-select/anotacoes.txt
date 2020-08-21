@@ -1,0 +1,12 @@
+aula-002-select{
+
+    #Selecionar vários dados de uma tabela
+
+    //retornar diferentes colunas
+    SELECT coluna1, coluna2
+    FROM <tabela>
+
+    //retornar todos as colunas
+    SELECT *
+    FROM <tabela>
+}
