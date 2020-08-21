@@ -1,0 +1,9 @@
+Aula 01 - Restaurando um banco de dados{
+    comandos{
+        //cria um banco de dados
+        create database <nome do banco>
+
+        //excluir um banco de dados
+        drop database <nome do banco>
+    }
+}
