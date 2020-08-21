@@ -152,3 +152,7 @@ body{
     transform: scale(1.1);
 }
 
+.card__body{
+    max-width: 450px;
+    margin: 30px auto;
+}
