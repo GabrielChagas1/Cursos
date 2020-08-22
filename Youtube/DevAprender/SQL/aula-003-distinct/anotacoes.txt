@@ -1,0 +1,8 @@
+aula 003 distinct{
+    distinct -> usado para trazer apenas os dados únicos das tabelas
+
+    query{
+        SELECT DISTINCT <colunas>
+        FROM <tabela>
+    }
+}
