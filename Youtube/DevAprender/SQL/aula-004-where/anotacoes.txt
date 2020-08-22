@@ -1,0 +1,20 @@
+aula 004 - where{
+    where -> eu uso para filtrar registros.
+
+    código{
+        SELECT <colunas>
+        FROM <tabela>
+        WHERE <condição>
+    }
+
+    Operados{
+        igual            = 
+        maior que        >
+        menor que        <
+        maior ou igual   >=
+        menor ou igual   <=
+        diferente de     <>
+        E                AND
+        OU               OR 
+    }
+}
