@@ -1,0 +1,8 @@
+aula 005 - count{
+    count -> serve para retornar um números de linha de uma condição estabelecida
+
+    comando{
+        SELECT COUNT (<colunas>)
+        FROM <tabela>
+    }
+}
