@@ -1,0 +1,14 @@
+aula-008{
+    between{
+        #comando usado para encontrar valor entre um valor máximo e mínimo
+    }
+
+    comando{
+        SELECT <colunas>
+        FROM <tabela>
+        WHERE <colunas> between <min> and <max>;
+
+        #NOT -> ele nega o valor do between
+
+    }
+}
