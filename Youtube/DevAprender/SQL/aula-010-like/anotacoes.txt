@@ -1,0 +1,19 @@
+aula 010{
+    like{
+        #comando usado para encontrar registros com apenas partes de alguma palavra
+    }
+
+    comando{
+        SELECT <colunas>
+        FROM <tabelas>
+        WHERE <colunas> like '<string>';
+    }
+
+    *{
+        # % – Que é equivalente qualquer valor independente da quantidade de caracteres{
+            'el%' -> registros que começam com as letras "el";
+            '%el' -> registros que terminam com as letras "el";
+        }
+        # _ – Que é equivalente a apenas um caractere qualquer. 
+    }
+}
