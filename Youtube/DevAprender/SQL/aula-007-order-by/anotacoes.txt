@@ -1,0 +1,27 @@
+aula 007{
+    order by{
+        --ordenar os resultados por alguma coluna em ordem crescente ou descrescente;
+
+        --no sql server eu consigo ordenar por uma coluna que não esteja no select, em outros bancos não.
+    }
+
+    comando{
+        SELECT <colunas>
+        FROM <tabela>
+        ORDER BY <coluna> ASC/DESC;
+
+         
+        --ordernando por mais de um grupo
+        SELECT <colunas>
+        FROM <tabela>
+        ORDER BY <coluna> *ASC/DESC, <coluna> *ASC/DESC
+
+
+    }
+
+    *{
+        #Vazio -> padrão(ordem de cadastro no banco)
+        #ASC -> crescente
+        #DESC -> descrescente
+    }
+}
