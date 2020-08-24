@@ -1,0 +1,19 @@
+aula 009{
+    IN{
+        Nós usamos o operador IN junto com o WHERE, para verificar se um valor
+        corresponde com qualquer valor passado na lista de valores
+    }
+
+    comandos{
+        SELECT <colunas> 
+        FROM <tabela>
+        WHERE <coluna> IN (<valor>, <valor>, <valor>);
+
+        valor IN (valor1, valor2);
+        valor IN (SELECT * FROM products)
+    }
+
+    *{
+        #Mais rápido e deixa a query mais limpa.
+    }
+}
