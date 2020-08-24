@@ -1,0 +1,10 @@
+aula 066 - top{
+    top{
+        limita a quantidade de dados retornados em um select
+    }
+
+    comando{
+        SELECT TOP 10 <colunas> 
+        FROM <tabela>
+    }
+}
