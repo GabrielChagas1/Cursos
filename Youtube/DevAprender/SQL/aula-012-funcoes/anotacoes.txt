@@ -1,0 +1,13 @@
+aula 012{
+    # Funções -> MIN, MAX, SUM e AVG
+
+    *funções de agregacação basicamente agregam ou combinam dados de uma tabela em 1 resultado.
+
+    SUM -> retorna a soma de uma coluna
+    AVG -> retorna a média de uma coluna
+    MIN -> retorna o valor minímo
+    MAX -> retorna o valor máximo
+
+
+
+}
