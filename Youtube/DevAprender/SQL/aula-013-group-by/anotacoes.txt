@@ -1,0 +1,15 @@
+aula 013{
+    group by{
+        # divide o resultado da pesquisa em grupos
+
+        # Para cada grupo você pode aplicar uma função de agregação, por exemplo:
+            -calcular a soma dos itens
+            -contar o número de itens naquele grupo
+    }
+
+    comando{
+        SELECT <colunas>
+        FROM <tabela>
+        GROUP BY <coluna>
+    }
+}
