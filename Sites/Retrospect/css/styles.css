@@ -48,4 +48,32 @@ body, input, select, textarea{
     align-items: center;
 }
 
+/* 
+font-size -> 3 rem -> 48px
+conta -> 48(3rem) * 2.25em = 108px
+height -> 2.25em -> pai * filho -> 108px
+
+*/
+
+.banner__icon{
+    border-radius: 100%;
+    border: solid 2px var(--color-text-white);
+    color: var(--color-text-white);
+    display: inline-block;
+    font-size: 3rem;
+    height: 2.25em;
+    line-height: 1.25em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    width: 2.25em;
+}
+
+.banner__titulo{
+    color: var(--color-text-white);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 24px;
+}
+
 }
