@@ -2,9 +2,9 @@
     --color-text-white: #fff;
     --color-primary: #51BAA4;
 }
+
 /* importando a font raleway */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
-
 
 /* Reset */
 
@@ -30,6 +30,7 @@ a{
 body, input, select, textarea{
     font-family: "Raleway", Helvetica, sans-serif;
 }
+
 /* banner */
 
 .banner{
@@ -76,4 +77,28 @@ height -> 2.25em -> pai * filho -> 108px
     margin: 24px;
 }
 
+.banner__paragrafo{
+    color: var(--color-text-white);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.banner__button{
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    display: block;
+    max-width: 190px;
+    padding: 18px 0;
+    margin: 0 auto;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background .5s ease;
+}
+
+.banner__button:hover{
+    background: #228d76;
 }
