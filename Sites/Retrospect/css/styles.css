@@ -28,6 +28,8 @@ a{
 }
 
 body, input, select, textarea{
+    font-family: "Raleway", Helvetica, sans-serif;
+}
 /* banner */
 
 .banner{
