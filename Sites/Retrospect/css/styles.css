@@ -195,3 +195,12 @@ height -> 2.25em -> pai * filho -> 108px
     margin: 90px auto;
     text-align: center;
 }
+
+.section__gallery h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #25383B;
+    font-weight: 700;
+}
+
