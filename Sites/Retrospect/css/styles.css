@@ -188,3 +188,10 @@ height -> 2.25em -> pai * filho -> 108px
         order: 0;
     }
 }
+
+/* gallery */
+.section__gallery{
+    max-width: 960px;
+    margin: 90px auto;
+    text-align: center;
+}
