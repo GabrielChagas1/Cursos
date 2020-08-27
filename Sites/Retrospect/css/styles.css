@@ -215,3 +215,9 @@ height -> 2.25em -> pai * filho -> 108px
     color: #25383B;
 }
 
+.gallery{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    cursor: pointer;
+    margin-bottom: 60px;
+}
