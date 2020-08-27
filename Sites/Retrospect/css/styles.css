@@ -202,6 +202,7 @@ height -> 2.25em -> pai * filho -> 108px
     margin-bottom: 40px;
     color: #25383B;
     font-weight: 700;
+    padding: 0px 10px;
 }
 
 .section__gallery p{
@@ -238,4 +239,51 @@ height -> 2.25em -> pai * filho -> 108px
 
 .section__gallery a:hover{
     background: var(--bg-gray);
+}
+
+
+@media (max-width: 769px){
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .gallery img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+
+    .section__gallery{
+        margin: 30px 0;
+    }
+
+    .section__gallery h2{
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .section__gallery p{
+        font-size: 1rem;
+        padding: 0px 10px;
+    }
+
+    .section__gallery a{
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .gallery img{
+        width: 100%;
+    }
+
+    
 }
