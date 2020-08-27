@@ -149,4 +149,21 @@ height -> 2.25em -> pai * filho -> 108px
     font-weight: 400;
     font-size: 1rem;
 }
+.card__content a{
+    display: block;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 10px;
+    width: 150px;
+    border-radius: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.card__content a:hover{
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-dark);
+}
 }
