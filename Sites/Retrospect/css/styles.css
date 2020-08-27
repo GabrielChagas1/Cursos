@@ -117,4 +117,8 @@ height -> 2.25em -> pai * filho -> 108px
     max-width: 960px;
     margin: 0 auto;
 }
+.card{
+    background: var(--color-text-white);
+    display: flex;
+}
 }
