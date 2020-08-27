@@ -129,4 +129,11 @@ height -> 2.25em -> pai * filho -> 108px
 .card:nth-child(2n) img{
     order: 2;
 }
+.card img{
+    width: 48%;
+}
+
+.card__content{
+   margin: 30px;
+}
 }
