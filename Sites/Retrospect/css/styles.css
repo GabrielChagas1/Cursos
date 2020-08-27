@@ -221,3 +221,21 @@ height -> 2.25em -> pai * filho -> 108px
     cursor: pointer;
     margin-bottom: 60px;
 }
+
+.section__gallery a{
+    display: block;
+    color: var(--color-primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid var(--color-primary);
+    width: 250px;
+    border-radius: 40px;
+    padding: 15px 0;
+    margin: 0 auto;
+    transition: background .3s ease-out;
+}
+
+.section__gallery a:hover{
+    background: var(--bg-gray);
+}
