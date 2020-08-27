@@ -104,5 +104,17 @@ height -> 2.25em -> pai * filho -> 108px
 }
 
 .banner__button:hover{
-    background: #228d76;
+}
+
+/* cards */
+
+.section__card{
+    background: var(--bg-gray);
+    padding: 50px 0;
+}
+
+.cards{
+    max-width: 960px;
+    margin: 0 auto;
+}
 }
