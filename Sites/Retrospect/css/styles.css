@@ -142,4 +142,11 @@ height -> 2.25em -> pai * filho -> 108px
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
+.card__content p{
+    color: var(--color-text-gray);
+    margin-bottom: 30px;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 1rem;
+}
 }
