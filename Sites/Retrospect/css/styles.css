@@ -104,6 +104,7 @@ height -> 2.25em -> pai * filho -> 108px
 }
 
 .banner__button:hover{
+    background: var(--color-primary-dark);
 }
 
 /* cards */
