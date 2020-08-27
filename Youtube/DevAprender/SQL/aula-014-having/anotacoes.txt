@@ -1,0 +1,16 @@
+aula 014{
+    having{
+        # O having é basicamente muito usado em junção com o group by para filtrar resultados de um agrupamento.
+
+        # De uma forma mais simples eu gosto de entender ele como basicamente um where para dados agrupados.
+
+        # A grande diferença entre o HAVING e o WHERE é que o group by é aplicado depois que os dados já foram agrupados, enquanto o WHERE é aplicado antes dos dados serem agrupados.
+    }
+
+    Comando{
+        SELECT <Colunas>
+        FROM <tabela>
+        GROUP BY <coluna>
+        HAVING condicao
+    }
+}
