@@ -204,3 +204,14 @@ height -> 2.25em -> pai * filho -> 108px
     font-weight: 700;
 }
 
+.section__gallery p{
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.75;
+    max-width: 690px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #25383B;
+}
+
