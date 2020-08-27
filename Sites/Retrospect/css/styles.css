@@ -166,4 +166,18 @@ height -> 2.25em -> pai * filho -> 108px
     border-color: var(--color-primary-dark);
     color: var(--color-primary-dark);
 }
+@media (max-width: 768px){
+    .card{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card img{
+        width: 100%;
+    }
+
+    .card:nth-child(2n) img{
+        order: 0;
+    }
 }
