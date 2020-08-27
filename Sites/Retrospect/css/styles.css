@@ -1,6 +1,10 @@
 :root{
     --color-text-white: #fff;
     --color-primary: #51BAA4;
+    --color-primary-dark: #228d76;
+    --color-text-dark: #555;
+    --color-text-gray: #777;
+    --bg-gray: #eee;
 }
 
 /* importando a font raleway */
