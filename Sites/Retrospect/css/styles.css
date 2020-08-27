@@ -1,6 +1,10 @@
 :root{
     --color-text-white: #fff;
     --color-primary: #51BAA4;
+    --color-primary-dark: #228d76;
+    --color-text-dark: #555;
+    --color-text-gray: #777;
+    --bg-gray: #eee;
 }
 
 /* importando a font raleway */
@@ -100,5 +104,87 @@ height -> 2.25em -> pai * filho -> 108px
 }
 
 .banner__button:hover{
-    background: #228d76;
+    background: var(--color-primary-dark);
+}
+
+/* cards */
+
+.section__card{
+    background: var(--bg-gray);
+    padding: 50px 0;
+}
+
+.cards{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.card{
+    background: var(--color-text-white);
+    display: flex;
+}
+
+.card:not(:last-child){
+    margin-bottom: 60px;
+}
+
+.card:nth-child(2n) img{
+    order: 2;
+}
+
+.card img{
+    width: 48%;
+}
+
+.card__content{
+   margin: 30px;
+}
+
+.card__content h2{
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.card__content p{
+    color: var(--color-text-gray);
+    margin-bottom: 30px;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.card__content a{
+    display: block;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 10px;
+    width: 150px;
+    border-radius: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.card__content a:hover{
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px){
+    .card{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card img{
+        width: 100%;
+    }
+
+    .card:nth-child(2n) img{
+        order: 0;
+    }
 }
