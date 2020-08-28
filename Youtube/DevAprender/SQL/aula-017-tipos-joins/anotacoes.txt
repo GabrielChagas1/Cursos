@@ -1,0 +1,8 @@
+aula 017{
+    tipos de joins{
+        #LEFT-> primeira tabela da consulta
+        #RIGTH  -> segunda tabela da consulta
+        #FULL -> Retorna um conjunto de todos os registros correspondentes na tabela A e tabela B.
+        #INNER -> traz apenas os resultados que correspondem tanto na tabela A, quando na tabela B.
+    }
+}
