@@ -1,0 +1,7 @@
+aula 015{
+    AS{
+        #Renomear colunas, querys ou agregações.
+
+        #É preciso usar as aspas quando o nome for componsto -> "Total Valor"
+    }
+}
