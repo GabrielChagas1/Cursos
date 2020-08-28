@@ -1,0 +1,20 @@
+aula 016{
+    inner join{
+        tipos{
+            INNER JOIN,
+            OUTER JOIN,
+            SELF JOIN
+        }
+
+        #Muito usado para fazer uma junção de duas ou mais tabelas e trazer valores que correspondem a elas;
+
+        EX{
+            SELECT C.ClienteId, C.Nome, E.Rua, E.Cidade
+            FROM cliente C
+            INNER JOIN Endereco E 
+            ON E.EnderecoId = C.EnderecoId;
+        }
+
+
+    }
+}
