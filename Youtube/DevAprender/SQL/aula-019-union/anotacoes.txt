@@ -1,0 +1,7 @@
+aula 019{
+    union{
+        //O operador UNION combina dois ou mais resultados de um select em um resultado apenas
+
+        //Remove resultados duplicados, se se quiser os duplicados usar o UNIAL ALL
+    }
+}
