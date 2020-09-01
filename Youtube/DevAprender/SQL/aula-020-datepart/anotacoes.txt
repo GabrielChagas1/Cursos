@@ -1,0 +1,28 @@
+aula 020{
+    datepart{
+        #A função DATEPART retorna a parte especificada de uma data como um inteiro
+
+        exemplo{
+            SELECT DATEPART ( YEAR , '02/01/2004' );
+            RESPOSTA: 2004
+
+        }
+    }
+
+    datediff{
+        #A função DATEDIFF calcula a diferença entre as datas data2 e data1, retornando o resultado como um inteiro, cuja unidade é definida pelo valor unidade.
+        
+        exemplo{
+            SELECT DATEDIFF ( DAY , '02/01/2004' , '05/25/2004' )
+            RESPOSTA -> 114 DIAS
+        }
+    }
+    
+    dateadd{
+        #A função DATEADD retorna uma nova data através da soma do número de unidades especificadas pelo valor unidade a uma data.
+        exemplo{
+            SELECT DATEADD ( DAY ,6, '02/01/2004' )
+            RESPOSTA: 2004-02-07
+        }
+    }
+}
