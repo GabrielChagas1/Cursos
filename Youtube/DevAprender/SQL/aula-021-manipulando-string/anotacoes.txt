@@ -1,0 +1,5 @@
+aula 021{
+    string{
+        consulta -> https://docs.microsoft.com/pt-br/sql/t-sql/functions/string-functions-transact-sql?view=sql-server-ver15
+    }
+}
