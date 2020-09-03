@@ -1,0 +1,5 @@
+aula 022{
+    operacoes{
+        pesquisar -> https://docs.microsoft.com/pt-br/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-ver15
+    }
+}
