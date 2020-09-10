@@ -1,0 +1,10 @@
+map{
+    parametros ->(item, index, array)
+
+    #item -> item que está sendo iterado atualmente
+
+    #index -> index(posição) do item que está sendo iterado
+
+    #array -> array que está sendo iterado.
+
+    #a função é executada para cada item e toda a vez que a função for executada o valor é adicionando num array novo que o map criar.
