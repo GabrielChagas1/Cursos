@@ -283,7 +283,62 @@ height -> 2.25em -> pai * filho -> 108px
 
     .gallery img{
         width: 100%;
-    }
+    } 
+}
 
-    
+/* section gallery */
+
+.section__parallax{
+    background-image: url('../img/pic11.jpg'), url('../img/overlay.png');
+    background-position: center;
+    object-fit: contain;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.hero__parallax{
+    width: 100%;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax__content{
+    max-width: 800px;
+}
+
+.parallax__titulo{
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.parallax__paragrafo{
+    font-size: 1.125rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 34px;
+    margin: 30px 0;
+}
+
+.parallax__button{
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 40px;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.parallax__button:hover{
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
