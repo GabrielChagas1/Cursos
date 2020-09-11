@@ -14,6 +14,7 @@ const products = [
 	{ name: 'Repetidor de Sinal Wi-Fi', price: 44 }
 ]
 
+// criando um array novo de produtos em que os produtos acima de 30 reais tenham o preço pela metade
 const saleProducts = products.map(item => {
     if(item.price >= 30){
         return {name: item.name, price: item.price/2}
@@ -22,4 +23,4 @@ const saleProducts = products.map(item => {
     return item;
 });
 
-console.log(products, saleProducts);
+// console.log(products, saleProducts);
