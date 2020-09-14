@@ -7,6 +7,9 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
+const oddNumbers = randomNumbers.filter((item) => item % 2 != 0);
+// console.log(oddNumbers);
+
 /*
   02
 
@@ -14,6 +17,12 @@ const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 */
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
+
+const coutNumbers = crazyNumbers.reduce((accumulator, item) => {
+  if(item < 501) accumulator++
+  return accumulator
+}, 0);
+// console.log(coutNumbers)
 
 /*
   03
@@ -23,6 +32,8 @@ const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 */
 
 const numbers = [5, 7, 3]
+const SQRTnumbers = numbers.map(item => Math.pow(item, 2));
+// console.log(SQRTnumbers);
 
 /*
   04
@@ -45,6 +56,9 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
+const moviesRecent = tarantinoMovies.filter(item => item.release < 2000);
+console.log(moviesRecent);
+
 /*
   05
 
@@ -61,6 +75,9 @@ const tvShows = [
   { name: 'House M.D.', releaseYear: 2004 },
   { name: 'Watchmen', releaseYear: 2019 }
 ]
+
+const nameTvShow = tvShows.map(item => item.name);
+console.log(nameTvShow);
 
 /*
   06
@@ -86,3 +103,5 @@ const cart = [
   - Nome 2
   - Nome 3
 */
+
+const teste = cart.reduce
