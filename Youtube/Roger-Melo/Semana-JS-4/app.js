@@ -56,7 +56,7 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
-const moviesRecent = tarantinoMovies.filter(item => item.release < 2000);
+const moviesBefore2000 = tarantinoMovies.filter(item => item.release < 2000);
 console.log(moviesRecent);
 
 /*
