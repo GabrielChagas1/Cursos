@@ -1,0 +1,32 @@
+Bibliografia Recomendada {
+    _____________________________________
+    MATERIAIS DE APOIO
+    1- Deve Web (CEV)
+    2- Referência MDN
+    3- Referência W3C
+    4- WHATWG living Standard
+    5- W3Schools 
+    _____________________________________
+    LIVROS
+    1- HTML5 (Mark Pilgrim)
+    2- CSS (Eric Meyer)
+    3- Flexbox in CSS (Estelle Weyl)
+    4- Grid Layout in CSS (Eric Meyer)
+    5- HTML5 & CSS3 (Elizabeth C., Bruce H.)
+    6- HTML5 & CSS3 (Jon Duckett)
+    7-HTML e CSS3 (Elizabeth R., Eric F.)
+    8-Construa seu próprio site (Nate C. Kim)
+    9- HTML5 (Maurício Samy Silva)
+    10- CSS3 ( Maurício Samy Silva)
+    11- HTM e CSS3 (Maurício Samy Silva)
+    12- CSS Grid Layout (Maurício Samy S.)
+    13- Curso de Design gráfico (David D., ..)
+    14- Essencial de desing gráfico (Senac)
+    15- A psicologia das cores
+    16- Pensar com tipos
+    17-Flexbox Explained (Jorge M. Steph. G)
+    18-CSS GRID Explained (Jorge M. Ste. G)
+    19-HTML5 (Bill Sanders)
+    20-CSS ( Eric Meyer )
+    _____________________________________
+}
