@@ -1,0 +1,9 @@
+Front-end -> Client-side -> são tecnologias que rodam no lado do cliente.
+
+# HTML, CSS e JS
+
+Back-end -> Server-side -> são tecnologias que rodam no lado do cliente.
+
+# Node, Ruby, C#, PHP
+
+Full stack -> Desenvolvedor que junta as tecnologias do front e back.
