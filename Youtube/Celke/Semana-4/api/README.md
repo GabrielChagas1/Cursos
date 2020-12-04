@@ -19,3 +19,11 @@ Instalar todas as dependencias indicadas pelo package.json
 
 Rodar o projeto usando o nodemon
 ### nodemon app.js
+
+
+Instalar o banco de dados MongoDb
+### npm install --save mongodb
+
+Instalar o mongoose - Mongoose traduz os dados do banco de dados para objetos
+Javascript para que possam ser utilizados pela aplicação
+### npm install --save mongoose
