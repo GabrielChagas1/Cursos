@@ -342,3 +342,23 @@ height -> 2.25em -> pai * filho -> 108px
     border-color: var(--color-primary);
     color: var(--color-primary);
 }
+
+/* section footer */
+
+.section__footer{
+    background: var(--bg-footer);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-text-white);
+    padding: 60px 0;
+}
+
+.section__footer h2{
+    font-size: 2rem;
+}
+
+.section__footer p{
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
