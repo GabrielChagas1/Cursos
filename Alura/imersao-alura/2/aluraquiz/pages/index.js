@@ -74,11 +74,24 @@ Widget.Content = styled.div`
     padding: 0;
   }
 `;
+
 export default function Home() {
   return (
     <BackgroundImage>
       <QuizContainer>
-        teste teste teste teste
+        <Widget>
+          <Widget.Header>
+            <h1>the Legend of zelda</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>Lorem ipsum dolor sit amet...</p>
+          </Widget.Content>
+        </Widget>
+        <Widget>
+          <h1>Quizes da Galera</h1>
+
+          <p>Lorem ipsum dolor sit amet...</p>
+        </Widget>
       </QuizContainer>
     </BackgroundImage>
   );
