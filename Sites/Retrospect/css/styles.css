@@ -390,3 +390,10 @@ height -> 2.25em -> pai * filho -> 108px
     margin-bottom: 30px;
     padding: 15px;
 }
+
+
+.form__buttons{
+    display: flex;
+    justify-content: center;
+}
+
