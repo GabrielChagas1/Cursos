@@ -1,66 +1,53 @@
 import styled from 'styled-components'
 import db from '../db.json';
+import Widget from '../src/components/Widget'
+import QuizLogo from '../src/components/QuizLogo'
+import QuizBackground from '../src/components/QuizBackground'
+import Footer from '../src/components/Footer'
+import GitHubCorner from '../src/components/GitHubCorner'
 
-// importando o componente widget
-import {Widget} from '../src/components/Widget'
-
-// importando o componente footer
-import {Footer} from '../src/components/Footer'
-
-// importando o componente GitHubCorner
-import {GitHubCorner} from '../src/components/GitHubCorner'
-
-// importando o componente QuizBackground
-import {QuizBackground} from '../src/components/QuizBackground'
-
-// importando o componente QuizLogo
-import {QuizLogo} from '../src/components/QuizLogo'
-
-
-const BackgroundImage = styled.div`
-  background-image: url(${db.bg});
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-`;
+// const BackgroundImage = styled.div`
+//   background-image: url(${db.bg});
+//   flex: 1;
+//   background-size: cover;
+//   background-position: center;
+// `;
 
 export const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
   margin: auto 10%;
-
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     margin: auto;
     padding: 15px;
   }
-
 `;
-
 
 export default function Home() {
   return (
-    <BackgroundImage>
+    <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>the Legend of zelda</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Lorem ipsum dolor sit amet...</p>
+            <p>{db.description}</p>
           </Widget.Content>
         </Widget>
+
         <Widget>
-         <Widget.Header>
-          <h1>Quizes da Galera</h1>
-         </Widget.Header>
+          <Widget.Content>
+            <h1>Quizes da Galera</h1>
 
-         <Widget.Content>
-          <p>Lorem ipsum dolor sit amet...</p>
-         </Widget.Content>
-
+            <p>lorem ipsum dolor sit amet...</p>
+          </Widget.Content>
         </Widget>
+        <Footer />
       </QuizContainer>
-    </BackgroundImage>
+      <GitHubCorner projectUrl="https://github.com/GabrielChagas1" />
+    </QuizBackground>
   );
 }
