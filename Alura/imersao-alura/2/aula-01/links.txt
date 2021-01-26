@@ -1,17 +1,31 @@
+LINKS IMPORTANTES PARA VOCÊ ACOMPANHAR A AULA
+
 arquivo db.js -> https://github.com/alura-challenges/aluraquiz-base/blob/v1/db.json
-
 código aula -> https://github.com/alura-challenges/aluraquiz-base/tree/v1
-
 gist css -> https://github.com/alura-challenges/aluraquiz-base/pull/1/files
-
 node js -> https://nodejs.org/pt-br/
-
 next.js com styled-components -> https://github.com/vercel/next.js/tree/canary/examples/with-styled-components
-
 next.js -> https://nextjs.org/
-
 styled-components -> https://styled-components.com/
-
 vscode styled components -> https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components
-
 repositório do código final da aula 1 -> https://github.com/alura-challenges/aluraquiz-base/tree/v1
+
+
+LINKS CITADOS NESSA AULA
+
+Série git e github -> https://www.youtube.com/playlist?list=PLh2Y_pKOa4Uf-cUQOVNGlz_GVHx8QYoE6
+DOM -> https://www.youtube.com/watch?v=QzDjdlF1BQI&feature=youtu.be
+Visual Studio Code -> https://www.alura.com.br/artigos/visualstudio-code-instalacao-teclas-de-atalho-plugins-e-integracoes
+MaterialUI -> https://material-ui.com/customization/color/
+Adobe Color -> https://color.adobe.com/trends
+joguinho para CSS Flexbox -> https://flexboxfroggy.com/#pt-br
+tagged functions -> https://www.alura.com.br/artigos/tagged-template-literals
+
+
+Conteúdos Extras
+features next.js => https://www.youtube.com/watch?v=pb5yKjCW004
+infra build react => https://www.youtube.com/watch?v=LMCtGvLJT6c
+react funciona => https://www.youtube.com/watch?v=5MzOCxSWrrc
+pokedex com next.js => https://www.youtube.com/watch?v=c8mVlakBESE
+styled components => https://www.youtube.com/watch?v=QdfjWRc4ySA
+css reset => https://necolas.github.io/normalize.css/
