@@ -1,0 +1,22 @@
+Links importantes para você acompanhar a aula
+
+font lato => https://fonts.google.com/specimen/Lato?query=lato
+arquivos alterados da segunda aula => https://github.com/alura-challenges/aluraquiz-base/pull/64/files
+código completo aula 02 => https://github.com/alura-challenges/aluraquiz-base/tree/v2
+
+
+Links citados nessa aula
+
+babel => https://babeljs.io/
+react router => https://www.youtube.com/watch?v=4Tb8dp5GYqI&feature=youtu.be
+Eslint => https://eslint.org/
+plugin eslint no vscode => https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+
+Conteúdos extras
+
+destructuring => https://www.youtube.com/watch?v=f8a-qwKC5yk&feature=youtu.be
+animações lottie => https://www.youtube.com/watch?v=dZH9aDX8T-0&list=PLTcmLKdIkOWnB8M6jEtg22yiTl3xSZHtZ
+efeito de desenhar css => https://www.youtube.com/watch?v=4cEMgap9wpk&t=1s
+konami code => https://www.youtube.com/watch?v=6KS4t97yMlI
+validar ideias em js =>  https://www.youtube.com/watch?v=mGXPon0H-Ks
