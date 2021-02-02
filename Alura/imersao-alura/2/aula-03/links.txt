@@ -1,0 +1,15 @@
+Links importantes para você acompanhar a aula
+
+gist css => https://github.com/alura-challenges/aluraquiz-base/pull/103/files
+
+repositório final => https://github.com/alura-challenges/aluraquiz-base/tree/v3
+
+Links citados nessa aula
+
+documentação react => https://pt-br.reactjs.org/docs/typechecking-with-proptypes.html
+
+biblioteca prop types => https://www.npmjs.com/package/prop-types
+
+Conteúdos extras
+
+redux => https://www.youtube.com/watch?v=DbEpBeZ6yic&feature=youtu.be

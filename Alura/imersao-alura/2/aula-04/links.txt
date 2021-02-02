@@ -1,0 +1,27 @@
+Links importantes para você acompanhar a aula
+Gist com o CSS dos componentes usados na aula => https://github.com/alura-challenges/aluraquiz-base/pull/177/files
+Repositório do código final da aula 4 => https://github.com/alura-challenges/aluraquiz-base/tree/v4
+Código que usamos para criar o endpoint api/db =>  https://github.com/alura-challenges/aluraquiz-base/blob/aula04/pages/api/db.js
+
+Links citados nessa aula
+Post do Soutinho sobre Fetch API => https://medium.com/@omariosouto/entendendo-como-fazer-ajax-com-a-fetchapi-977ff20da3c6
+Vídeo do Soutinho sobre array.reduce() => https://www.youtube.com/watch?v=O_bSjsLga48&feature=youtu.be
+
+
+<ExternalQuizList hasName={hasName}>
+    {db.external.map((url) => {
+        const prepareUrl = url
+            .replace(/\//g, '')
+            .replace('https:', '')
+            .replace('.vercel.app', '');
+
+        const [repoName, user] = prepareUrl.split('.');
+        return (
+            <li key={url}>
+                <Widget.Topic href={`/quiz/${user}__${repoName}?name=${name}`}>
+                    {`${user}/${repoName}`}
+                </Widget.Topic>
+            </li>
+        );
+    })}
+</ExternalQuizList>

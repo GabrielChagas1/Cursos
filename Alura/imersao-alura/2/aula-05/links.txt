@@ -1,0 +1,23 @@
+Links importantes para você acompanhar a aula
+Gist com o CSS dos componentes usados na aula => https://github.com/alura-challenges/aluraquiz-base/pull/270/files
+Repositório do código final da aula 5 => https://github.com/alura-challenges/aluraquiz-base/tree/v5
+Framer Motion => https://www.framer.com/motion/
+
+Os quizes que a Alura e o DevSoutinho fizeram pra você se inspirar <3
+https://aluraquiz-base.alura-challenges.vercel.app/
+
+https://aluraquiz-css.omariosouto.vercel.app/
+
+https://aluraquiz-devsoutinho.omariosouto.vercel.app/
+
+PS: Eles já estão usando o Lottie! Confere os códigos fonte
+
+https://github.com/crello/react-lottie/blob/master/example/src/LottieBasic.tsx
+https://github.com/alura-challenges/aluraquiz-base/blob/main/src/screens/Quiz/index.js#L63
+
+
+Links citados nessa aula
+Live sobre JAM Stack na Hipsters.Talks #35 => https://www.youtube.com/watch?v=9E2xlG-m9Gs&feature=youtu.be
+JavaScript replace: manipulando Strings e regex =>  https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
+Post/vídeo sobre Node/threads ou algo assim 39:10 =>
+Vídeo: animações com Lottie => https://www.youtube.com/watch?v=dZH9aDX8T-0&feature=youtu.be
