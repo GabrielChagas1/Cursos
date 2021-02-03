@@ -1,0 +1,21 @@
+Guia de estudos e organização
+
+ 1 => Pomodoro
+
+2 => Tenha um lugar reservado para seu estudo{
+    .Foco
+    .Silêncio
+    .Interrupções
+}
+
+3 => Aprendizado ativo x passivo{
+    .Aprenda a ser perguntar: Se pergunte o que você acabou de ver.
+    .Aprenda a ensinar: Repita o que você acabou de ver.
+}
+
+4 => Anotação e Revisão{
+    .Anote mais após a aula
+    .Revise suas anotações e busque respostas para o que você não entendeu.
+}
+
+5 => Pesquisas
