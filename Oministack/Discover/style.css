@@ -1,10 +1,12 @@
-/* Reset CSS */
+:root{
+    --dark-blue: #363f5f;
+}
 
+/* Reset CSS */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
 ul {
@@ -40,7 +42,6 @@ h2{
 
 
 /* Header CSS */
-
 header{
     background: #2d4a22;
     padding: 2rem 0 10rem;
@@ -68,7 +69,33 @@ header #logo{
 /* End Balance CSS */
 
 
+/* Cards CSS */
 
+.card{
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+
+.card h3{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card p{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card.total{
+    background: #49aa26;
+    color: #fff;
+}
+
+/* End Cards CSS */
 
 /* Footer CSS */
 footer{
