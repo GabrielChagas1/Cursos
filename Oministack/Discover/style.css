@@ -41,4 +41,8 @@ header #logo{
 }
 
 
-/* End Header CSS */
+/* Footer CSS */
+footer{
+    text-align: center;
+}
+/* End Footer CSS */
