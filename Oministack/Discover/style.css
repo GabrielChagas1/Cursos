@@ -51,6 +51,23 @@ header #logo{
     color: #fff;
     font-weight: 100;
 }
+/* End Header CSS */
+
+
+/* Balance CSS */
+
+#balance{
+    margin-top: -8rem;
+}
+
+#balance h2{
+    color: #fff;
+    margin-top: 0;
+}
+
+/* End Balance CSS */
+
+
 
 
 /* Footer CSS */
