@@ -25,7 +25,12 @@ body{
     font-family: 'Poppins', sans-serif ;
 }
 
+.container {
+    width: min(90vw, 500px);
+    margin: 0 auto;
+}
 /* End Reset CSS */
+
 
 /* Header CSS */
 
