@@ -55,6 +55,23 @@ h2{
     color: var(--dark-blue);
     font-weight: normal;
 }
+
+/* links & Button */
+a{
+    color: #49aa26;
+    font-size: .8rem;
+}
+
+a:hover{
+    color: #3dd705;
+}
+
+.button.new{
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+
 /* End Reset CSS */
 
 
