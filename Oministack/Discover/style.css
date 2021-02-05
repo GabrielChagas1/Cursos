@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 93.75%;
+    /* 16px */
+}
+
 ul {
     list-style: none;
 }
