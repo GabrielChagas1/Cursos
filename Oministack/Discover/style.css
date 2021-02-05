@@ -38,6 +38,7 @@ body{
     white-space: nowrap;
     border-width: 0;
 }
+
 .container {
     width: min(90vw, 500px);
     margin: 0 auto;
@@ -69,7 +70,7 @@ header #logo{
 /* Balance CSS */
 
 #balance{
-    margin-top: -8rem;
+    margin-top: -4rem;
 }
 
 #balance h2{
@@ -93,6 +94,9 @@ header #logo{
 .card h3{
     font-weight: bold;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p{
