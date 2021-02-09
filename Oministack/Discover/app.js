@@ -18,4 +18,25 @@ const  Modal = {
     }
 }
 
+// recuperando a lista de transações
+const transactions = [
+    {
+        id: 1,
+        description: 'Luz',
+        amount: -50000,
+        date: '01/01/2021'
+    },
+    {
+        id:2,
+        description: 'Salário Janeiro',
+        amount: 250000,
+        date: '05/01/2021'
+    },
+    {
+        id:3,
+        description: 'Livros Arsene Lupin',
+        amount: -5900,
+        date: '06/01/2021'
+    }
+]
 
