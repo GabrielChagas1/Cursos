@@ -105,6 +105,18 @@ const DOM = {
         `
         // retornando o html
         return html
+    },
+
+    updateBalance(){
+
+        document.getElementById('incomeDisplay').innerHTML = Utils.FormatCurrency(Transaction.incomes());
+        
+
+        document.getElementById('expenseDisplay')
+        .innerHTML = Utils.FormatCurrency(Transaction.expenses());
+
+        document.getElementById('totalDisplay')
+        .innerHTML = Utils.FormatCurrency(Transaction.total());
     }
 }
 
@@ -133,3 +145,4 @@ const Utils = {
 
 // forEach para varrer todoas as transações e criar seu HTML
 transactions.forEach((transaction) => DOM.addTransaction(transaction));
+DOM.updateBalance();
