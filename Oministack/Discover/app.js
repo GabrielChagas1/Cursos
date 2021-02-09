@@ -99,3 +99,5 @@ const Utils = {
     }
 }
 
+// forEach para varrer todoas as transações e criar seu HTML
+transactions.forEach((transaction) => DOM.addTransaction(transaction));
