@@ -40,6 +40,38 @@ const transactions = [
     }
 ]
 
+// criando um objeto transação
+const Transaction = {
+    incomes(){
+        // somar as entradas
+        var incomes = 0;
+
+        // Filtrando os registros que são maiores que zero
+        transactions.forEach((transaction) => { if(transaction.amount > 0) incomes += transaction.amount});
+
+        // retornando o valor total das entradas
+        return incomes;
+
+    },
+
+    expenses(){
+        // somar as saídas
+        var expenses = 0;
+
+        // Filtrando os registros que são menores que zero
+        transactions.forEach((transaction) => { if(transaction.amount < 0) expenses += transaction.amount});
+
+        // retornando o valor total das saídas
+        return expenses;
+    },
+
+    total(){
+        // entradas subtraindo saídas
+        return this.incomes() + this.expenses();
+    }
+}
+
+
 const DOM = {
     // recuperando o tbody da table para inserir as transações novas
     transactionsContainer: document.querySelector('#data-table tbody'),
