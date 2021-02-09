@@ -75,3 +75,27 @@ const DOM = {
         return html
     }
 }
+
+// criando uma estrutura para criar funções util para o programa.
+const Utils = {
+    FormatCurrency(value){
+        // recuperando o sinal de - se o valor for negativo
+        const signal = Number(value) < 0 ? '-' : '';
+
+        // removendo tudo o que não for números
+        value = String(value).replace(/\D/g, '');
+
+        // dividindo por 100 para fazer as casas decimais
+        value = Number(value) / 100;
+
+        // convertando o número para um valor de moeda brasileira
+        value = value.toLocaleString('pt-BR',{
+            style: "currency",
+            currency: "BRL"
+        });
+
+        // retornando o valor final
+        return signal + value;
+    }
+}
+
