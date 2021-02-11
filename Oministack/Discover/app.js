@@ -45,6 +45,13 @@ const Transaction = {
     // atalho do objeto transaction
     all: transactions,
 
+    // função para add uma transação
+    add(transaction){
+        Transaction.all.push(transaction);
+
+        App.reload();
+    },
+
     incomes(){
         // somar as entradas
         var incomes = 0;
