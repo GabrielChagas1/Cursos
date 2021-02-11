@@ -170,6 +170,15 @@ const Form = {
 
     },
 
+    formatValues(){
+        let { description, amount, date} = Form.getValues();
+
+        amount = Utils.formatAmount(amount);
+        date = Utils.formatDate(date);
+        
+        return { description, amount, date};
+    },
+
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
