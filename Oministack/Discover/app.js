@@ -42,6 +42,9 @@ const transactions = [
 
 // criando um objeto transação
 const Transaction = {
+    // atalho do objeto transaction
+    all: transactions,
+
     incomes(){
         // somar as entradas
         var incomes = 0;
