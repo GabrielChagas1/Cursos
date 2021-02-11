@@ -147,6 +147,14 @@ const Form = {
     amount: document.querySelector('input#amount'),
     date: document.querySelector('input#date-transaction'),
 
+    getValues(){
+        return {
+            description: Form.description.value,
+            amount: Form.amount.value,
+            date: Form.date.value
+        }
+    },
+
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
