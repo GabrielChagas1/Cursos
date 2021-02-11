@@ -183,6 +183,12 @@ const Form = {
         Transaction.add(transaction);
     },
 
+    clearFields(){
+        Form.description.value = "";
+        Form.amount.value = "";
+        Form.date.value = "";
+
+    },
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
