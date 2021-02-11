@@ -175,3 +175,5 @@ DOM.updateBalance();
     }
 }
 
+// método para preencher a tabelas e os balance
+App.init();
