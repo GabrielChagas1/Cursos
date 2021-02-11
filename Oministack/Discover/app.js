@@ -179,6 +179,10 @@ const Form = {
         return { description, amount, date};
     },
 
+    saveTransaction(transaction){
+        Transaction.add(transaction);
+    },
+
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
