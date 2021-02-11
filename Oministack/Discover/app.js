@@ -158,6 +158,20 @@ const Utils = {
     }
 }
 
+const App = {
+    init() {
 // forEach para varrer todoas as transações e criar seu HTML
 transactions.forEach((transaction) => DOM.addTransaction(transaction));
+
+        //Atualizando os valores
 DOM.updateBalance();
+
+    },
+
+    // método para ser chamado toda vez que eu transação for adicionada
+    reload(){
+        DOM.clearTransaction();
+        App.init();
+    }
+}
+
