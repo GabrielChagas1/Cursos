@@ -122,6 +122,7 @@ const DOM = {
         return html
     },
 
+    // método para atualizar os balanços
     updateBalance(){
 
         document.getElementById('incomeDisplay').innerHTML = Utils.FormatCurrency(Transaction.incomes());
@@ -189,6 +190,36 @@ const Form = {
         Form.date.value = "";
 
     },
+
+
+    submit(event){
+        event.preventDefault();
+
+        try {
+            // verificar se os campos estão preenchidos
+            Form.validateFields();
+            
+            // formatando os valores que vem do form
+            const transaction = Form.formatValues()
+
+            // salvando uma transação
+            Form.saveTransaction(transaction);
+
+            // limpando os campos
+            Form.clearFields();
+
+            // fechando o modal
+            Modal.close();
+            
+
+        } catch (error) {
+            // recuperando a mensagem para voltar para o usuário.
+            alert(error.message);
+        }
+
+    }
+}
+
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
@@ -226,11 +257,11 @@ const Utils = {
 
 const App = {
     init() {
-// forEach para varrer todoas as transações e criar seu HTML
-transactions.forEach((transaction) => DOM.addTransaction(transaction));
+        // forEach para varrer todoas as transações e criar seu HTML
+        transactions.forEach((transaction) => DOM.addTransaction(transaction));
 
         //Atualizando os valores
-DOM.updateBalance();
+        DOM.updateBalance();
 
     },
 
@@ -244,9 +275,3 @@ DOM.updateBalance();
 // método para preencher a tabelas e os balance
 App.init();
 
-Transaction.add({
-    id: 39,
-    description: 'Livros Sherlock Holmes',
-    amount: -1500,
-    date: '23/02/2021'
-})
