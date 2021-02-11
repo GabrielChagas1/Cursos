@@ -148,6 +148,12 @@ const Utils = {
         return value;
     },
 
+    // formantando a data
+    formatDate(value){
+        const splittedDate = value.split('-');
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`;
+    },
+
     FormatCurrency(value){
         // recuperando o sinal de - se o valor for negativo
         const signal = Number(value) < 0 ? '-' : '';
