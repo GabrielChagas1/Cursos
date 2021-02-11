@@ -49,6 +49,14 @@ const Transaction = {
         App.reload();
     },
 
+    remove(index){
+        // remover um item das transações pela lista
+        Transaction.all.splice(index, 1);
+
+        // função para atualizar a lista no front
+        App.reload();
+    },
+
     incomes(){
         // somar as entradas
         var incomes = 0;
