@@ -140,6 +140,13 @@ const DOM = {
     }
 }
 
+const Form = {
+
+    // propriedades do form
+    description: document.querySelector('input#description'),
+    amount: document.querySelector('input#amount'),
+    date: document.querySelector('input#date-transaction'),
+
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
