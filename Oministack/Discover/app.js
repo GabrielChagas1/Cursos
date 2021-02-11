@@ -57,7 +57,7 @@ const Transaction = {
         var incomes = 0;
 
         // Filtrando os registros que são maiores que zero
-        transactions.forEach((transaction) => { if(transaction.amount > 0) incomes += transaction.amount});
+        Transaction.all.forEach((transaction) => { if(transaction.amount > 0) incomes += transaction.amount});
 
         // retornando o valor total das entradas
         return incomes;
@@ -69,7 +69,7 @@ const Transaction = {
         var expenses = 0;
 
         // Filtrando os registros que são menores que zero
-        transactions.forEach((transaction) => { if(transaction.amount < 0) expenses += transaction.amount});
+        Transaction.all.forEach((transaction) => { if(transaction.amount < 0) expenses += transaction.amount});
 
         // retornando o valor total das saídas
         return expenses;
