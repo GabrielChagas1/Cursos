@@ -155,6 +155,21 @@ const Form = {
         }
     },
 
+    validateFields(){
+        const { description, amount, date} = Form.getValues();
+
+        if(
+            description.trim() === "" || 
+            amount.trim() === "" ||
+            date.trim() === ""
+        )
+        {
+            // se algum campo tiver em branco, uma mensagem com um erro será retornado.
+            throw new Error("Por favor, preencha todos os campos")
+        }
+
+    },
+
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
     // formatando o valor que é recebido
