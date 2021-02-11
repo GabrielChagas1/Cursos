@@ -127,6 +127,11 @@ const DOM = {
 
         document.getElementById('totalDisplay')
         .innerHTML = Utils.FormatCurrency(Transaction.total());
+    },
+
+    // método para limpar a lista de transação
+    clearTransaction(){
+        DOM.transactionsContainer.innerHTML = "";
     }
 }
 
