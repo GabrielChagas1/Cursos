@@ -177,3 +177,10 @@ DOM.updateBalance();
 
 // método para preencher a tabelas e os balance
 App.init();
+
+Transaction.add({
+    id: 39,
+    description: 'Livros Sherlock Holmes',
+    amount: -1500,
+    date: '23/02/2021'
+})
