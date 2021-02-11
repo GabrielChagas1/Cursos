@@ -142,6 +142,12 @@ const DOM = {
 
 // criando uma estrutura para criar funções util para o programa.
 const Utils = {
+    // formatando o valor que é recebido
+    formatAmount(value){
+        value = Number(value.replace(/\,\./g)) * 100;
+        return value;
+    },
+
     FormatCurrency(value){
         // recuperando o sinal de - se o valor for negativo
         const signal = Number(value) < 0 ? '-' : '';
