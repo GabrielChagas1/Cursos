@@ -18,29 +18,20 @@ const  Modal = {
     }
 }
 
-// recuperando a lista de transações
-const transactions = [
-    {
-        description: 'Luz',
-        amount: -50000,
-        date: '01/01/2021'
+const Storage = {
+    get() {
+        return JSON.parse(localStorage.getItem('dev.finances:transactions')) || []
     },
-    {
-        description: 'Salário Janeiro',
-        amount: 250000,
-        date: '05/01/2021'
-    },
-    {
-        description: 'Livros Arsene Lupin',
-        amount: -5900,
-        date: '06/01/2021'
+
+    set(transactions){
+        localStorage.setItem('dev.finances:transactions', JSON.stringify(transactions));
     }
-]
+}
 
 // criando um objeto transação
 const Transaction = {
-    // atalho do objeto transaction
-    all: transactions,
+    // recuperando as transações
+    all: Storage.get(),
 
     // função para add uma transação
     add(transaction){
@@ -94,7 +85,8 @@ const DOM = {
     // método para adicionar uma transação
     addTransaction(transaction, index){
         const tr = document.createElement('tr')
-        tr.innerHTML = DOM.innerHTMLTransaction(transaction);
+        tr.innerHTML = DOM.innerHTMLTransaction(transaction, index);
+        tr.dataset.index = index;
 
         // adicionando a transação ao HTML
         DOM.transactionsContainer.appendChild(tr);
@@ -102,7 +94,7 @@ const DOM = {
 
 
     // método para criar o HTML de uma transação
-    innerHTMLTransaction(transaction){
+    innerHTMLTransaction(transaction, index){
         // operador ternário para descobrir se a classe do amount tem que ser expense ou income
         const CSSclass = transaction.amount < 0 ? 'expense' : 'income';
 
@@ -115,7 +107,7 @@ const DOM = {
             <td class="${CSSclass}">${amount}</td>
             <td class="date">${transaction.date}</td>
             <td>
-            <img src="./assets/minus.svg" alt="Imagem Minus">
+                <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Imagem Minus">
             </td>        
         `
         // retornando o html
@@ -239,7 +231,7 @@ const Utils = {
         const signal = Number(value) < 0 ? '-' : '';
 
         // removendo tudo o que não for números
-        value = String(value).replace(/\D/g, '');
+        // value = String(value).replace(/\D/g, '');
 
         // dividindo por 100 para fazer as casas decimais
         value = Number(value) / 100;
@@ -257,12 +249,16 @@ const Utils = {
 
 const App = {
     init() {
+
+        // Transaction.all.forEach(DOM.addTransaction);
+
         // forEach para varrer todoas as transações e criar seu HTML
-        transactions.forEach((transaction) => DOM.addTransaction(transaction));
+        Transaction.all.forEach((transaction, index) => DOM.addTransaction(transaction, index));
 
         //Atualizando os valores
         DOM.updateBalance();
-
+        
+        Storage.set(Transaction.all);
     },
 
     // método para ser chamado toda vez que eu transação for adicionada
