@@ -232,6 +232,31 @@ td.expense{
     color: #e92929;
 }
 
+.offTransaction{
+    background: #e92929;
+    color: #fff;
+    padding: .6rem 0;
+    text-align: center;
+    border-radius: .4rem;
+    display: none;
+    transition: background 2s linear;
+}
+
+.newTransaction{
+    background: #49aa26;
+    color: #fff;
+    padding: .6rem 0;
+    text-align: center;
+    border-radius: .4rem;
+    display: none;
+    transition: background 2s linear;
+}
+
+.newTransaction.active, .offTransaction.active{
+    display: block;
+    transition: background 2s linear;
+}
+
 /* End Table CSS */
 
 /* Modal CSS */
