@@ -31,13 +31,18 @@ const Storage = {
 // criando um objeto transação
 const Transaction = {
     // recuperando as transações
-    all: Storage.get(),
+    all: Storage.get(),    
 
     // função para add uma transação
     add(transaction){
+        // adicionando uma transação nova
         Transaction.all.push(transaction);
 
+        // função para atualizar a lista no front
         App.reload();
+
+        // mostrando mensagem ao add uma nova transação
+        Utils.MessageAddTransaction();
     },
 
     remove(index){
@@ -46,6 +51,9 @@ const Transaction = {
 
         // função para atualizar a lista no front
         App.reload();
+        
+        // Mostrando mensagem ao deletar uma transação
+        Utils.MessageDeleteTransaction()
     },
 
     incomes(){
@@ -100,7 +108,6 @@ const DOM = {
 
         // formantando o valor de amount
         const amount = Utils.FormatCurrency(transaction.amount);
-        console.log(amount);
         
         // criando html
         const html = `
@@ -175,6 +182,7 @@ const Form = {
 
     saveTransaction(transaction){
         Transaction.add(transaction);
+
     },
 
     clearFields(){
@@ -244,17 +252,24 @@ const Utils = {
             currency: "BRL"
         });
 
-        console.log(value);
-
         // retornando o valor final
         return signal + value;
+    },
+
+    MessageDeleteTransaction(){
+        document.querySelector('.offTransaction').classList.add('active');
+        setTimeout(() => { document.querySelector('.offTransaction').classList.remove('active')}, 5000);
+    },
+
+    MessageAddTransaction(){
+        document.querySelector('.newTransaction').classList.add('active');
+        setTimeout(() => { document.querySelector('.newTransaction').classList.remove('active')}, 5000);
     }
+    
 }
 
 const App = {
     init() {
-
-        // Transaction.all.forEach(DOM.addTransaction);
 
         // forEach para varrer todoas as transações e criar seu HTML
         Transaction.all.forEach((transaction, index) => DOM.addTransaction(transaction, index));
@@ -267,6 +282,7 @@ const App = {
 
     // método para ser chamado toda vez que eu transação for adicionada
     reload(){
+        // Ordenando os registros por ordem
         DOM.clearTransaction();
         App.init();
     }
