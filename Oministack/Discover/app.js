@@ -264,6 +264,10 @@ const Utils = {
     MessageAddTransaction(){
         document.querySelector('.newTransaction').classList.add('active');
         setTimeout(() => { document.querySelector('.newTransaction').classList.remove('active')}, 5000);
+    },
+
+    LimitDateTransaction(){
+        document.getElementById('date-transaction').setAttribute('max', new Date().toISOString().split('T')[0]);
     }
     
 }
@@ -276,7 +280,10 @@ const App = {
 
         //Atualizando os valores
         DOM.updateBalance();
-        
+
+        // limitando a data da transação para até hoje
+        Utils.LimitDateTransaction();
+
         Storage.set(Transaction.all);
     },
 
@@ -290,4 +297,6 @@ const App = {
 
 // método para preencher a tabelas e os balance
 App.init();
+
+// limitando o máximo da data para o dia de hoje
 
