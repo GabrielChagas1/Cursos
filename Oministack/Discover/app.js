@@ -100,6 +100,7 @@ const DOM = {
 
         // formantando o valor de amount
         const amount = Utils.FormatCurrency(transaction.amount);
+        console.log(amount);
         
         // criando html
         const html = `
@@ -216,8 +217,9 @@ const Form = {
 const Utils = {
     // formatando o valor que é recebido
     formatAmount(value){
-        value = Number(value.replace(/\,\./g)) * 100;
-        return value;
+        // value = Number(value.replace(/\,\./g)) * 100;
+        value = value * 100;
+        return Math.round(value);
     },
 
     // formantando a data
@@ -231,7 +233,7 @@ const Utils = {
         const signal = Number(value) < 0 ? '-' : '';
 
         // removendo tudo o que não for números
-        // value = String(value).replace(/\D/g, '');
+        value = String(value).replace(/\D/g, '');
 
         // dividindo por 100 para fazer as casas decimais
         value = Number(value) / 100;
@@ -241,6 +243,8 @@ const Utils = {
             style: "currency",
             currency: "BRL"
         });
+
+        console.log(value);
 
         // retornando o valor final
         return signal + value;
