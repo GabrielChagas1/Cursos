@@ -108,12 +108,14 @@ const DOM = {
 
         // formantando o valor de amount
         const amount = Utils.FormatCurrency(transaction.amount);
+
+        const date = Utils.formatDate(transaction.date);
         
         // criando html
         const html = `
             <td class="description">${transaction.description}</td>
             <td class="${CSSclass}">${amount}</td>
-            <td class="date">${transaction.date}</td>
+            <td class="date">${date}</td>
             <td>
                 <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Imagem Minus">
             </td>        
@@ -175,7 +177,6 @@ const Form = {
         let { description, amount, date} = Form.getValues();
 
         amount = Utils.formatAmount(amount);
-        date = Utils.formatDate(date);
         
         return { description, amount, date};
     },
@@ -268,6 +269,23 @@ const Utils = {
 
     LimitDateTransaction(){
         document.getElementById('date-transaction').setAttribute('max', new Date().toISOString().split('T')[0]);
+    },
+
+    SortTransactionList(){
+
+        Transaction.all.sort((a, b) => {
+
+            key1 = new Date(a.date).getTime();
+            key2 = new Date(b.date).getTime();
+
+            if (key1 > key2) {
+                return -1;
+            } else if (key1 == key2) {
+                return 0;
+            } else {
+                return 1;
+            }
+        });
     }
     
 }
@@ -275,7 +293,10 @@ const Utils = {
 const App = {
     init() {
 
-        // forEach para varrer todoas as transações e criar seu HTML
+        // colocando a lista de transações em ordem
+        Utils.SortTransactionList();
+
+        // forEach para varrer todos as transações e criar seu HTML
         Transaction.all.forEach((transaction, index) => DOM.addTransaction(transaction, index));
 
         //Atualizando os valores
