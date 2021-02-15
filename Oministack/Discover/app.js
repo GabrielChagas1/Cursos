@@ -290,20 +290,110 @@ const Utils = {
     
 }
 
+const Pagination = {
+
+    Pagination (page, total, limit) {
+        var pageSize = Math.ceil(total/limit);
+        
+        var _pagination = {
+            page: page,
+            total: total,
+            limit: limit,
+            pages: pageSize
+          };
+      
+        if(page > 1){
+          var prev = page-1;
+          _pagination.previous = prev;
+        }
+      
+        var remaining = total - (page * limit);
+      
+        if(remaining > 0){
+          _pagination.next = page+1;
+        }
+      
+        return _pagination;
+    },
+
+    setItemsPagination(){
+        // recuperando todas as transações
+        var array = Transaction.all;
+        
+        // recuperando a página pela url 
+        var pageQuery = this.getUrlVars()["pagina"];
+
+        // limitando para 3 transações
+        var limit = 4;
+
+        // recuperando o total das transações
+        var total = array.length;
+
+        // recuperando o valor inteiro da página, se não tiver transações para a página é retornado para o primeiro 
+        var page = parseInt(pageQuery) || 1;
+
+        // verificando se o número da url existe itens para ele, senão ele traz os produtos da página 1
+        if(parseInt(pageQuery) > Math.ceil(total/limit)) page = 1;
+
+        // recuperando valor do offset
+        var offset = (page - 1) * limit;
+        var items = array.slice(offset, offset+limit);
+
+        // chamando método pagination
+        let paginationResume = this.Pagination(page, total, limit);
+
+        // retornando items e pagination Resume
+        return {items, paginationResume}
+    },
+
+    setPagination(){
+
+        // recuperando os dados do pagination resume
+        let { paginationResume } = this.setItemsPagination();
+        
+        // criando variável para receber o html 
+        var paginationItems = '';
+
+        // se existir uma página anterior, cria o elemento
+        if(paginationResume.previous > 0) paginationItems +=`<a class="pagination__link" href="index.html?pagina=${paginationResume.previous}">Anterior</a>`;
+        
+        // se existir uma próxima página, cria o elemento
+        if(paginationResume.next > 0) paginationItems +=`<a class="pagination__link" href="index.html?pagina=${paginationResume.next}">Próximo</a>`;
+
+        // inserindo na página
+        document.getElementById('pagination').innerHTML = paginationItems;
+    },
+
+    getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+        function(m,key,value) {
+          vars[key] = value;
+        });
+        return vars;
+    }
+}
+
 const App = {
     init() {
 
         // colocando a lista de transações em ordem
         Utils.SortTransactionList();
+        
+        Pagination.setPagination();
+
+        var { items } = Pagination.setItemsPagination();
+
 
         // forEach para varrer todos as transações e criar seu HTML
-        Transaction.all.forEach((transaction, index) => DOM.addTransaction(transaction, index));
+        items.forEach((transaction, index) => DOM.addTransaction(transaction, index));
 
         //Atualizando os valores
         DOM.updateBalance();
 
         // limitando a data da transação para até hoje
         Utils.LimitDateTransaction();
+
 
         Storage.set(Transaction.all);
     },
@@ -318,6 +408,3 @@ const App = {
 
 // método para preencher a tabelas e os balance
 App.init();
-
-// limitando o máximo da data para o dia de hoje
-
