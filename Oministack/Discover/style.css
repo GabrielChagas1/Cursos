@@ -7,7 +7,22 @@
     --table-color-base: #fff;
     --background-color-header: #2d4a22;
     --background-color: #f0f2f5;
-  }
+
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --font-color-base: #f0f2f5;
+      --green: #49aa26;
+      --light-green: #555;
+      --expense-color: #e92929;
+      --light-color-base: #1f1b24;
+      --table-color-base: #121212;
+      --background-color-header: #121212;
+      --background-color: #1f1b24;
+    }
+}
 
 /* Reset CSS */
 *{
@@ -29,10 +44,10 @@ a{
     text-decoration: none;
 }
 
-/* img{
-    display: block;
-    max-width: 100%;
-} */
+.svg {
+    stroke: var(--light-color-base);
+}
+
 
 body{
     background: var(--background-color);
@@ -119,6 +134,23 @@ button:hover{
 
 
 /* Header CSS */
+
+.color-mode.button {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    color: var(--green);
+    padding: 10px 6px;
+    border: 1px solid var(--green);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+  
+  .color-mode.button:hover {
+    color: var(--light-green);
+    border: 1px solid var(--light-green);
+  }
+
 header{
     background: var(--background-color-header);
     padding: 2rem 0 8rem;
@@ -153,7 +185,8 @@ header #logo{
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
-    color: var(--dark-blue);
+    color: var(--font-color-base);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
 .card h3{
@@ -276,7 +309,7 @@ td.expense{
 .pagination a{
     display: inline-block;
     padding: .5rem 1rem;
-    margin: 0 10px;
+    margin-right: 10px;
     border-radius: .4rem;
     background: var(--green);
     color: var(--light-color-base);
