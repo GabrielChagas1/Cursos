@@ -18,6 +18,35 @@ const  Modal = {
     }
 }
 
+let COLOR_THEME = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+function switchTheme() {
+    const currentTheme = COLOR_THEME
+  
+    COLOR_THEME = currentTheme === 'light'
+      ? 'dark'
+      : 'light'
+  
+    const rules = window.document.styleSheets[1].cssRules
+  
+    for (i = 0; i < rules.length; i++) {
+      media = rules[i].media
+  
+      if (media == undefined) {
+        continue
+      }
+  
+      let item = media
+        .mediaText
+        .replace(
+          "(prefers-color-scheme: " + COLOR_THEME + ")",
+          "(prefers-color-scheme: " + currentTheme + ")"
+        )
+  
+      media.mediaText = item
+    }
+}
+
 const Storage = {
     get() {
         return JSON.parse(localStorage.getItem('dev.finances:transactions')) || []
