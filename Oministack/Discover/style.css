@@ -1,6 +1,13 @@
-:root{
-    --dark-blue: #363f5f;
-}
+:root {
+    --font-color-base: #363f5f;
+    --green: #49aa26;
+    --light-green: #3dd705;
+    --expense-color: #e92929;
+    --light-color-base: #fff;
+    --table-color-base: #fff;
+    --background-color-header: #2d4a22;
+    --background-color: #f0f2f5;
+  }
 
 /* Reset CSS */
 *{
@@ -28,7 +35,7 @@ a{
 } */
 
 body{
-    background: #f0f2f5;
+    background: var(--background-color);
     font-family: 'Poppins', sans-serif ;
 }
 
@@ -58,12 +65,12 @@ h2{
 
 /* links & Button */
 a{
-    color: #49aa26;
+    color: var(--green);
     font-size: .8rem;
 }
 
 a:hover{
-    color: #3dd705;
+    color: var(--light-green);
 }
 
 button{
@@ -71,15 +78,15 @@ button{
     height: 50px;
     border: none;
     border-radius: .25rem;
-    background: #49aa26;
-    color: #fff;
+    background: var(--green);
+    color: var(--light-color-base);
     padding: 0;
     cursor: pointer;
     transition: 1s;
 }
 
 button:hover{
-    background: #3dd705;
+    background: var(--light-green);
     transition: 1s;
 }
 
@@ -91,9 +98,9 @@ button:hover{
 .button.cancel{
     width: 100%;
     height: 50px;
-    border: 1px solid #e92929;
+    border: 1px solid var(--expense-color);
     border-radius: .25rem;
-    color: #e92929;
+    color: var(--expense-color);
     padding: 0;
     display: flex;
     align-items: center;
@@ -105,7 +112,7 @@ button:hover{
     transition: background 1s;
     background: #ed5353;
     border-color: #ed5353;
-    color: #fff;
+    color: var(--light-color-base);
 }
 
 /* End Reset CSS */
@@ -113,7 +120,7 @@ button:hover{
 
 /* Header CSS */
 header{
-    background: #2d4a22;
+    background: var(--background-color-header);
     padding: 2rem 0 8rem;
     text-align: center;
     
@@ -132,7 +139,7 @@ header #logo{
 }
 
 #balance h2{
-    color: #fff;
+    color: var(--light-color-base);
     margin-top: 0;
 }
 
@@ -142,7 +149,7 @@ header #logo{
 /* Cards CSS */
 
 .card{
-    background: #fff;
+    background: var(--light-color-base);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
@@ -164,8 +171,8 @@ header #logo{
 }
 
 .card.total{
-    background: #49aa26;
-    color: #fff;
+    background: var(--green);
+    color: var(--light-color-base);
 }
 
 /* End Cards CSS */
@@ -199,7 +206,7 @@ table tbody tr td:last-child{
 
 
 table thead th{
-    background: #fff;
+    background: var(--table-color-base);
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: left;
@@ -215,7 +222,7 @@ table tbody tr:hover{
 }
 
 table tbody td{
-    background: #fff;
+    background: var(--table-color-base);
     padding: 1rem 2rem;
     font-size: .8rem;
 }
@@ -229,12 +236,12 @@ td.income{
 }
 
 td.expense{
-    color: #e92929;
+    color: var(--expense-color);
 }
 
 .offTransaction{
-    background: #e92929;
-    color: #fff;
+    background: var(--expense-color);
+    color: var(--light-color-base);
     padding: .6rem 0;
     text-align: center;
     border-radius: .4rem;
@@ -243,8 +250,8 @@ td.expense{
 }
 
 .newTransaction{
-    background: #49aa26;
-    color: #fff;
+    background: var(--green);
+    color: var(--light-color-base);
     padding: .6rem 0;
     text-align: center;
     border-radius: .4rem;
@@ -271,8 +278,8 @@ td.expense{
     padding: .5rem 1rem;
     margin: 0 10px;
     border-radius: .4rem;
-    background: #49aa26;
-    color: #fff;
+    background: var(--green);
+    color: var(--light-color-base);
 }
 /* End Pagination CSS */
 
@@ -301,7 +308,7 @@ td.expense{
     }
 
     .modal{
-        background: #f0f2f5;
+        background: var(--background-color);
         padding: 2.4rem;
         border-radius: 0.26rem;
         width: min(90vw, 600px);
