@@ -18,9 +18,12 @@ const  Modal = {
     }
 }
 
-let COLOR_THEME = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+let COLOR_THEME = window.matchMedia('(prefers-color-scheme: light)')
+  .matches
+  ? 'light'
+  : 'dark'
 
-function switchTheme() {
+  function switchTheme() {
     const currentTheme = COLOR_THEME
   
     COLOR_THEME = currentTheme === 'light'
@@ -45,7 +48,7 @@ function switchTheme() {
   
       media.mediaText = item
     }
-}
+  }
 
 const Storage = {
     get() {
