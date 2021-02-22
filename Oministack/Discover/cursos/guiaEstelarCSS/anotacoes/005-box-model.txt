@@ -1,0 +1,11 @@
+aula{
+    
+    #Tudo no Css deve ser pensado em caixas.
+
+    #As caixas possuem extremidades, espaçamentos externos e internos
+
+    # Elementos HTML são caixas
+
+    #Caixas possuem posicionamentos, tamanhos, espaçamento, bordas, cores 
+
+}

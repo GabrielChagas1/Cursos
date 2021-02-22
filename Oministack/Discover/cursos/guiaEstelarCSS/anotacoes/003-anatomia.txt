@@ -1,0 +1,16 @@
+aula{
+    
+    h1{
+        color: blue;
+        font-size: 2rem;
+        background: gray;
+    }
+
+    #Selector -> tag html que você deseja estilizar
+    #Declaration -> tudo oq tiver entre as chaves
+    #Properties -> propriedades que vão estilizar -> color, font-size, background.
+    #Properties Values -> valores que vão dentro das propriedades -> color: tomato.
+
+    
+
+}

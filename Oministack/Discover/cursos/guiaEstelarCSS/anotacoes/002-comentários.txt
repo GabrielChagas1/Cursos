@@ -1,0 +1,10 @@
+aula{
+    .Não irá afetar o seu Código
+    .Ajuda a lembrar blocos de código
+    .Deixa dicas para leitura
+    .Ajuda outros a entenderem
+    .Nunca esqueça de fechar um comentário
+
+    /* comentário */ -> sitaxe do comentário
+
+}
