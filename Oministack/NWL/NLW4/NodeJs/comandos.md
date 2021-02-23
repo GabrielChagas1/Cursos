@@ -22,3 +22,7 @@
 * yarn add sqlite3 => banco de dados que vamos usar no projeto, mas poderia ser qualquer outro.
 
 *beekeeper -> ide para o banco de dados.
+
+* uuid -> yarn add uuid -> biblioteca usada para controlar os ids das tabelas
+ 
+* types do uuid -> yarn add @types/uuid
