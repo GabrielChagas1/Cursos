@@ -20,3 +20,5 @@
 * yarn add typeorm reflect-metadata => framework para fazer o mapeamento objeto-relacional da nossa base de dados
 
 * yarn add sqlite3 => banco de dados que vamos usar no projeto, mas poderia ser qualquer outro.
+
+*beekeeper -> ide para o banco de dados.
