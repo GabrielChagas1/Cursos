@@ -1,29 +1,15 @@
 import 'reflect-metadata';
 import express from 'express';
 import './database';
+import { router } from './routes';
 
 const app = express();
 
-/* 
-GET => Busca
-POST => Salvar
-PUT => Alterar
-DELETE => Deletar
-PATCH => alteração específica
-*/
+// habilitando o nosso projeto a trabalhar com json
+app.use(express.json());
 
-/*
-    1 param => Rota(Recurso API)
-    2 param => Request, response (req, res)
-*/
+// usando as routas que estão dentro do arquivo de routes
+app.use(router)
 
-// criando uma rota de get
-app.get('/', (req, res) =>{
-    return res.json({message: 'Hello World - NLW#04'});
-});
-
-app.post('/', (req, res) =>{
-    return res.json({message: 'Os dados foram salvos com sucesso!'});
-});
-
+// abrindo uma conexão para o servidor.
 app.listen(3333, () => console.log("Server is running!"));
