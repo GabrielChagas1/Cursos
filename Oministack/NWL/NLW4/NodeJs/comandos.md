@@ -12,3 +12,11 @@
 * yarn add typescript -D => adicionando o typescript ao nosso projeto.
 * yarn tsc --init => inicializando o typescript no nosso projeto.
 * yarn add ts-node-dev -D => comando para converter o código em typescript em tempo de execução
+
+# 3º Comando - BD
+
+* instalando bibliotecas
+
+* yarn add typeorm reflect-metadata => framework para fazer o mapeamento objeto-relacional da nossa base de dados
+
+* yarn add sqlite3 => banco de dados que vamos usar no projeto, mas poderia ser qualquer outro.
