@@ -10,3 +10,10 @@
 ### Typescript
 
 * Typescript superset do javascript, o que significa dizer que é um javascript com algumas features a mais.
+
+
+* GET => Buscar
+* POST => Salvar
+* PUT => Alterar
+* Delete => Deletar
+* Patch => Alteração específica
