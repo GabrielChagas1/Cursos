@@ -27,7 +27,7 @@ class UserController{
         await usersRespository.save(user);
 
         // retornando em json o usuário cadastrado.
-        return res.json(user);
+        return res.status(201).json(user);
 
     }
 }
