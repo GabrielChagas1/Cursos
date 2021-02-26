@@ -35,7 +35,7 @@
     border-left: 1px solid var(--gray-line);
 }
 
-.startCountdownButton{
+.countdownButton{
     width: 100%;
     height: 5rem;
     background: var(--blue);
@@ -49,6 +49,27 @@
     transition: background-color 0.2s;
 }
 
-.startCountdownButton:hover{
+.countdownButton > img{
+    margin-left: .5rem;
+}
+
+.countdownButton:disabled{
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+    border-bottom: 3px solid var(--green);
+}
+
+.countdownButton:not(:disabled):hover{
     background: var(--blue-dark);
+}
+
+.countdownButtonActive{
+    background: var(--white);
+    color: var(--title);
+}
+
+.countdownButtonActive:not(:disabled):hover{
+    background: var(--red);
+    color: var(--white);
 }
