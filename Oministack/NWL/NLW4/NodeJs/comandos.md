@@ -35,3 +35,8 @@
 
 **- Instale o pacote cross-env (https://www.npmjs.com/package/cross-env) para lidar com as variáveis ambiente, o comando é: yarn add cross-env -D ou npm install cross-env -D
 **- Altere o script "test" no arquivo package.json para o seguinte: "test": "cross-env NODE_ENV=test jest"
+
+
+* yarn add nodemailer && yarn add @types/nodemailer -> https://ethereal.email/
+
+* yarn add handlebars -> criar template do e-mail
