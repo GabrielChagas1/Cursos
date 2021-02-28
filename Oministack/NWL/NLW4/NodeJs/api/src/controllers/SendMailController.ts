@@ -5,6 +5,7 @@ import { UsersRespository } from "../repositories/UsersRespository";
 import { SurveysRespository } from "../repositories/SurveysRespository";
 import { SurveysUsersRespository } from "../repositories/SurveysUsersRespository";
 import SendMailService from '../services/SendMailService';
+import { appError } from '../errors/appError';
 
 
 class SendMailController{
@@ -17,18 +18,24 @@ class SendMailController{
         // verificando se o user existe, senão ele retorna um erro
         const user = await usersRespository.findOne({ email });
         if(!user){
-            return res.status(400).json({
-                error: 'User does not exists',
-            });
+            throw new appError("User does not exist");
         }
             
         // verificando se o survey existe, senão ele retorna um erro   
         const survey = await surveysRespository.findOne({ id: survey_id });
         if(!survey){
-            return res.status(400).json({
-                error: 'Survey does not exists',
-            });
+            throw new appError("Survey does not exist");
         }
+
+    
+        // recuperando o local que o meu handlebars está
+        let npsPath = resolve(__dirname, "../", "views", "emails", "npsMail.hbs");
+
+        // validando se já existe um cadastro com esse e-mail e id
+        const surveyUserAlreadyExists = await surveysUsersRespository.findOne({ 
+            where: {user_id: user.id, value: null},
+            relations: ["user", "survey"]
+        });
 
         //criando um objeto com diversos valores
         const variables = {
@@ -36,20 +43,12 @@ class SendMailController{
             title: survey.title,
             description: survey.description,
             link: process.env.URL_MAIL,
-            user_id: user.id
+            id: ""
         }
-
-        // recuperando o local que o meu handlebars está
-        let npsPath = resolve(__dirname, "../", "views", "emails", "npsMail.hbs");
-
-        // validando se já existe um cadastro com esse e-mail e id
-        const surveyUserAlreadyExists = await surveysUsersRespository.findOne({ 
-            where: [{user_id: user.id}, {value: null}],
-            relations: ["user", "survey"]
-        });
 
         // se já existir um usuário cadastrado ele dispara um e-mail
         if(surveyUserAlreadyExists){
+            variables.id = surveyUserAlreadyExists.id
             await SendMailService.execute(email, survey.title, variables, npsPath);
             return res.json(surveyUserAlreadyExists);
         }
@@ -62,7 +61,7 @@ class SendMailController{
 
         await surveysUsersRespository.save(surveyUser);
 
-         
+         variables.id = surveyUser.id;
 
         // chamando o métod execute da nossa classe sendMailService
         await SendMailService.execute(email, survey.title ,variables, npsPath);
