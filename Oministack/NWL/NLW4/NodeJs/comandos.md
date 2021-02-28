@@ -40,3 +40,7 @@
 * yarn add nodemailer && yarn add @types/nodemailer -> https://ethereal.email/
 
 * yarn add handlebars -> criar template do e-mail
+
+* yarn add yup -> yup é uma biblioteca de validação
+
+* "posttest": "rm ./src/database/database.test.sqlite" -> comando para remover o nosso banco de teste
