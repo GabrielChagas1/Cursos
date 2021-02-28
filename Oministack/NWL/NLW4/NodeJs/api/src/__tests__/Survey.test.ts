@@ -2,6 +2,8 @@ import request from 'supertest';
 import { app } from '../app';
 
 import createConnection from '../database'
+import connection from '../../../../../NLW1/NLW#1 Booster/server/src/database/connection';
+import { getConnection } from 'typeorm';
 
 describe("Surveys", () => {
 
@@ -9,6 +11,12 @@ describe("Surveys", () => {
         const connection = await createConnection();
         await connection.runMigrations(); 
     });
+
+    afterAll(async () => {
+        const connection = getConnection();
+        await connection.dropDatabase();
+        await connection.close();
+    })
 
     it("Should be able to create a new survey", async () => {
         const response = await request(app).post('/surveys').send({
