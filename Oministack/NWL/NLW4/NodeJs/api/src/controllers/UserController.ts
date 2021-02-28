@@ -1,10 +1,27 @@
 import { Request, Response } from "express";
 import { getCustomRepository } from "typeorm";
 import { UsersRespository } from "../repositories/UsersRespository";
+import { appError } from "../errors/appError";
+import * as yup from 'yup';
 
 class UserController{
     async create(req: Request, res: Response){
         const {name, email} = req.body;
+
+        // criando o schema do objeto
+        const schema = yup.object().shape({
+            name: yup.string().required("Nome é obrigatório"),
+            email: yup.string().email("Formato de email inválido").required("Email é obrigatório")
+        });
+
+        // validando nosso schema
+        try {
+            await schema.validate(req.body, { abortEarly: false });
+        } catch (err) {
+            return res.status(400).json({error: err })
+        }
+
+
 
         // criando um repositório de um usuário
         const usersRespository = getCustomRepository(UsersRespository);
@@ -14,9 +31,7 @@ class UserController{
 
         // se já existir, ele retorna uma mensagem de erro.
         if(userAlreadyExists)
-            return res.status(400).json({
-                error: "User already exists"
-            });
+            throw new appError("User already exists")
         
         //se não exisitr ele cria um novo usuário passando o nome e email 
         const user = usersRespository.create({
