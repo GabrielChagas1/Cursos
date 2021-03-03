@@ -1,4 +1,4 @@
-import {createContext, ReactNode, useState} from 'react';
+import { createContext, ReactNode, useState, useEffect } from 'react';
 
 import challenges from  '../../challenges.json'; 
 import { CompletedChallenges } from '../components/CompletedChallenges';
@@ -38,7 +38,12 @@ export function ChallengesProvider({ children }: ChallengesProviderProps){
     const [challengesCompleted, setchallengesCompleted] = useState(0);
     const [activeChallenge, setActiveChallenge] = useState(null);
 
-    const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
+    const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
+
+    // sempre o segundo parametro for um array vazio a função vai ser executada apenas uma vez
+    useEffect(() => {
+        Notification.requestPermission();
+    },[])
 
     // function para subir o level do usuário
     function levelUp(){
@@ -50,6 +55,14 @@ export function ChallengesProvider({ children }: ChallengesProviderProps){
         const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
         const challenge = challenges[randomChallengeIndex];
         setActiveChallenge(challenge);
+
+        new Audio('/notification.mp3').play();
+
+        if(Notification.permission === 'granted'){
+            new Notification('Novo desafio 🎉', {
+                body: `Valendo ${challenge.amount}xp!`
+            })
+        }
     }   
 
     // função para resertar o challenge
