@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-curso",
+  "version": "1.0.0",
+  "description": "meu projeto bacana",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js",
+    "start:dev": "cross-env NODE_ENV=development node index.js"
+  },
+  "author": "Gabriel Chagas",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
