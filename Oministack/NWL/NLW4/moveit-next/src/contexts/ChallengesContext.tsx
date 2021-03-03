@@ -1,6 +1,7 @@
 import {createContext, ReactNode, useState} from 'react';
 
 import challenges from  '../../challenges.json'; 
+import { CompletedChallenges } from '../components/CompletedChallenges';
 
 interface ChallengesProviderProps{
     children: ReactNode
@@ -23,6 +24,7 @@ interface ChallengesContextData{
     levelUp: () => void;
     startNewChallenge: () => void;
     resetChallenge: () => void;
+    completedChallenge: () => void;
 }
 
 // exportando o context para recuperar valores de outros componentes
@@ -55,6 +57,24 @@ export function ChallengesProvider({ children }: ChallengesProviderProps){
         setActiveChallenge(null);
     }
 
+    // função para quando um challenge for completado
+    function completedChallenge(){
+        if(!activeChallenge) return
+
+        const {amount} = activeChallenge;
+
+        let finalExperience = currentExperience + amount;
+
+        if(finalExperience >= experienceToNextLevel){
+            finalExperience = finalExperience - experienceToNextLevel;
+            levelUp();
+        }
+
+        setCurrentExperience(finalExperience);
+        setActiveChallenge(null);
+        setchallengesCompleted(challengesCompleted + 1);
+    }
+
 
     // retornandos as variáveis para outros components terem acessos.
     return (
@@ -67,7 +87,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps){
             startNewChallenge,
             activeChallenge,
             resetChallenge,
-            experienceToNextLevel
+            experienceToNextLevel,
+            completedChallenge
             }}>
             {children}
         </ChallengesContext.Provider> 
