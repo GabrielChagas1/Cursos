@@ -13,8 +13,8 @@ let scrape = async () => {
     // varrendo todos os elementos que tenha a classe thing
     document.querySelectorAll('.thing').forEach((score) =>{
 
-      // verificando se o score da thread é maior ou igual a  1000
-      if(score.getAttribute('data-score') >= 1000){
+      // verificando se o score da thread é maior ou igual a  5000
+      if(score.getAttribute('data-score') >= 5000){
         // add a constante scores os seguintes dados
         scores.push({
           // recuperando o score
