@@ -1,0 +1,9 @@
+Documentar o projeto => fazer um readme (tecnologias, como rodar o projeto, funcionalidades, prints da aplicação)
+
+Melhorar a estilização da aplicação de
+
+Adicionar uma versão com PWA (next PWA)
+
+Criar um tema Dark
+
+pesquisar => oauth github next => serveless com ReactJs e Next.Js
