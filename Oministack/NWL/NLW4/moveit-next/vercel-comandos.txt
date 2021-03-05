@@ -1,0 +1,3 @@
+criar um ambiente de teste => vercel
+
+subir modificações para produção => vercel --prod
