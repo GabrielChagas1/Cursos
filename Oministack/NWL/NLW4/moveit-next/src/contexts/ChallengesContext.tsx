@@ -1,6 +1,9 @@
 import { createContext, ReactNode, useState, useEffect } from 'react';
 
 import Cookies from 'js-cookie';
+import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
+
 
 import challenges from  '../../challenges.json'; 
 import { CompletedChallenges } from '../components/CompletedChallenges';
@@ -43,6 +46,8 @@ export function ChallengesProvider({
     children,
     ...rest
  }: ChallengesProviderProps){
+
+    const {width, height} = useWindowSize();
     
     const [level, setLevel] = useState(rest.level ?? 1);
     const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0); 
@@ -69,7 +74,8 @@ export function ChallengesProvider({
     // function para subir o level do usuário
     function levelUp(){
         setLevel(level + 1 );
-        setIsLevelUpModalOpen(true)
+        setIsLevelUpModalOpen(true);
+        new Audio('/levelup.mp3').play();
     }
 
     // function para fechar o modalità
@@ -132,7 +138,12 @@ export function ChallengesProvider({
             closeLevelUpModal
         }}>
             {children}
-            { isLevelUpModalOpen && <LevelUpModal />}
+            { isLevelUpModalOpen && (
+                <>
+                    <Confetti width={width - 70} height={height} />
+                    <LevelUpModal />
+                </>
+            )}
         </ChallengesContext.Provider> 
     )
 }
