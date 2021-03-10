@@ -1,0 +1,57 @@
+@import url('./reset.css');
+
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header__alert{
+    background: var(--bg-primary);
+    color: var(--text-white);
+    padding: 7px 30px;
+    font-size: .8rem;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.header__nav {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-header);
+    color: var(--text-white);
+}
+
+.header__nav ul{
+    display: flex;
+}
+
+.header__nav ul li{
+    padding: 5px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-family: 'Nunito';
+}
+
+.header__nav li a{
+    color: currentColor;
+}
+
+.header__nav li a:hover{
+    color: var(--color-danger);
+    transition: 0.5s;
+}
+
+.header__nav ul li:not(:first-child){
+    list-style: circle;  
+}
+
+.header__nav ul li:last-child{
+    border-bottom: 2px solid var(--color-danger);
+}
+
+/* MAIN */
