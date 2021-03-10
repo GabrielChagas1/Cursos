@@ -55,3 +55,56 @@
 }
 
 /* MAIN */
+
+.main{
+    background: url('../assets/fotos/seth-doyle-151914.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    padding: 0 30px 50px;
+    color: var(--text-white);
+    display: flex;
+    align-items: flex-end;
+}
+
+.main__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__content h1{
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+
+.main__content form{
+    display: flex;
+    width: 450px;
+}
+
+.main__content form input{
+    flex: 2;
+    border-radius: 4px 0 0 4px;
+    padding: 12px 10px;
+    border: 0;
+}
+
+.main__content form input::placeholder{
+    font-size: .8rem;
+    color: var(--color-text);
+    font-family: 'Nunito';
+    font-weight: 700;
+}
+
+.main__content form button{
+    flex: 1;
+    background: var(--color-danger);
+    border: 0;
+    color: var(--text-white);
+    text-transform: uppercase;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
