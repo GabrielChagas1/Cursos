@@ -1,5 +1,10 @@
 :root{
     --bg-primary: #1188ee;
+    --bg-header: #17222d;
+    --color-danger: #EE2211;
+    --color-text: #BBCCDD;
+    --text-white: #fff;
+    --text-black: #000
 }
 
 *{
