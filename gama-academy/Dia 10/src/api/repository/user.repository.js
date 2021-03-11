@@ -20,4 +20,20 @@ const save = async (user) => {
     })
 }
 
-module.exports = { save }
+const findOne = async (username) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+
+           
+            const sqlStatement = `SELECT * FROM users WHERE username=${username};`            
+            const result = await database.execute(sqlStatement)
+
+            resolve(result)
+        } catch (error) {
+            console.error(error)
+            reject(error)      
+        }
+    })
+}
+
+module.exports = { save, findOne }
