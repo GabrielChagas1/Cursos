@@ -6,8 +6,11 @@ const createAccount = async (newUser) => {
 
 
     //TODO: Verficar se usuario já existe
-    const result = await repository.save(newUser)
-    return result
+    const user = await repository.findOne(newUser.username);
+
+    if(!user)
+        const result = await repository.save(newUser)
+        return result;
 
 }
 
