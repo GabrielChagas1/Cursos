@@ -3,13 +3,16 @@ require('./configs/env')
 
 const routes = require('./routes')
 
-const server = () => {
+const swagger = require('./configs/swagger')
+
+const server = async () => {
 
     const hapiServer = Hapi.server({
-        port: process.env.PORT || 3000,
+        port: process.env.PORT || 3333,
         host: process.env.HOST || 'localhost'
     })
 
+    await hapiServer.register(swagger)
     hapiServer.route(routes)
 
     return hapiServer
