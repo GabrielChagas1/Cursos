@@ -20,12 +20,10 @@ const save = async (user) => {
     })
 }
 
-const findOne = async (username) => {
+const find = async (username) => {
     return new Promise(async (resolve, reject) => {
         try {
-
-           
-            const sqlStatement = `SELECT * FROM users WHERE username=${username};`            
+            const sqlStatement = `SELECT * FROM users WHERE username="${username}";`            
             const result = await database.execute(sqlStatement)
 
             resolve(result)
@@ -36,4 +34,4 @@ const findOne = async (username) => {
     })
 }
 
-module.exports = { save, findOne }
+module.exports = { save, find }
