@@ -7,7 +7,7 @@
 }
 
 .header__alert{
-    background: var(--bg-primary);
+    background: var(--color-primary);
     color: var(--text-white);
     padding: 7px 30px;
     font-size: .8rem;
@@ -170,7 +170,7 @@
     display: inline-block;
     height: 2px;
     width: 10px;
-    background: var(--bg-primary);
+    background: var(--color-primary);
     margin-right: 5px;
     vertical-align: middle;
    
@@ -178,4 +178,10 @@
 
 .information{
     font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 74px
+}
+
+.information span{
+    color: var(--color-primary);
 }
