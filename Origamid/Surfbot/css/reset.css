@@ -2,8 +2,9 @@
     --bg-header: #17222d;
     --color-primary: #1188ee;
     --color-danger: #EE2211;
-    --color-primary-text: #445566
+    --color-primary-text: #445566;
     --color-text: #BBCCDD;
+    --color-border: #EFF4F9;
     --text-white: #fff;
     --text-black: #000
 }
