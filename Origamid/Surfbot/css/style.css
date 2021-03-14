@@ -8,7 +8,7 @@
 
 .header__alert{
     background: var(--color-primary);
-    color: var(--text-white);
+    color: var(--color-white);
     padding: 7px 30px;
     font-size: .8rem;
     line-height: 19px;
@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     background: var(--bg-header);
-    color: var(--text-white);
+    color: var(--color-white);
 }
 
 .header__nav ul{
@@ -62,7 +62,7 @@
     background-size: cover;
     background-position: center;
     padding: 0 30px 50px;
-    color: var(--text-white);
+    color: var(--color-white);
     display: flex;
     align-items: flex-end;
 }
@@ -102,7 +102,7 @@
     flex: 1;
     background: var(--color-danger);
     border: 0;
-    color: var(--text-white);
+    color: var(--color-white);
     text-transform: uppercase;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
