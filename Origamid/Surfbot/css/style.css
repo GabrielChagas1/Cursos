@@ -345,3 +345,28 @@
     border-bottom: 2px solid var(--color-danger);
 }
 
+/* BANNER */
+
+.banner{
+    background: url('../assets/foto-quote.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.banner blockquote{
+    color: var(--color-white);
+    font-family: 'Alice';
+    max-width: 640px;
+    text-align: center;
+}
+
+.banner blockquote p{
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
