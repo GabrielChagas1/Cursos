@@ -326,3 +326,22 @@
 .card__content button:hover{
     background: var(--color-primary);
 }
+
+.card__content--call{
+    text-align: center;
+    margin-top: 60px;
+    line-height: 30px;
+    font-family: 'Nunito';
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.card__content--call span:first-child{
+    color: var(--color-danger);
+    font-weight: bold;
+}
+
+.card__content--call span:last-child{
+    border-bottom: 2px solid var(--color-danger);
+}
+
