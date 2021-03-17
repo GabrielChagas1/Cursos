@@ -449,3 +449,60 @@
 .contato__content form button:hover{
     background: var(--color-primary);
 }
+
+.informacoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacoes__content{
+    flex: 2;
+}
+
+.informacoes__content > div:not(:last-child){
+    border-bottom: 2px solid var(--color-border);
+    max-width: 370px;
+}
+
+.informacoes__content > div{
+    padding-bottom: 15px;
+}
+
+.informacoes__content >  div:last-child p:first-child:before{
+    display: inline-block;
+    content: '';
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    border: 2px solid var(--color-success);
+    background: transparent;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+
+.informacoes__content > div p{
+    font-family: 'Nunito';
+    font-size: .875rem;
+    color: var(--color-primary-text);
+    line-height: 21px;
+}
+
+.informacoes__content > div p.mapa{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.informacoes__content > div p.mapa span{
+    padding-left: 9px;
+}
+
+
+.informacoes__content > div p:first-child{
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+
