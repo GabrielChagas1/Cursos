@@ -506,3 +506,21 @@
 }
 
 
+/* Footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 25px 30px;
+}
+
+footer p{
+    font-family: 'Nunito';
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* TODO: arrumar todos os elementos que tem flexbox */
