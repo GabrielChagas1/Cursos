@@ -375,3 +375,77 @@
     font-weight: 400;
     margin-bottom: 20px;
 }
+
+/* Contato */
+
+.contato{
+    margin: 30px 0;
+}
+
+.contato h2{
+    font-family: 'Alice';
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contato__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 30px;
+}
+
+.contato__content form .input-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 470px;
+    margin: 15px 0;
+}
+
+.contato__content form .input-group label{
+    font-family: 'Nunito';
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.contato__content form .input-group input, .input-group textarea{
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--color-border);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.input-group input{
+    height: 50px;
+
+}
+
+.contato__content form .input-group input[type]:focus, .input-group textarea{
+   outline-color: var(--color-primary);
+
+}
+
+.contato__content form button{
+    border: 0;
+    color: var(--color-white);
+    background: var(--color-primary-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 230px;
+    height: 50px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 1.125rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 2s;
+}
+
+.contato__content form button:hover{
+    background: var(--color-primary);
+}
