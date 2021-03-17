@@ -106,6 +106,11 @@
     text-transform: uppercase;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    font-weight: 700;
+    font-family: 'Nunito';
+    display: flex;
+    justify-content: space-evenly   ;
+    align-items: center;
 }
 
 /* Beach */
