@@ -35,9 +35,63 @@ body{
     left: 40%;
 }
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.card{
+    width: 500px;
+    height: 300px;
+    border-radius: 14px;
+    background: #f0841d;
+    padding: 20px 40px;
+    box-shadow: 0 15px 35px rgb(0 0 0 / 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.card .correntista{
+    text-align: right;
+    color: #eeeaf0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .875rem;
+}
+
+.card .banco{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+}
+
+.card .banco::after{
+    position: absolute;
+    right: 40px;
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #f6433f;
+    border-radius: 50%;
+    opacity: .7;
+}
+
+.card .banco::before{
+    position: absolute;
+    right: 0px;
+    content: '' ;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #ffb752;
+    border-radius: 50%;
+    opacity: .8;
+}
+
+.card img{
+    max-width: 54px;
+    filter: invert(90%);
+}
+
 }
 
 ul {
