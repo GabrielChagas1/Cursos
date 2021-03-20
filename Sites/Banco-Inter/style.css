@@ -94,7 +94,7 @@ body{
     display: inline-block;
     width: 60px;
     height: 60px;
-    background: var(--color-secondary);
+    background: var(--color-yellow);
     border-radius: 50%;
     opacity: .8;
 }
@@ -189,7 +189,7 @@ body{
 }
 
 .typesCards .gold{
-    background: var(--color-primary);
+    background: #F0841D;
 }
 
 .typesCards .platinum{
@@ -198,4 +198,8 @@ body{
 
 .typesCards .black{
     background: #282929;
+}
+
+.typesCards .business{
+    background: #027a75;
 }
