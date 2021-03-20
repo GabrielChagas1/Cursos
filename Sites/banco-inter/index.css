@@ -92,6 +92,17 @@ body{
     filter: invert(90%);
 }
 
+@keyframes anim{
+    0%{
+        border-top: 2px solid #fff
+    }
+    70%{
+        border-top: 2px solid #fff
+    }
+    100%{
+        border-top: 2px solid #F0841D
+    }
+}
 }
 
 ul {
