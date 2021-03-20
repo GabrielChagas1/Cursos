@@ -90,7 +90,7 @@ body{
 
 .card img{
     max-width: 54px;
-    filter: invert(90%);
+    filter: grayscale(1)
 }
 
 .chip{
