@@ -30,7 +30,7 @@ body{
     background: var(--color-gray);
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -42,7 +42,7 @@ body{
     position: absolute;
     border-radius: 50%;
     bottom: -40%;
-    left: 40%;
+    left: 55%;
 }
 
 .card{
@@ -170,4 +170,30 @@ body{
     right: 15px;
     bottom: 15px;
     animation-delay: .1s;
+}
+
+.typesCards p{
+    margin-bottom: 15px;
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .75);
+}
+
+.typesCards p:hover{
+    box-shadow: none;
+}
+
+.typesCards .gold{
+    background: var(--color-primary);
+}
+
+.typesCards .platinum{
+    background: #989ca1;
+}
+
+.typesCards .black{
+    background: #282929;
 }
