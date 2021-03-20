@@ -1,4 +1,27 @@
-*{
+body{
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
+}
+
+.container{
+    background: #eeeaf0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before{
+    content: '';
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(#ffc048, #F0841D);
+    position: absolute;
+    border-radius: 50%;
+    bottom: -40%;
+    left: 40%;
+}
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
