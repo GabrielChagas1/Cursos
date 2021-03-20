@@ -5,6 +5,7 @@
     --color-red: #f6433f;
     --color-yellow: #ffb752;
     --color-gray: #eeeaf0;
+    --animate-right: translateX(20px);
 }
 
 *{
@@ -183,7 +184,8 @@ body{
 }
 
 .typesCards p:hover{
-    box-shadow: none;
+    transform: var(--animate-right);
+    transition: all 1s;
 }
 
 .typesCards .gold{
