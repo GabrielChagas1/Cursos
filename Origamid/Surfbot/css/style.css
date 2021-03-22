@@ -419,9 +419,13 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
+.input-group textarea{
+    resize: none;
+}
+
 .input-group input{
     height: 50px;
-
+    
 }
 
 .contato__content form .input-group input[type]:focus, .input-group textarea{
@@ -540,6 +544,10 @@ footer p{
         margin-top: 15px;
     }
 
+    .header__nav ul li{
+        padding: 5px 0;
+    }
+
     .beach{
         grid-template-columns: 1fr;
     }
@@ -568,3 +576,53 @@ footer p{
         margin-top: 30px;
     }
 }
+
+@media(max-width: 420px){
+
+    .header__nav{
+        justify-content: center;
+    }
+
+
+    .contato__content form .input-group{
+        max-width: 300px;
+    }
+
+    .contato__content form .input-group textarea{
+        max-width: 100%;
+    }
+
+    .contato__content form button{
+        width: 300px;
+    }
+
+
+    .informacoes img{
+        display: none;
+    }
+
+    footer{
+        padding: 15px;
+        justify-content: center;
+    }
+
+    footer img{
+        margin: 30px 0;
+    }
+    
+}
+
+@media(max-width: 320px){
+    .contato__content form .input-group{
+        max-width: 250px;
+    }
+
+    .contato__content form .input-group textarea{
+        max-width: 100%;
+    }
+
+    .contato__content form button{
+        width: 250px;
+    }
+}
+
