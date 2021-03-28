@@ -1,5 +1,6 @@
 #page-profile .page-header ~ .container {
   display: flex;
+  margin-bottom: 60px;
 }
 
 aside.card {
