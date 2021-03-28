@@ -1,9 +1,19 @@
 const express = require('express');
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-  return res.sendFile(`${__dirname}/views/index.html`)
-});
+const basePath = `${__dirname}/views`;
+
+// route para a página de index
+routes.get('/', (req, res) => res.sendFile(`${basePath}/index.html`));
+
+// route para a página job
+routes.get('/job', (req, res) => res.sendFile(`${basePath}/job.html`));
+
+// route para a página de job-edit
+routes.get('/job/edit', (req, res) => res.sendFile(`${basePath}/job-edit.html`));
+
+// route para a página de profile
+routes.get('/profile', (req, res) => res.sendFile(`${basePath}/profile.html`));
 
 
 // devolvendo para fora alguma propriedades
