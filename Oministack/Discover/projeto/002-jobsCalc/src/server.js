@@ -8,6 +8,9 @@ server.set('view engine', 'ejs');
 //middleware para configurar a rota dos meu arquivos estáticos (fotos, scripts, styles)
 server.use(express.static('public'));
 
+// habilitando nosso body das requisições serem em json
+server.use(express.urlencoded({ extended: true }));
+
 // utilizando as rotas criadas
 server.use(routes);
 
