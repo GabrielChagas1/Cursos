@@ -49,8 +49,6 @@ const Profile = {
         'value-hour': valueHour
       }
 
-      console.log(Profile.data);
-
       return res.redirect('/profile');
 
     }
@@ -101,11 +99,11 @@ const Job = {
 
     save(req, res){
       // recuperando o id do último elemento dentro de jobs
-      let lastId = Job.data[Job.data.length - 1]?.id || 1;
+      let lastId = Job.data[Job.data.length - 1]?.id || 0;
     
       //dando um push para dentro do objeto jobs 
-      Profile.data.push({
-        id: lastId++,
+      Job.data.push({
+        id: ++lastId,
         name: req.body.name,
         'daily-hours': req.body['daily-hours'],
         'total-hours': req.body['total-hours'],
@@ -122,16 +120,21 @@ const Job = {
 
     show(req, res) {
 
+      // recuperando o id passado como parametro
       const jobId = req.params.id;
       
+      // recuperando o job, pelo id recebido
       const job = Job.data.find(job => Number(job.id) === Number(jobId) );
 
+      // se o id for inválido ou não existir, ele retorna um erro
       if(!job){
         return res.send('Job not found!');
       }
 
+      // recuperando o valor do projeto
       job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"]);
 
+      // renderizando a página de job-edit
       res.render(`${views}job-edit`, { job })
     },
 
@@ -220,8 +223,11 @@ routes.post('/job', Job.controllers.save);
 // route para a página de job-edit
 routes.get('/job/:id', Job.controllers.show);
 
-// route para editar um jo
+// route para editar um job
 routes.post('/job/:id', Job.controllers.update);
+
+// route para deletar um job
+routes.post('/job/delete/:id', Job.controllers.delete);
 
 // route para a página de profile
 routes.get('/profile', Profile.controllers.index);
