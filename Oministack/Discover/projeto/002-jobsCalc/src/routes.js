@@ -93,7 +93,7 @@ const Job = {
           ...job,
           remaining,
           status,
-          budget: Profile.data["value-hour"] * job["total-hours"]
+          budget: Job.services.calculateBudget(job, Profile.data["value-hour"])
         };
       });
       res.render(`${views}index`, { jobs: updatedJobs });
