@@ -133,6 +133,41 @@ const Job = {
       job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"]);
 
       res.render(`${views}job-edit`, { job })
+    },
+
+    update(req, res){
+      // recuperando o id do job para editar
+      const jobId = req.params.id;
+
+      // recuperando o job que corresponde ao id recebido
+      const job = Job.data.find(job => Number(job.id) === Number(jobId));
+
+      // se o job não for encontrado é enviado uma mensagem de erro
+      if(!job){
+        return res.send('Job Not Found!');
+      }
+
+      // constante com o job atualizado.
+      const updateJob = {
+        ...job,
+        name: req.body.name,
+        'total-hours': req.body['total-hours'],
+        'daily-hours': req.body['daily-hours']
+
+      }
+
+      // map para atualizar o job
+      Job.data = Job.data.map(job => { 
+        if(Number(job.id) === Number(jobId)){
+          job = updateJob;
+        }
+        return job
+      });
+
+      // redirecionando para a página de detalhes do job
+      res.redirect(`/job/${job.id}`);
+    },
+
     delete(req, res){
       const jobId = req.params.id;
 
