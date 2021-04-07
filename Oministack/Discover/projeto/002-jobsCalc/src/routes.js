@@ -133,6 +133,12 @@ const Job = {
       job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"]);
 
       res.render(`${views}job-edit`, { job })
+    delete(req, res){
+      const jobId = req.params.id;
+
+      Job.data = Job.data.filter(job => Number(job.id) !== Number(jobId));
+
+      return res.redirect('/')
     }
 
   },
