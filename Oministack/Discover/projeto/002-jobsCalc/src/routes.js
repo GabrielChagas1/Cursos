@@ -146,7 +146,9 @@ const Job = {
       const remainigDay = (timeMiliseconds / dayMiliseconds).toFixed();
     
       return remainigDay
-    }
+    },
+
+    calculateBudget: (job, valueHour) => valueHour * job["total-hours"],
   },
 }
 
