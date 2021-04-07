@@ -160,7 +160,10 @@ routes.get('/job', Job.controllers.create);
 routes.post('/job', Job.controllers.save);
 
 // route para a página de job-edit
-routes.get('/job/edit', (req, res) => res.render(`${views}job-edit`));
+routes.get('/job/:id', Job.controllers.show);
+
+// route para editar um jo
+routes.post('/job/:id', Job.controllers.update);
 
 // route para a página de profile
 routes.get('/profile', Profile.controllers.index);
