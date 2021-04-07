@@ -68,14 +68,14 @@ const Job = {
       name: "Pizzaria Guloso",
       'daily-hours': 2,
       'total-hours': 1,
-      created_at: 1617753484744
+      created_at: 1617753484744,
     },
     {
       id: 2,
       name: "Newsletter Otis Brasil",
       'daily-hours': 2,
       'total-hours': 10,
-      created_at: 1617753484744
+      created_at: 1617753484744,
     }
   ],
 
@@ -118,6 +118,21 @@ const Job = {
 
     create(req, res){ 
       return res.render(`${views}job`) 
+    },
+
+    show(req, res) {
+
+      const jobId = req.params.id;
+      
+      const job = Job.data.find(job => Number(job.id) === Number(jobId) );
+
+      if(!job){
+        return res.send('Job not found!');
+      }
+
+      job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"]);
+
+      res.render(`${views}job-edit`, { job })
     }
 
   },
