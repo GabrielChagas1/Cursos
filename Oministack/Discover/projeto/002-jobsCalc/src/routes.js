@@ -7,15 +7,58 @@ const routes = express.Router();
 // pegando o caminho absoluto das páginas
 const views = `${__dirname}/views/`;
 
-const profile = {
-  name: "Gabriel",
-  avatar: "https://github.com/gabrielchagas1.png",
-  'monthly-budget': 300,
-  'hours-per-day': 5,
-  'days-per-week': 5,
-  'vacation-per-year': 4,
-  'value-hour': 75,
+const Profile = {
+  data: {
+    name: "Gabriel",
+    avatar: "https://github.com/gabrielchagas1.png",
+    'monthly-budget': 1500,
+    'hours-per-day': 5,
+    'days-per-week': 5,
+    'vacation-per-year': 4,
+    'value-hour': 70,
+  },
 
+  controllers:{
+    index(req, res){
+      res.render(`${views}profile`, { profile: Profile.data })
+    },
+    
+    update(req, res){
+      // req.body para pegar os dados
+      const data = req.body;
+
+      // definir quantas semanas tem no ano
+      const weeksPerYear = 52;
+
+      // remover as semanas de férias do ano, para pegar pegar quantas semanas tem em um mês
+      const weeksPerMonth = (weeksPerYear - data['vacation-per-year']) / 12;
+
+      // total de horas trabalhadas na semana
+      const weekTotalHours = data["hours-per-day"] * data["days-per-week"];
+
+      // horas trabalhadas no mês
+      const monthlyTotalHours = weekTotalHours * weeksPerMonth;
+
+      // valor da hora
+      const valueHour = data["monthly-budget"] / monthlyTotalHours;
+
+      // Profile.data = data;
+      Profile.data = {
+        ...Profile.data,
+        ...req.body,
+        'value-hour': valueHour
+      }
+
+      console.log(Profile.data);
+
+      return res.redirect('/profile');
+
+    }
+  },
+
+  services:{
+
+  }
 }
 
 const Job = {
@@ -50,7 +93,7 @@ const Job = {
           ...job,
           remaining,
           status,
-          budget: profile["value-hour"] * job["total-hours"]
+          budget: Profile.data["value-hour"] * job["total-hours"]
         };
       });
       res.render(`${views}index`, { jobs: updatedJobs });
@@ -61,7 +104,7 @@ const Job = {
       let lastId = Job.data[Job.data.length - 1]?.id || 1;
     
       //dando um push para dentro do objeto jobs 
-      jobs.push({
+      Profile.data.push({
         id: lastId++,
         name: req.body.name,
         'daily-hours': req.body['daily-hours'],
@@ -120,9 +163,12 @@ routes.post('/job', Job.controllers.save);
 routes.get('/job/edit', (req, res) => res.render(`${views}job-edit`));
 
 // route para a página de profile
-routes.get('/profile', (req, res) => res.render(`${views}profile`, {
-  profile
-}));
+routes.get('/profile', Profile.controllers.index);
+
+// route para alterar os valores do profile
+routes.post('/profile', Profile.controllers.update);
+
+
 
 
 // devolvendo para fora alguma propriedades
