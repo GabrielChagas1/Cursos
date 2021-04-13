@@ -1,8 +1,7 @@
-const {
-  Router
-} = require('express');
 const express = require('express');
 const routes = express.Router();
+
+const profileController = require('./controllers/ProfileController');
 
 // pegando o caminho absoluto das páginas
 // const views = `${__dirname}/views/`;
@@ -17,46 +16,6 @@ const Profile = {
     'vacation-per-year': 4,
     'value-hour': 70,
   },
-
-  controllers:{
-    index(req, res){
-      res.render(`profile`, { profile: Profile.data })
-    },
-    
-    update(req, res){
-      // req.body para pegar os dados
-      const data = req.body;
-
-      // definir quantas semanas tem no ano
-      const weeksPerYear = 52;
-
-      // remover as semanas de férias do ano, para pegar pegar quantas semanas tem em um mês
-      const weeksPerMonth = (weeksPerYear - data['vacation-per-year']) / 12;
-
-      // total de horas trabalhadas na semana
-      const weekTotalHours = data["hours-per-day"] * data["days-per-week"];
-
-      // horas trabalhadas no mês
-      const monthlyTotalHours = weekTotalHours * weeksPerMonth;
-
-      // valor da hora
-      const valueHour = data["monthly-budget"] / monthlyTotalHours;
-
-      // Profile.data = data;
-      Profile.data = {
-        ...Profile.data,
-        ...req.body,
-        'value-hour': valueHour
-      }
-
-      return res.redirect('/profile');
-
-    }
-  },
-
-  services:{
-
-  }
 }
 
 const Job = {
@@ -230,10 +189,10 @@ routes.post('/job/:id', Job.controllers.update);
 routes.post('/job/delete/:id', Job.controllers.delete);
 
 // route para a página de profile
-routes.get('/profile', Profile.controllers.index);
+routes.get('/profile', profileController.index);
 
 // route para alterar os valores do profile
-routes.post('/profile', Profile.controllers.update);
+routes.post('/profile', profileController.update);
 
 
 
