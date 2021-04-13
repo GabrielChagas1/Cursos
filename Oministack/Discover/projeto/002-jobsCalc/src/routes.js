@@ -1,25 +1,27 @@
 const express = require('express');
 const routes = express.Router();
 
+// importando as controllers do projeto
 const profileController = require('./controllers/ProfileController');
+const jobController = require('./controllers/JobController')
 
 // route para a página de index
-routes.get('/', Job.controllers.index);
+routes.get('/', jobController.index);
 
 // route para a página job
-routes.get('/job', Job.controllers.create);
+routes.get('/job', jobController.create);
 
 // route para o post da página de job
-routes.post('/job', Job.controllers.save);
+routes.post('/job', jobController.save);
 
 // route para a página de job-edit
-routes.get('/job/:id', Job.controllers.show);
+routes.get('/job/:id', jobController.show);
 
 // route para editar um job
-routes.post('/job/:id', Job.controllers.update);
+routes.post('/job/:id', jobController.update);
 
 // route para deletar um job
-routes.post('/job/delete/:id', Job.controllers.delete);
+routes.post('/job/delete/:id', jobController.delete);
 
 // route para a página de profile
 routes.get('/profile', profileController.index);
