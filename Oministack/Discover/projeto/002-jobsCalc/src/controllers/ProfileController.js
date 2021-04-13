@@ -1,7 +1,9 @@
+const Profile = require('../model/Profile');
+
 module.exports = {
   
   index(req, res){
-    res.render(`profile`, { profile: Profile.data })
+    res.render(`profile`, { profile: Profile.get() })
   },
   
   update(req, res){
@@ -23,12 +25,14 @@ module.exports = {
     // valor da hora
     const valueHour = data["monthly-budget"] / monthlyTotalHours;
 
-    // Profile.data = data;
-    Profile.data = {
-      ...Profile.data,
+
+    //TODO: refatorar o cálculo do valor de horas
+
+    Profile.update({
+      ...Profile.get(),
       ...req.body,
       'value-hour': valueHour
-    }
+    });
     return res.redirect('/profile');
   }
 }
