@@ -6,18 +6,6 @@ const profileController = require('./controllers/ProfileController');
 // pegando o caminho absoluto das páginas
 // const views = `${__dirname}/views/`;
 
-const Profile = {
-  data: {
-    name: "Gabriel",
-    avatar: "https://github.com/gabrielchagas1.png",
-    'monthly-budget': 1500,
-    'hours-per-day': 5,
-    'days-per-week': 5,
-    'vacation-per-year': 4,
-    'value-hour': 70,
-  },
-}
-
 const Job = {
   data: [
     {
