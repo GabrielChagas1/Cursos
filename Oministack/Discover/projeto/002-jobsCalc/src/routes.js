@@ -5,7 +5,7 @@ const express = require('express');
 const routes = express.Router();
 
 // pegando o caminho absoluto das páginas
-const views = `${__dirname}/views/`;
+// const views = `${__dirname}/views/`;
 
 const Profile = {
   data: {
@@ -20,7 +20,7 @@ const Profile = {
 
   controllers:{
     index(req, res){
-      res.render(`${views}profile`, { profile: Profile.data })
+      res.render(`profile`, { profile: Profile.data })
     },
     
     update(req, res){
@@ -94,7 +94,7 @@ const Job = {
           budget: Job.services.calculateBudget(job, Profile.data["value-hour"])
         };
       });
-      res.render(`${views}index`, { jobs: updatedJobs });
+      res.render(`index`, { jobs: updatedJobs });
     },
 
     save(req, res){
@@ -115,7 +115,7 @@ const Job = {
     },
 
     create(req, res){ 
-      return res.render(`${views}job`) 
+      return res.render(`job`) 
     },
 
     show(req, res) {
@@ -135,7 +135,7 @@ const Job = {
       job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"]);
 
       // renderizando a página de job-edit
-      res.render(`${views}job-edit`, { job })
+      res.render(`job-edit`, { job })
     },
 
     update(req, res){
