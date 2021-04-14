@@ -20,8 +20,13 @@ module.exports = {
     return data;
   },
 
-  update(newData){
-    data = newData;
+  update(newJob){
+    data = newJob;
+  },
+
+  delete(jobId){
+    // deletando o job
+    data = data.filter(job => Number(job.id) !== Number(jobId));
   }
 
 }
