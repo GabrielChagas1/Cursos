@@ -3,10 +3,11 @@ const routes = express.Router();
 
 // importando as controllers do projeto
 const profileController = require('./controllers/ProfileController');
-const jobController = require('./controllers/JobController')
+const jobController = require('./controllers/JobController');
+const dashboardController = require('./controllers/DashboardController');
 
 // route para a página de index
-routes.get('/', jobController.index);
+routes.get('/', dashboardController.index);
 
 // route para a página job
 routes.get('/job', jobController.create);
