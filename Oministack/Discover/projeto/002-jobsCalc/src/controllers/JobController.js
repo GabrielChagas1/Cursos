@@ -1,11 +1,22 @@
 const Job = require('../model/Job');
 
+const jobUtils = require('../utils/JobUtils');
+
+const Profile = require('../model/Profile');
+
 module.exports = {
   index(req, res) {
-    const updatedJobs = Job.data.map((job) => {
+    // recuperando os jobs
+    const jobs = Job.get();
+    
+    // recuperado os dados do profile
+    const profile = Profile.get();
+
+    // utilizando o map para adicionar os dias que faltam e o status do job
+    const updatedJobs = jobs.map((job) => {
 
       // recuperando os dias que faltam para a entrega do projeto
-      const remaining = Job.services.remainingDays(job);
+      const remaining = jobUtils.remainingDays(job);
 
       // recuperando o status do projeto.
       const status = remaining <= 0 ? 'done' : 'progress';
@@ -14,18 +25,22 @@ module.exports = {
         ...job,
         remaining,
         status,
-        budget: Job.services.calculateBudget(job, Profile.data["value-hour"])
+        budget: jobUtils.calculateBudget(job, profile["value-hour"])
       };
     });
     res.render(`index`, { jobs: updatedJobs });
   },
 
   save(req, res){
+
+    // recuperando todos os jobs
+    const jobs = Job.get();
+
     // recuperando o id do último elemento dentro de jobs
-    let lastId = Job.data[Job.data.length - 1]?.id || 0;
+    let lastId = jobs[jobs.length - 1]?.id || 0;
   
     //dando um push para dentro do objeto jobs 
-    Job.data.push({
+    jobs.push({
       id: ++lastId,
       name: req.body.name,
       'daily-hours': req.body['daily-hours'],
@@ -42,12 +57,17 @@ module.exports = {
   },
 
   show(req, res) {
+    // recuperando os jobs
+    const jobs = Job.get();
+
+    // recuperando os dados de profile
+    const profile = Profile.get();
 
     // recuperando o id passado como parametro
     const jobId = req.params.id;
     
     // recuperando o job, pelo id recebido
-    const job = Job.data.find(job => Number(job.id) === Number(jobId) );
+    const job = jobs.find(job => Number(job.id) === Number(jobId) );
 
     // se o id for inválido ou não existir, ele retorna um erro
     if(!job){
@@ -55,18 +75,21 @@ module.exports = {
     }
 
     // recuperando o valor do projeto
-    job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"]);
+    job.budget = jobUtils.calculateBudget(job, profile["value-hour"]);
 
     // renderizando a página de job-edit
     res.render(`job-edit`, { job })
   },
 
   update(req, res){
+    // recuperando os jobs
+    const jobs = Job.get();
+
     // recuperando o id do job para editar
     const jobId = req.params.id;
 
     // recuperando o job que corresponde ao id recebido
-    const job = Job.data.find(job => Number(job.id) === Number(jobId));
+    const job = jobs.find(job => Number(job.id) === Number(jobId));
 
     // se o job não for encontrado é enviado uma mensagem de erro
     if(!job){
@@ -83,22 +106,28 @@ module.exports = {
     }
 
     // map para atualizar o job
-    Job.data = Job.data.map(job => { 
+    const newJobs = jobs.map(job => { 
       if(Number(job.id) === Number(jobId)){
         job = updateJob;
       }
       return job
     });
 
+    // atualizando os jobs
+    Job.update(newJobs);
+
     // redirecionando para a página de detalhes do job
     res.redirect(`/job/${job.id}`);
   },
 
   delete(req, res){
+    // recuperando o id do jovem que veio por parametro
     const jobId = req.params.id;
 
-    Job.data = Job.data.filter(job => Number(job.id) !== Number(jobId));
+    // passando o jobId para deletar o job
+    Job.delete(jobId);
 
+    // redirecionando para a página principal
     return res.redirect('/')
   }
 
