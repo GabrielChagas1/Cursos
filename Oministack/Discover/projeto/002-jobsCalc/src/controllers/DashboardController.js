@@ -14,7 +14,16 @@ module.exports = {
     
     // recuperado os dados do profile
     const profile = Profile.get();
-  
+
+    const statusCount = {
+      progress: 0,
+      done: 0,
+      total: jobs.length
+    };
+
+    // guardar o valor total de horas por dia de cada job em progresso
+    let jobTotalHours = 0;
+
     // utilizando o map para adicionar os dias que faltam e o status do job
     const updatedJobs = jobs.map((job) => {
   
@@ -23,6 +32,12 @@ module.exports = {
   
       // recuperando o status do projeto.
       const status = remaining <= 0 ? 'done' : 'progress';
+
+      // somando a quantidade de status
+      statusCount[status] ++;
+
+      // se o status for progress, a variável jobTotalHours vai ser atualizada
+      jobTotalHours = status === 'progress' ? jobTotalHours += Number(job['daily-hours']) : jobTotalHours;
   
       return {
         ...job,
@@ -31,6 +46,21 @@ module.exports = {
         budget: jobUtils.calculateBudget(job, profile["value-hour"])
       };
     });
-    res.render(`index`, { jobs: updatedJobs });
+
+    
+    // quantidade de horas disponiveis no dia
+    const freeHours = profile['hours-per-day'] - jobTotalHours;
+
+    res.render(`index`, { jobs: updatedJobs, profile, statusCount, freeHours});
+
+
+
+    // const statusCount = {
+    //   progress: updatedJobs.filter(x => x.status === 'progress').length,
+    //   done: updatedJobs.filter(x => x.status === 'done').length,
+    //   total: updatedJobs.length
+    // }
+
+
   }
 } 
