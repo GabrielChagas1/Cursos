@@ -13,14 +13,14 @@ module.exports = {
     // recuperando o id do último elemento dentro de jobs
     let lastId = jobs[jobs.length - 1]?.id || 0;
   
-    //dando um push para dentro do objeto jobs 
-    jobs.push({
-      id: ++lastId,
-      name: req.body.name,
-      'daily-hours': req.body['daily-hours'],
-      'total-hours': req.body['total-hours'],
-      created_at: Date.now()
-    });
+    //criando um novo job 
+    Job.create({
+        id: ++lastId,
+        name: req.body.name,
+        'daily-hours': req.body['daily-hours'],
+        'total-hours': req.body['total-hours'],
+        created_at: Date.now()
+      });
   
     // redirecioando para a home
     return res.redirect('/');
