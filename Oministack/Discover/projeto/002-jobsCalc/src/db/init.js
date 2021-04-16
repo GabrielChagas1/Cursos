@@ -1,8 +1,8 @@
 const database = require('./config');
 
-database()
+const db = await database()
 
-database.exec(`CREATE TABLE profile(
+await db.exec(`CREATE TABLE profile(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
   avatar TEXT,
@@ -13,7 +13,7 @@ database.exec(`CREATE TABLE profile(
   value_hour INT
 )`);
 
-database.exec(`CREATE TABLE jobs(
+await db.exec(`CREATE TABLE jobs(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT,
   daily_hours INT,
@@ -21,7 +21,7 @@ database.exec(`CREATE TABLE jobs(
   created_at DATETIME
 );`);
 
-database.run(`INSERT INTO profile(
+await db.run(`INSERT INTO profile(
   name,
   avatar,
   monthly_budget,
@@ -39,7 +39,7 @@ database.run(`INSERT INTO profile(
   75
 );`);
 
-database.run(`INSERT INTO jobs(
+await db.run(`INSERT INTO jobs(
   name,
   daily_hours,
   total_hours,
@@ -51,4 +51,4 @@ database.run(`INSERT INTO jobs(
   1617753484744
 );`)
 
-database.close();
+await db.close();
