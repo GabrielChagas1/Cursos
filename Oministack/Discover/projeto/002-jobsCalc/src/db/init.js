@@ -3,9 +3,9 @@ const database = require('./config');
 
 const initDb = {
 
-  init(){
+  async init(){
 
-  const db = await database();
+    const db = await database();
 
     // criando a tabela de profile
     await db.exec(`CREATE TABLE profile(
@@ -65,3 +65,6 @@ const initDb = {
   }
 
 }
+
+// executando o init
+initDb.init();
