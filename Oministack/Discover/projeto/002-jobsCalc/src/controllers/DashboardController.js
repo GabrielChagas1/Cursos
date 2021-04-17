@@ -8,12 +8,12 @@ const Profile = require('../model/Profile');
 const jobUtils = require('../utils/JobUtils');
 
 module.exports = {
-  index(req, res) {
+  async index(req, res) {
     // recuperando os jobs
     const jobs = Job.get();
     
     // recuperado os dados do profile
-    const profile = Profile.get();
+    const profile = await Profile.get();
 
     const statusCount = {
       progress: 0,
