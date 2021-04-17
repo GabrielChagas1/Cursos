@@ -104,5 +104,4 @@ module.exports = {
     // redirecionando para a página principal
     return res.redirect('/')
   }
-
 }
