@@ -16,8 +16,27 @@ let data =  [
 ];
 
 module.exports = {
-  get(){
-    return data;
+  async get(){
+
+    // abrindo a conexão do banco de dados
+    const db = await database();
+
+    // recuperando os jobs do banco de dados
+    const jobs = await db.all(`SELECT * FROM jobs`);
+
+    // fechando a conexão
+    await db.close();
+
+
+    // normalizando os dados do banco de dados
+    return jobs.map(job => ({
+      id: job.id,
+      name: job.name,
+      'daily-hours': job.daily_hours,
+      'total-hours': job.total_hours,
+      created_at: job.created_at
+    }));
+
   },
 
   update(newJob){
