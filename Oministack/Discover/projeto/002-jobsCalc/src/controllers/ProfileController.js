@@ -6,7 +6,7 @@ module.exports = {
     res.render(`profile`, { profile: await Profile.get() })
   },
   
-  update(req, res){
+  async update(req, res){
     // req.body para pegar os dados
     const data = req.body;
 
@@ -25,11 +25,14 @@ module.exports = {
     // valor da hora
     const valueHour = data["monthly-budget"] / monthlyTotalHours;
 
+    // recuperando os dados do profile
+    const profile =  await Profile.get()
+
 
     //TODO: refatorar o cálculo do valor de horas
 
-    Profile.update({
-      ...Profile.get(),
+    await Profile.update({
+      ... profile,
       ...req.body,
       'value-hour': valueHour
     });
