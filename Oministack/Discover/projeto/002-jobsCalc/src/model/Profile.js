@@ -15,7 +15,7 @@ module.exports = {
       name: profile.name,
       avatar: profile.avatar,
       'monthly-budget': profile.monthly_budget,
-      'day-per-week': profile.days_per_week,
+      'days-per-week': profile.days_per_week,
       'hours-per-day': profile.hours_per_day,
       'vacation-per-year': profile.vacation_per_year,
       'value-hour': profile.value_hour
