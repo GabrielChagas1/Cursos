@@ -1,19 +1,4 @@
-let data =  [
-  {
-    id: 1,
-    name: "Pizzaria Guloso",
-    'daily-hours': 2,
-    'total-hours': 1,
-    created_at: 1617753484744,
-  },
-  {
-    id: 2,
-    name: "Newsletter Otis Brasil",
-    'daily-hours': 2,
-    'total-hours': 10,
-    created_at: 1617753484744,
-  }
-];
+const database = require('../db/config');
 
 module.exports = {
   async get(){
@@ -48,8 +33,25 @@ module.exports = {
     data = data.filter(job => Number(job.id) !== Number(jobId));
   },
 
-  create(newJob){
-    data.push(newJob);
+  async create(job){
+    // abrindo conexão com banco de dados
+    const db = await database();
+    
+    await db.run(`INSERT INTO jobs (
+      name,
+      daily_hours,
+      total_hours,
+      created_at
+    ) VALUES (
+      '${job.name}',
+      ${job['daily-hours']},
+      ${job['total-hours']},
+      ${job.created_at}
+
+    )`);
+
+    // fechando a conexão com o banco de dados
+    await db.close();
   }
 
 }
