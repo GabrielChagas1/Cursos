@@ -5,17 +5,12 @@ const jobUtils = require('../utils/JobUtils');
 const Profile = require('../model/Profile');
 
 module.exports = {
-  save(req, res){
+  async save(req, res){
 
-    // recuperando todos os jobs
-    const jobs = Job.get();
-
-    // recuperando o id do último elemento dentro de jobs
-    let lastId = jobs[jobs.length - 1]?.id || 0;
+    // let lastId = jobs[jobs.length - 1]?.id || 0;
   
     //criando um novo job 
-    Job.create({
-        id: ++lastId,
+    await Job.create({
         name: req.body.name,
         'daily-hours': req.body['daily-hours'],
         'total-hours': req.body['total-hours'],
@@ -30,12 +25,12 @@ module.exports = {
     return res.render(`job`) 
   },
 
-  show(req, res) {
+  async show(req, res) {
     // recuperando os jobs
-    const jobs = Job.get();
+    const jobs = await Job.get();
 
     // recuperando os dados de profile
-    const profile = Profile.get();
+    const profile = await Profile.get();
 
     // recuperando o id passado como parametro
     const jobId = req.params.id;
@@ -55,9 +50,9 @@ module.exports = {
     res.render(`job-edit`, { job })
   },
 
-  update(req, res){
+  async update(req, res){
     // recuperando os jobs
-    const jobs = Job.get();
+    const jobs = await Job.get();
 
     // recuperando o id do job para editar
     const jobId = req.params.id;
