@@ -40,9 +40,16 @@ module.exports = {
     await db.close();
   },
 
-  delete(jobId){
-    // deletando o job
-    data = data.filter(job => Number(job.id) !== Number(jobId));
+  async delete(jobId){
+
+    // abrindo conexão com bando de dados
+    const db = await database();
+
+    // executando comando para excluir um registro no banco de dados
+    await db.run(`DELETE FROM jobs WHERE id = ${jobId}`)
+
+    // fechando conexão com o banco de dados
+    await db.close()
   },
 
   async create(job){
