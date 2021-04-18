@@ -10,7 +10,7 @@ const jobUtils = require('../utils/JobUtils');
 module.exports = {
   async index(req, res) {
     // recuperando os jobs
-    const jobs = Job.get();
+    const jobs = await Job.get();
     
     // recuperado os dados do profile
     const profile = await Profile.get();
