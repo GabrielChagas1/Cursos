@@ -24,8 +24,20 @@ module.exports = {
 
   },
 
-  update(newJob){
-    data = newJob;
+  async update(job, jobId){
+    // abrindo conexão com banco de dados
+    const db = await database();
+
+
+    await db.run(` UPDATE jobs SET 
+      name = "${job.name}",
+      daily_hours = ${job['daily-hours']},
+      total_hours = ${job['total-hours']}
+      WHERE id = ${jobId}
+    `)
+
+    // fechando conexão com banco de dados
+    await db.close();
   },
 
   delete(jobId){
