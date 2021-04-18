@@ -52,49 +52,28 @@ module.exports = {
 
   async update(req, res){
     // recuperando os jobs
-    const jobs = await Job.get();
-
-    // recuperando o id do job para editar
     const jobId = req.params.id;
-
-    // recuperando o job que corresponde ao id recebido
-    const job = jobs.find(job => Number(job.id) === Number(jobId));
-
-    // se o job não for encontrado é enviado uma mensagem de erro
-    if(!job){
-      return res.send('Job Not Found!');
-    }
 
     // constante com o job atualizado.
     const updateJob = {
-      ...job,
       name: req.body.name,
       'total-hours': req.body['total-hours'],
       'daily-hours': req.body['daily-hours']
-
     }
 
-    // map para atualizar o job
-    const newJobs = jobs.map(job => { 
-      if(Number(job.id) === Number(jobId)){
-        job = updateJob;
-      }
-      return job
-    });
-
     // atualizando os jobs
-    Job.update(newJobs);
+    Job.update(updateJob, jobId);
 
     // redirecionando para a página de detalhes do job
-    res.redirect(`/job/${job.id}`);
+    res.redirect(`/job/${jobId}`);
   },
 
-  delete(req, res){
+  async delete(req, res){
     // recuperando o id do jovem que veio por parametro
     const jobId = req.params.id;
 
     // passando o jobId para deletar o job
-    Job.delete(jobId);
+    await Job.delete(jobId);
 
     // redirecionando para a página principal
     return res.redirect('/')
