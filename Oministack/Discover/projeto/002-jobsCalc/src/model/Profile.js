@@ -9,7 +9,7 @@ module.exports = {
     const profile = await db.get(`SELECT * FROM profile`);
 
     // fechando a conexão
-    db.close();
+    await db.close();
 
     return {
       name: profile.name,
@@ -22,7 +22,22 @@ module.exports = {
     };
   },
 
-  update(newData){
-    data = newData;
+  async update(profile){
+    // abrindo a conexão com o bando de dados
+    const db = await database();
+
+    // atualizando no banco de dados
+    db.run(`UPDATE profile SET 
+            name = "${profile.name}",
+            avatar = "${profile.avatar}",
+            monthly_budget = ${profile['monthly-budget']},
+            days_per_week = ${profile['days-per-week']},
+            hours_per_day = ${profile['hours-per-day']},
+            vacation_per_year = ${profile['vacation-per-year']},
+            value_hour = ${profile['value-hour']}
+  `);
+
+    // fechando a conexão
+    await db.close();
   }
 }
