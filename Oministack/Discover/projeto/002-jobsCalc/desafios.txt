@@ -1,0 +1,6 @@
+## 2 projetos que envolvam CRUD
+  # Lista de tarefas
+  # Playlist de músicas favoritas
+
+## 1 projeto que irá consumir uma API
+## 1 projeto que envolva upload de arquivos
