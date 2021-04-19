@@ -1,0 +1,5 @@
+colocar código no discord 
+
+```ts
+  <código>
+``` 
