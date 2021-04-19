@@ -4,3 +4,52 @@
 
 ## 1 projeto que irá consumir uma API
 ## 1 projeto que envolva upload de arquivos
+
+
+##### Banco de dados
+
+## Como funciona
+## Diferença entre SQL e NoSQL
+  #SQL
+  #MongoDB
+## Arquiteturas de dados
+## Operações básicas: Inserir, Consultar, Alterar, Apagar
+## Busca Avançada
+## Ordenação, Agrupamento e Paginação
+
+#### Para praticar
+
+## 1 projeto CRUD
+## 1 projeto que envolva diversos filtros de dados
+## 1 projeto que envolva relacionamentos
+## 3 projetos que envolva relacionamentos
+  #Produtos, Categorias
+  #Usuários, Grupos
+  #Blog, Comentários
+
+
+##### Autenticação e Autorização
+
+## Como funciona
+## Autenticação serve para mostrar quem é você
+## Sign up/Sign In
+  #Login e senha
+  #Validações
+  #Envio de email
+## Reset de senha
+
+#### Para praticar
+
+## 1 projeto que envolva autenticação
+## 1 projeto que envolva autenticação e autorização
+## 1 projeto que envolva envio de e-mail
+## 1 projeto que envolva reset de senha
+
+#### Para praticar
+
+## Encurtador de URL
+## Ecommerce (mini)
+## Stream de música e/ou vídeo
+## Rede Social
+## APIs
+## Clone
