@@ -1,16 +1,17 @@
 import express from 'express';
 
+import {routes} from './routes';
+
 // importando o database
 import "./database";
 
 const app = express();
 
-app.listen(3333, () => console.log('Server running on http://localhost:3333'));
+// habilitando o nosso projeto a trabalhar com json
+app.use(express.json())
 
-app.get('/', (req, res) =>{
-  // res.send('Hello World');
-  return res.json({message: "Olá NLW 05!"})
-});
+// linkando as rotas criadas
+app.use(routes);
 
 // iniciando o servidor
 app.listen(3333, () => console.log('Server running on http://localhost:3333'));
