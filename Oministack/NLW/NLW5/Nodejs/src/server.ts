@@ -12,8 +12,5 @@ app.get('/', (req, res) =>{
   return res.json({message: "Olá NLW 05!"})
 });
 
-app.post('/', (req, res) =>{
-  return res.json({
-    message: 'Usuário cadastrado com sucesso!'
-  });
-})
+// iniciando o servidor
+app.listen(3333, () => console.log('Server running on http://localhost:3333'));
