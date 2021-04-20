@@ -2,4 +2,24 @@ colocar código no discord
 
 ```ts
   <código>
-``` 
+```
+
+
+CONFIGURANDO O TYPESCRIPT NO NODE
+
+Informar o node para ele trabalhar com a sintaxe de import e from
+
+//add typescript
+yarn add typescript -D
+
+//criando um arquivo de configuração do typescript (tsconfig.json)
+yarn tsc --init
+
+//alterar dentro do arquivo tsconfig.json
+"strict": false;
+
+//biblioteca para o node entender algumas coisas do ts
+yarn add ts-node-dev -D
+
+//criar dentro do package.json um script
+"dev": "ts-node-dev src/server.ts"
