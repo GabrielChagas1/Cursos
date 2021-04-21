@@ -12,7 +12,7 @@ class UserService{
 
     // se existir, retornar user
     if(userExists){
-      throw new Error("User already exists!");
+      return userExists;
     }
     
     // criando um objeto user
