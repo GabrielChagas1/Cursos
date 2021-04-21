@@ -15,6 +15,6 @@ const usersController = new UsersController();
 routes.post("/settings",settingsController.create);
 
 // rota para cadastrar um usuário
-routes.post("/user", usersController.create)
+routes.post("/users", usersController.create)
 
 export { routes };
