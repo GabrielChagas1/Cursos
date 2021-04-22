@@ -13,6 +13,10 @@ const http = createServer(app);
 // criando protocolo de web socket
 const io = new Server(http);
 
+io.on("connection", (socket: Socket) =>{
+  console.log(`Socket: ${socket.id}`)
+})
+
 // habilitando o nosso projeto a trabalhar com json
 app.use(express.json());
 
@@ -20,4 +24,4 @@ app.use(express.json());
 app.use(routes);
 
 // iniciando o servidor
-app.listen(3333, () => console.log('Server running on http://localhost:3333'));
+http.listen(3333, () => console.log('Server running on http://localhost:3333'));
