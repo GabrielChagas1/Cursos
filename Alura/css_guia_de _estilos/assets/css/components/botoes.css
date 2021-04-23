@@ -1,8 +1,9 @@
 .botao{
-  background: #ffcb47;
-  color: #fff;
+  background: var(--amarelo);
+  color: var(--branco);
   width: 100%;
   padding: 1rem 0;
+  margin: 0 0 1rem 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
