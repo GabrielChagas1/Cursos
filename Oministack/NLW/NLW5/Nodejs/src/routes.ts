@@ -17,6 +17,8 @@ const messagesController = new MessagesController();
 
 // rota para cadastrar um settings
 routes.post("/settings",settingsController.create);
+routes.get("/settings/:username", settingsController.findByUsername);
+routes.put("/settings/:username", settingsController.update);
 
 // rota para cadastrar um usuário
 routes.post("/users", usersController.create);
