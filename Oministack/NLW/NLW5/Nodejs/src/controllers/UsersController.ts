@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import { UserService } from "../services/UsersService";
+import { UsersService } from "../services/UsersService";
 
 
 class UsersController {
@@ -8,7 +8,7 @@ class UsersController {
     const {email} = req.body; 
 
     // criando um objeto do service do user
-    const userService = new UserService();
+    const userService = new UsersService();
 
    try {
     // chamando o método create para persistir um user no banco de dados
