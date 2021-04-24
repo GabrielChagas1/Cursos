@@ -18,9 +18,16 @@ app.set("views", path.join(__dirname, "..", "public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 
+// página com o chat do cliente
 app.get("/pages/client", (req, res) =>{
   return res.render("html/client.html");
-})
+});
+
+// página com o chat do admin
+app.get("/pages/admin", (req, res) =>{
+  return res.render("html/admin.html");
+});
+
 
 // criando protocolo http
 const http = createServer(app);
