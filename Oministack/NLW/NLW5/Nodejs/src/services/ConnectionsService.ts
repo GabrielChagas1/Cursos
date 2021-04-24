@@ -1,43 +1,64 @@
-import { getCustomRepository, Repository } from "typeorm"
+import { getCustomRepository, Repository } from "typeorm";
 import { Connection } from "../entities/Connection";
-
-import { ConnectionsRepository } from "../repositories/ConnectionsRepository"
+import { ConnectionsRepository } from "../repositories/ConnectionsRepository";
 
 interface IConnectionCreate{
-  socket_id: string;
-  user_id: string;
-  admin_id?: string;
-  id?: string;
+    socket_id: string;
+    user_id: string;
+    admin_id?: string;
+    id?: string;
 }
 
+class ConnectionsService { 
+    private connectionsRepository: Repository<Connection>;
 
-class ConnectionsService{
+    constructor(){
+        this.connectionsRepository = getCustomRepository(ConnectionsRepository);
+    }
 
-  private connectionsRepository: Repository<Connection>
+    async create ({ socket_id, user_id, admin_id, id }: IConnectionCreate){
+        const connection = await this.connectionsRepository.create({
+            socket_id,
+            user_id,
+            admin_id,
+            id
+        });
 
-  constructor(){
-    this.connectionsRepository = getCustomRepository(ConnectionsRepository)
-  }
+        await this.connectionsRepository.save(connection);
+    }
+    
+    async findByUserId(user_id: string){
+        const connection = await this.connectionsRepository.findOne({user_id});
+        return connection;
+    }
 
-  async create({socket_id, user_id, admin_id, id}: IConnectionCreate){
-    const connection = this.connectionsRepository.create({
-      socket_id,
-      user_id,
-      admin_id,
-      id
-    });
+    async findAllWithoutAdmin(){
+        const connections = await this.connectionsRepository.find({
+            where: { admin_id: null },
+            relations: ["user"],
+        });
 
-    await this.connectionsRepository.save(connection);
+        return connections;
+    }
 
-    return connection;
-  }
+    async findBySocketID(socket_id: string){
+        const connection = await this.connectionsRepository.findOne({
+            socket_id
+        });
+        
+        return connection;
+    }
 
-  async FindByUserId(user_id: string){
-    const connection = await this.connectionsRepository.findOne({user_id});
-    return connection;
-  }
-
-
+    async updateAdminID(user_id: string, admin_id: string) {
+        await this.connectionsRepository
+          .createQueryBuilder()
+          .update(Connection)
+          .set({ admin_id })
+          .where('user_id = :user_id', {
+            user_id,
+          })
+          .execute();
+    }
 }
 
-export {ConnectionsService}
+export { ConnectionsService }; 
