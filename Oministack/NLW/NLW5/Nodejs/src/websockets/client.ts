@@ -32,8 +32,7 @@ io.on("connect", (socket) =>{
 
     }else{
       user_id = userExists.id;
-
-      const connection = await connectionsService.FindByUserId(userExists.id);
+      const connection = await connectionsService.findByUserId(userExists.id);
 
       if(!connection){
         await connectionsService.create({
@@ -50,6 +49,12 @@ io.on("connect", (socket) =>{
       text,
       user_id
     });
+
+    const allMessages = await messagesService.listByUser(user_id);
+
+    socket.emit("client_list_all_messages", allMessages);
+
+
 
   });
 });
