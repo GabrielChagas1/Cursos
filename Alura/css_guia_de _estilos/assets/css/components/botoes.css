@@ -1,3 +1,5 @@
+/* inheret fala para o botão herdar a font que está no body */
+
 .botao{
   background: var(--amarelo);
   color: var(--branco);
@@ -5,7 +7,7 @@
   padding: 1rem 0;
   margin: 0 0 1rem 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: inherit;
   font-weight: bold;
   box-shadow: 10px 10px 30px #ffcb473d;
   border: none;
