@@ -1,0 +1,14 @@
+/* importando arquivos necessários */
+@import url('./_variaveis.css');
+@import url('./_reset.css');
+
+body{
+  background: url(../../img/fundo-linhas.png), url(../../img/fundo-linhas.png);
+  background-position: center;
+  font-family: var(--familia-corpo);
+  font-size: var(--tamanho-corpo);
+}
+
+.container {
+  padding: 0 1rem;
+}
