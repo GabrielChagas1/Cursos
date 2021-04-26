@@ -12,3 +12,10 @@
   box-shadow: 10px 10px 30px #ffcb473d;
   border: none;
 }
+
+.botao--alternativo{
+  color: var(--amarelo);
+  background-color: unset;
+  box-shadow: none;
+  border: 1px solid var(--amarelo);
+}
