@@ -2,6 +2,11 @@
 @import url('./_variaveis.css');
 @import url('./_reset.css');
 
+*{
+  box-sizing: border-box;
+}
+
+
 body{
   background: url(../../img/fundo-linhas.png), url(../../img/fundo-linhas.png);
   background-position: center;
