@@ -50,6 +50,11 @@ copas.forEach((copa, index) =>{
 // Interaja com um loop nas frutas abaixo e pare ao chegar em Pera
 var frutas = ['Banana', 'Maçã', 'Pera', 'Uva', 'Melância']
 
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i])
+  if(frutas[i] === "Pera") break;  
+}
+
 // Coloque a última fruta da array acima em uma variável,
 // sem remover a mesma da array.
 
