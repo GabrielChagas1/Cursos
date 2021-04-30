@@ -1,1 +1,10 @@
-*{margin:0;padding:0;box-sizing:border-box}div{color:#999;background:#ff006a}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  color: #fff;
+  background: #ff006a;
+}
