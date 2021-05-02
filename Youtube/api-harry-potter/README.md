@@ -25,4 +25,4 @@ $  Digite o nome de uma casa no harry potter:
 ```
 
 ### 🧑‍💻 Resultado
-[Resultado](https://github.com/GabrielChagas1/Cursos/tree/master/Youtube/api-harry-potter/gif.gif)
+[Resultado](https://raw.githubusercontent.com/GabrielChagas1/master/Cursos/master/Youtube/api-harry-potter/gif.gif)
