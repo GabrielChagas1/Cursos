@@ -1,0 +1,13 @@
+{
+  "name": "api-harry-potter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "console-png": "^1.2.1",
+    "got": "^11.8.2",
+    "readline-sync": "^1.4.10",
+    "terminal-image": "^1.2.1"
+  }
+}
