@@ -4,6 +4,20 @@ div::after, section::after {
   clear: both;
 }
 
+.erro, .button-erro {
+  color: red;
+  font-weight: bold;
+}
+
+a.erro, a.button-erro {
+  display: block;
+}
+
+.button-erro {
+  padding: 20px;
+  width: 200px;
+}
+
 section {
   max-width: 600px;
   margin: 0 auto;

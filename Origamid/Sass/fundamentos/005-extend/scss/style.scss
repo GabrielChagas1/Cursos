@@ -12,6 +12,21 @@ section {
 	@extend %clearfix;
 }
 
+.erro{
+	color: red;
+	font-weight: bold;
+}
+
+a.erro{
+	display: block;
+}
+
+.button-erro{
+	@extend .erro;
+	padding: 20px;
+	width: 200px;
+}
+
 @mixin title-large {
 	font-size: 4em;
 	font-weight: bold;
