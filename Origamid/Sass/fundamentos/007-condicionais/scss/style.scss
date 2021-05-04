@@ -1,18 +1,47 @@
-$tema: oceano;
-$primary-color: black;
-$secondary-color: gray;
+@mixin type-1($size){
+	font-family: monospace;
+	@if $size == 16{
+		font-weight: normal;
+		font-size: 1em;
+	}@else if $size == 18{
+		font-weight: normal;
+		font-size: 1.25em;
+	}@else if $size == 24{
+		font-weight: bold;
+		font-size: 1.5em;		
+	}
+}
 
-@if($tema == oceano){
-	$primary-color: blue;
-	$secondary-color: orange;
-} @else if $tema == deserto{
-	$primary-color: yellow;
-	$secondary-color: purple;
+@mixin device($device) {
+	@if $device == m{
+		@media (max-width: 300px) {
+			@content;
+		}
+	}@else if $device == t{
+		@media (max-width: 600px) {
+			@content;
+		}
+	}@else if $device == s{
+		@media (max-width: 900px) {
+			@content;
+		}
+	}
 }
 
 p{
-	color: $primary-color;
-	background: $secondary-color;
+	@include type-1(18);
+}
+
+div{
+	$width: 410px;
+	width: $width;
+
+	@if $width > 400px{
+		height: $width * 1.5;
+	}@else{
+		height: $width;
+	}
+	
 }
 
 @mixin title-large {

@@ -1,6 +1,12 @@
 p {
-  color: blue;
-  background: orange;
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 1.25em;
+}
+
+div {
+  width: 410px;
+  height: 615px;
 }
 
 section {
