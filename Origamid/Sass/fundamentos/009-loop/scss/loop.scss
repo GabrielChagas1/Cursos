@@ -12,3 +12,22 @@ $numero: 1;
 // 	$numero: $numero + 1
 // }
 
+//* For
+$max-width: 768;
+$max-columns: 16;
+$gutter: 20;
+
+// @for $i from 1 through $max-columns{
+// 	$width: percentage($i / $max-columns);
+// 	.porcento-#{$i}{
+// 		width: $width;
+// 	}
+// }
+
+// @for $i from 1 through $max-columns{
+// 	$width: ($max-width / $max-columns) * $i - $gutter;
+// 	.grid-#{$i}{
+// 		width: $width + px;
+// 	}
+// }
+
