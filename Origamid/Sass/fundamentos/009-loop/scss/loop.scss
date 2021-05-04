@@ -31,3 +31,12 @@ $gutter: 20;
 // 	}
 // }
 
+//* each
+
+$lista: facebook twitter snapchat instagram;
+
+@each $item in $lista{
+	.rede-#{$item}{
+		background: url('../img/#{$item}.png');
+	}
+}

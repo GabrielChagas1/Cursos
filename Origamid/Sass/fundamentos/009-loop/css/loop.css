@@ -1,0 +1,19 @@
+div {
+  width: 200px;
+}
+
+.rede-facebook {
+  background: url("../img/facebook.png");
+}
+
+.rede-twitter {
+  background: url("../img/twitter.png");
+}
+
+.rede-snapchat {
+  background: url("../img/snapchat.png");
+}
+
+.rede-instagram {
+  background: url("../img/instagram.png");
+}
