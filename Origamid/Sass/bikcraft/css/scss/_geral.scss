@@ -35,9 +35,9 @@ img {
 }
 
 .btn {
-	border: 3px solid #fec63e;
+	border: 3px solid $amarelo;
 	padding: 10px 30px;
-	color: #fec63e;
+	color: $amarelo;
 	font-size: 14px;
 	line-height: 20px;
 	text-transform: uppercase;
@@ -101,7 +101,7 @@ img {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: #fec63e; /* Amarelo */
+	background: $amarelo; /* Amarelo */
 	padding: 15px 0;
 	z-index: 10;
 }
@@ -215,7 +215,7 @@ img {
 }
 
 .produtos_lista li{
-	background: #fec63e;
+	background: $amarelo;
 	text-align: center;
 }
 
@@ -269,11 +269,11 @@ img {
 }
 
 .portfolio .subtitulo {
-	color: #fec63e;
+	color: $amarelo;
 }
 
 .portfolio .subtitulo:after {
-	background: #fec63e;
+	background: $amarelo;
 }
 
 .portfolio_lista div:last-of-type {
@@ -361,7 +361,7 @@ img {
 .footer h3 {
 	font-size: 18px;
 	line-height: 25px;
-	color: #fec63e;
+	color: $amarelo;
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-weight: bold;
@@ -372,7 +372,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #fec63e;
+	background: $amarelo;
 	margin: 6px 0 12px 0;
 }
 
@@ -392,7 +392,7 @@ img {
 }
 
 .footer_redes ul li a {
-	border: 3px solid #fec63e;
+	border: 3px solid $amarelo;
 	display: block;
 	padding: 10px;
 	transition: all .5s ease;
@@ -404,7 +404,7 @@ img {
 
 .copy {
 	width: 100%;
-	background: #fec63e;
+	background: $amarelo;
 	padding: 20px 0;
 }
 
