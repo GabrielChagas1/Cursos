@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos Instagram</title>
+</head>
+<body>
+  <style>
+    .container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    li{
+      list-style: none;
+    }
+
+    li img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  </style>
+
+  <div class="container">
+    <img src="https://instagram.fcgh23-1.fna.fbcdn.net/v/t51.2885-15/e35/c236.0.608.608a/15099328_1697278157254370_4442397309770137600_n.jpg?tp=1&_nc_ht=instagram.fcgh23-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=OCMujE5iBaUAX8SC3-D&edm=ABfd0MgBAAAA&ccb=7-4&oh=15570cf24407fcd9575f3dacfbefceff&oe=60B8E6DD&_nc_sid=7bff83" alt="">
+  </div>
+
+  <script>
+
+    (async () =>{
+      const response = await fetch('./instagram.json');
+      const data = await response.json();
+      console.log(data)
+
+      // formatar os dados
+      const htmlList = data.map(({src}) => `<li><img src="${src}"></li>`).join('');
+
+      // colocar no html
+      // document.querySelector('.container').innerHTML = htmlList;
+
+    })();
+
+
+  </script>
+</body>
+</html>
