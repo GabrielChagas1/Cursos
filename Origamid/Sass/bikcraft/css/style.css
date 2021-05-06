@@ -611,10 +611,10 @@ img {
 }
 
 #form-erro span, #form-send span {
-  font-size: 18px;
-  line-height: 25px;
   margin-bottom: 10px;
   display: block;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 #form-send {
@@ -629,12 +629,13 @@ img {
   border: 3px solid #fec63e;
   padding: 10px 30px;
   color: #fec63e;
-  font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: .1em;
   transition: all .5s ease;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .btn:hover {
@@ -648,14 +649,14 @@ img {
 }
 
 .subtitulo {
-  font-size: 24px;
-  line-height: 30px;
   font-weight: bold;
   letter-spacing: .1em;
   color: #000;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .subtitulo:after {
@@ -668,13 +669,13 @@ img {
 }
 
 .subtitulo-interno {
-  font-size: 24px;
-  line-height: 30px;
   font-weight: bold;
   letter-spacing: .1em;
   color: #000;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .subtitulo-interno:after {
@@ -712,10 +713,11 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-size: 14px;
   line-height: 20px;
   padding: 10px 0;
   transition: all .3s ease;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .header_menu ul li a:hover {
@@ -738,10 +740,10 @@ img {
 }
 
 .introducao h1 {
-  font-size: 48px;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 48px;
 }
 
 .quote-externo {
@@ -768,6 +770,7 @@ img {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
+  line-height: 20px;
   letter-spacing: .1em;
 }
 
@@ -812,11 +815,11 @@ img {
 
 .produtos_lista li h3 {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: .1em;
   margin-top: 20px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .produtos_lista li h3:after {
@@ -904,11 +907,11 @@ img {
 
 .qualidade_lista li h3 {
   font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   letter-spacing: .1em;
   margin-top: 20px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .qualidade_lista li h3:after {
@@ -943,12 +946,12 @@ img {
 }
 
 .footer h3 {
-  font-size: 18px;
-  line-height: 25px;
   color: #fec63e;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .footer h3:after {
@@ -1045,10 +1048,10 @@ img {
 }
 
 .missao_sobre p {
-  font-size: 18px;
-  line-height: 25px;
   margin-bottom: 1em;
   padding-right: 60px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .missao_sobre ul li {
@@ -1109,6 +1112,7 @@ img {
   color: #fff;
   font-size: 18px;
   line-height: 25px;
+  line-height: 25px;
   height: 180px;
   padding: 30px 40px;
 }
@@ -1116,14 +1120,14 @@ img {
 .produto_info ul li {
   background: #fec63e;
   text-transform: uppercase;
-  font-size: 18px;
-  line-height: 20px;
   font-weight: bold;
   float: left;
   width: 229px;
   height: 49px;
   text-align: center;
   padding-top: 16px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .produto_info ul li:nth-child(1), .produto_info ul li:nth-child(2) {
@@ -1204,6 +1208,7 @@ img {
 .orcamento_dados h3 {
   font-size: 18px;
   line-height: 25px;
+  line-height: 25px;
   text-transform: uppercase;
   color: #fec63e;
   font-weight: bold;
@@ -1262,6 +1267,7 @@ img {
 
 .quote_clientes cite {
   font-size: 18px;
+  line-height: 25px;
   font-weight: bold;
   float: right;
   font-style: normal;
@@ -1384,11 +1390,11 @@ img {
 }
 
 .contato_dados h3 {
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   color: #fec63e;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .contato_dados span {
@@ -1524,6 +1530,7 @@ img {
   }
   .missao_sobre ul li {
     font-size: 14px;
+    line-height: 20px;
     line-height: 25px;
   }
   /*Produtos*/

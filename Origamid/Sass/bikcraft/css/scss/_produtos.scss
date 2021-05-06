@@ -9,7 +9,7 @@
 
 .produto_item h2{
 	color: $white;
-	font-size: 36px;
+	@include tipo-1(36);
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-weight: bold;
@@ -43,7 +43,7 @@
 
 .produto_info p{
 	color: $white;
-	font-size: 18px;
+	@include tipo-1(18);
 	line-height: 25px;
 	height: 180px;
 	padding: 30px 40px;
@@ -53,14 +53,13 @@
 .produto_info ul li {
 	background: $amarelo;
 	text-transform: uppercase;
-	font-size: 18px;
-	line-height: 20px;
 	font-weight: bold;
 	float: left;
 	width: 229px;
 	height: 49px;
 	text-align: center;
 	padding-top: 16px;
+	@include tipo-1(18);
 }
 
 .produto_info ul li:nth-child(1), .produto_info ul li:nth-child(2) {
@@ -135,7 +134,7 @@
 }
 
 .orcamento_dados h3{
-	font-size: 18px;
+	@include tipo-1(18);
 	line-height: 25px;
 	text-transform: uppercase;
 	color: $amarelo;
