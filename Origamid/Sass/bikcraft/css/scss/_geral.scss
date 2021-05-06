@@ -52,8 +52,8 @@ img {
 }
 
 .btn.btn-preto:hover {
-	color: #000;
-	border-color: #000;
+	color: $black;
+	border-color: $black;
 }
 
 .subtitulo {
@@ -61,7 +61,7 @@ img {
 	line-height: 30px;
 	font-weight: bold;
 	letter-spacing: .1em;
-	color: #000;
+	color: $black;
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 40px;
@@ -72,7 +72,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #000;
+	background: $black;
 	margin: 8px auto;
 }
 
@@ -81,7 +81,7 @@ img {
 	line-height: 30px;
 	font-weight: bold;
 	letter-spacing: .1em;
-	color: #000;
+	color: $black;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
@@ -91,7 +91,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #000;
+	background: $black;
 	margin: 8px 0;
 }
 
@@ -117,7 +117,7 @@ img {
 }
 
 .header_menu ul li a {
-	color: #000;
+	color: $black;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: .1em;
@@ -237,7 +237,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #000;
+	background: $black;
 	margin: 2px auto;
 }
 
@@ -246,7 +246,7 @@ img {
 }
 
 .produtos_icone {
-	background: #000;
+	background: $black;
 	padding: 20px;
 }
 
@@ -264,7 +264,7 @@ img {
 
 .portfolio {
 	width: 100%;
-	background: #000;
+	background: $black;
 	padding: 40px 0;
 }
 
@@ -330,7 +330,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #000;
+	background: $black;
 	margin: 6px auto;
 }
 
@@ -353,7 +353,7 @@ img {
 
 .footer {
 	width: 100%;
-	background: #000;
+	background: $black;
 	color: #fff;
 	padding: 20px 0;
 }

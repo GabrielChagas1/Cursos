@@ -29,7 +29,7 @@
 }
 
 .produto_icone {
-	background: #000;
+	background: $black;
 	padding: 70px 0;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .produto_info {
-	background: #000;
+	background: $black;
 }
 
 .produto_info p{
@@ -74,7 +74,7 @@
 /*Orçamento*/
 
 .orcamento {
-	background: #000;
+	background: $black;
 	width: 100%;
 	margin-top: 60px;
 	padding: 40px 0;
