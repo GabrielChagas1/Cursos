@@ -47,8 +47,8 @@ img {
 }
 
 .btn:hover {
-	color: #fff;
-	border-color: #fff;
+	color: $white;
+	border-color: $white;
 }
 
 .btn.btn-preto:hover {
@@ -128,11 +128,11 @@ img {
 }
 
 .header_menu ul li a:hover {
-	color: #FFF;
+	color: $white;
 }
 
 .header_menu ul li a.menu_ativo {
-	color: #FFF;
+	color: $white;
 }
 
 /* Introdução */
@@ -149,7 +149,7 @@ img {
 
 .introducao h1 {
 	font-size: 48px;
-	color: #FFF;
+	color: $white;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -158,7 +158,7 @@ img {
 	max-width: 320px;
 	margin: 0 auto;
 	margin-bottom: 40px;
-	color: white;
+	color: $white;
 }
 
 .quote-externo p {
@@ -170,7 +170,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #fff;
+	background: $white;
 	margin: 14px auto 10px auto;
 }
 
@@ -188,7 +188,7 @@ img {
 	margin-top: 92px;
 	height: 160px;
 	text-align: center;
-	color: #fff;
+	color: $white;
 	padding-top: 30px;
 }
 
@@ -203,7 +203,7 @@ img {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background: #fff;
+	background: $white;
 	margin: 6px auto 10px auto;
 }
 
@@ -281,7 +281,7 @@ img {
 }
 
 .portfolio .call p {
-	color: #fff;
+	color: $white;
 }
 
 /*Qualidade*/
@@ -354,7 +354,7 @@ img {
 .footer {
 	width: 100%;
 	background: $black;
-	color: #fff;
+	color: $white;
 	padding: 20px 0;
 }
 
@@ -399,7 +399,7 @@ img {
 }
 
 .footer_redes ul li a:hover {
-	border-color: #fff;
+	border-color: $white;
 }
 
 .copy {
