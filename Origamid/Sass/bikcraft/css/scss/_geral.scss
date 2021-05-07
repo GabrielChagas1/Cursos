@@ -295,6 +295,9 @@ img {
 	top: 209px;
 	right: 162px;
 	z-index: -1;
+	@include d(t){
+		right: 66px;
+	}
 }
 
 .qualidade img{
@@ -309,6 +312,9 @@ img {
 .qualidade_lista li {
 	text-align: center;
 	padding: 0 40px;
+	@include d(t){
+		padding: 0 10px;
+	}
 }
 
 .qualidade_lista li h3{
@@ -388,6 +394,18 @@ img {
 	display: block;
 	padding: 10px;
 	transition: all .5s ease;
+	@include d(t){
+		border: 3px solid $amarelo;
+		display: block;
+		padding: 6px;
+	}
+}
+
+.footer_redes ul li a img{
+	@include d(t){
+		width: 26px;
+		height: 26px;
+	}
 }
 
 .footer_redes ul li a:hover {
