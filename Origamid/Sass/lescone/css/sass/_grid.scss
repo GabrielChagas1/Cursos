@@ -67,3 +67,9 @@ $s-device: 480px;
   }
 }
 
+// selecionando todas as classes que começam com grid-
+[class^="grid-"]{
+  @include grid-structure()
+}
+
+
