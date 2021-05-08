@@ -116,3 +116,15 @@ $s-device: 480px;
 .container{
   @include container;
 }
+
+// criando mixin do row
+@mixin row{
+  position: relative;
+  margin-left: -$gutter / 2;
+  margin-right: -$gutter / 2;
+  @include d(s){
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  @include clearfix;
+}
