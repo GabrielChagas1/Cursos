@@ -8,3 +8,9 @@ $verde: #988c77;
 // fontes
 $fonte-1: 'PT Mono', monospace;
 $fonte-2: 'Aref Ruqaa', serif;
+
+// functions
+@function em($pixel, $contexto: 16){
+  @return $pixel / $contexto + em;
+}
+
