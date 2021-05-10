@@ -222,8 +222,55 @@ table {
   clear: both;
 }
 
-div {
-  font-family: 'Aref Ruqaa', serif;
-  font-family: 'PT Mono', monospace;
+body {
+  background: #edece4;
+  border: 10px solid #cbc6b9;
+  color: #2a2426;
+}
+
+@media screen and (max-width: 479px) {
+  body {
+    border: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+}
+
+.titulo {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.66667em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 479px) {
+  .titulo {
+    margin-bottom: 40px;
+  }
+}
+
+.titulo::after {
+  content: '';
+  display: block;
+  width: 75%;
+  height: 2px;
+  float: right;
+  background: #2a2426;
+  margin-top: 14px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 759px) {
+  .titulo::after {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
