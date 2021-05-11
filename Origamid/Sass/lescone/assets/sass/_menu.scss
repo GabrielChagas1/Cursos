@@ -6,3 +6,10 @@
     margin-bottom: 60px;
   }
 }
+
+.menu-item{
+  margin-bottom: 60px;
+  h2{
+    @include tipo-2(24);
+    margin-bottom: 1em;
+  }
