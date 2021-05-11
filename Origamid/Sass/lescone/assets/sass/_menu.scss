@@ -30,3 +30,18 @@
       }
     }
   }
+  img{
+    border-radius: 50%;
+    border: 10px solid $bege-medio;
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+    @include d(l){
+      right: 120px;
+    }
+    @include d(s){
+      width: 120px;
+      margin-top: 0px;
+    }
+  }
+}
