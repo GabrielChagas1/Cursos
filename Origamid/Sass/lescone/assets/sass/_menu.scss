@@ -13,3 +13,20 @@
     @include tipo-2(24);
     margin-bottom: 1em;
   }
+  li{
+    @include tipo-1(18);
+    line-height: em(35, 18);
+    span{
+      font-family: $fonte-2;
+      color: $bege-escuro;
+      display: inline-block;
+      width: 70px;
+      text-align: right;
+      margin-right: 10px;
+      margin-left: -80px;
+      @include d(s){
+        margin-left: 0px;
+        width: auto;
+      }
+    }
+  }
