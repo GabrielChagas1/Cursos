@@ -1,0 +1,51 @@
+$text-color: tomato;
+$bg-color: #7159c1;
+
+@mixin box-shadow($color){
+  box-shadow: 2px 2px 4px -1px rgba($color, .6);
+}
+
+@mixin make-bold($bool){
+  @if($bool){
+    font-weight: bold;
+  }
+}
+
+@mixin text-effect($val){
+  @if($val == danger){
+    color: red;
+  }@else if($val == alert){
+    color: yellow;
+  }@else{
+    color: greenyellow;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: $bg-color;
+  color: $text-color;
+}
+
+.container {
+   $text-secondary: #fff;
+  width: 200px;
+  height: 200px;
+  background: $text-secondary;
+  color: $text-secondary;
+  @include box-shadow(rgba(0, 0, 0, .6));
+  p{
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: $text-secondary;
+    @include box-shadow(rgba(0, 0, 0, .4));
+    @include make-bold(true);
+    @include text-effect(success)
+  }
+}

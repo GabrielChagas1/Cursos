@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #7159c1;
+  color: tomato;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  color: #fff;
+  -webkit-box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.6);
+}
+
+.container p {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: #fff;
+  -webkit-box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.6);
+          box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  color: greenyellow;
+}
+/*# sourceMappingURL=main.css.map */
