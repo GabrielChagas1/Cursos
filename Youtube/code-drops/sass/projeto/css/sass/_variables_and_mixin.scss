@@ -1,0 +1,28 @@
+// variáveis
+$primary-color: #7159c1;
+$color-white: #fff;
+
+
+.flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// mixins
+@mixin boundaries($isAuto: true) {
+  width: 90%;
+  max-width: 980px;
+  @if($isAuto){
+    margin: auto;
+  }
+}
+
+// function
+@function set-text-color($color){
+  @if lightness($color) > 70{
+    @return #333;
+  }@else{
+    @return #fff;
+  }
+}
