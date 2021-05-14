@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api Marvel</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Marvel', sans-serif;
+    }
+
+    .logo{
+      display: flex;
+      justify-content: center;
+      margin: 60px 0 0 0;
+    }
+
+    .logo img{
+      width: 200px;
+    }
+
+
+    #herois{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    #herois{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .personagem{
+      width: 300px;
+      height: 300px;
+      margin: 60px 0;
+      cursor: pointer;
+    }
+
+    .personagem img{
+      display: inherit;
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    .personagem p{
+      text-align: center;
+      background-color: #e23636;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      color: #fff;
+      padding: 10px 0;
+      font-size: 1.25em;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="./logo.png" alt="Logo">
+  </div>
+  <div id="herois"></div>
+  <script>
+    let timeStamp = "16209549598";
+    let apiKey = "de0cfe8325151df1a7dd79ccc2f8d068";
+    let md5 = "afd1d6191b1a93d70bef3efd7941d169";
+
+    fetch(`http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=34`)
+    .then((response) => {
+      return response.json();
+    }).then((jsonParsed) => {
+      let divHero = document.querySelector('#herois');
+      jsonParsed.data.results.forEach(element =>{
+        let srcImage = element.thumbnail.path + '.' + element.thumbnail.extension;
+        let nameHero = element.name;
+
+        if(srcImage != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
+          createDivHero(srcImage, divHero, nameHero);
+
+      });
+
+      console.log(jsonParsed);
+    });
+
+
+    function createDivHero(srcImage, divHero, nameHero){
+      let divToAppend = document.getElementById('herois');
+      let divPai = document.createElement('div');
+      let divFilho = document.createElement('div');
+      let textName = document.createElement('p');
+      let img = document.createElement('img');
+
+      textName.textContent = nameHero;
+      img.src = srcImage;
+
+      divPai.appendChild(img);
+      divFilho.appendChild(textName);
+      divPai.appendChild(divFilho);
+      divToAppend.appendChild(divPai);
+
+      divPai.classList.add('personagem');
+
+
+    }
+
+  </script>
+</body>
+</html>
