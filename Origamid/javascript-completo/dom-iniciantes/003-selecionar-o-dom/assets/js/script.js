@@ -1,19 +1,22 @@
-let animais = document.getElementById('animais');
-let contato = document.getElementById('contato');
-// console.log(animais);
+// Retorne no console todas as imagens do site
+const images = document.querySelectorAll('img');
+const imagesTag = document.getElementsByTagName('img');
+// const images = document.querySelectorAll('img');
+console.log(images, imagesTag)
 
-const gridSection = document.getElementsByClassName('grid-section');
-// console.log(gridSection);
+// Retorne no console apenas as imagens que começaram com a palavra imagem
+const image = document.querySelectorAll('img[src^="./assets/img/imagem"]');
+console.log(image)
 
-
-const primeiraLi = document.querySelector('li');
-console.log(primeiraLi);
-
-let primeiraUl = document.querySelector('ul');
-console.log(primeiraUl);
-
-let linksInternos = document.querySelectorAll('[href^="#"]');
+// Selecione todos os links internos (onde o href começa com #)
+const linksInternos = document.querySelectorAll('[href^="#"]');
 console.log(linksInternos);
 
-let imagesProject = document.querySelectorAll('img');
-console.log(imagesProject[1])
+// Selecione o primeiro h2 dentro de .animais-descricao
+const animaisDescricao = document.querySelector('.animais-descricao h2');
+console.log(animaisDescricao);
+
+// Selecione o último p do site
+const paragrafos = document.querySelectorAll('p');
+const lastP = paragrafos[--paragrafos.length];
+console.log(lastP);
