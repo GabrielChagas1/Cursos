@@ -1,8 +1,21 @@
-const imgs = document.querySelectorAll('img');
-// console.log(imgs)
-// imgs.forEach((item, index) => console.log(item.src, index))
+const listaAnimais = document.querySelector('.animais-lista');
 
-const titulo = document.getElementsByClassName('titulo');
-const tituloArray = Array.from(titulo);
+const testeHeight = listaAnimais.scrollHeight;
 
-tituloArray.map((item) => console.log(item.innerHTML));
+let animaisTop = listaAnimais.offsetTop;
+
+console.log(testeHeight, animaisTop);
+
+const primeiroH2 = document.querySelector('h2');
+const h2left = primeiroH2.offsetLeft;
+
+console.log(h2left);
+
+const section = document.querySelector('.animais');
+
+const rect = section.getBoundingClientRect();
+
+console.log(rect);
+
+const small = window.matchMedia('(max-width: 600px').matches;
+console.log(small)
