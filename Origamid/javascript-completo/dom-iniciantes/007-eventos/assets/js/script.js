@@ -1,36 +1,52 @@
-const img = document.querySelector('img')
-console.log(img);
+// Quando o usuário clicar nos links internos do site,
+// adicione a classe ativo ao item clicado e remova dos
+// demais itens caso eles possuam a mesma. Previna
+// o comportamento padrão desses links
+// const linksInternos = document.querySelectorAll('a[href^="#"]');
+// console.log(linksInternos);
 
-function callback(event){
-  console.log(event.currentTarget)
+// function handleLink(event){
+//   event.preventDefault();
+
+//   this.classList.add('ativo');
+
+//   linksInternos.forEach((item) =>{
+//     item.classList.remove('ativo');
+//   });
+
+// }
+
+// linksInternos.forEach((link) =>{
+//   link.addEventListener('click', handleLink);
+// })
+
+// Selecione todos os elementos do site começando a partir do body,
+// ao clique mostre exatamente quais elementos estão sendo clicados
+
+const elements = document.querySelectorAll('body *');
+
+function handleClick(event){
+  console.log(event.currentTarget);
 }
 
-img.addEventListener('click', callback)
+elements.forEach((item) =>{
+  item.addEventListener('click', handleClick);
+})
 
-const linkExterno = document.querySelector('a[href^="http"');
 
-function handleLinkExterno(event){
-  event.preventDefault();
-  console.log(this.getAttribute('href'));
-  console.log('clicou');
+// Utilizando o código anterior, ao invés de mostrar no console,
+// remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+function handleClick(event){
+  event.currentTarget.remove();
 }
 
-linkExterno.addEventListener('click', handleLinkExterno); 
 
-
-
-const h1 = document.querySelector('h1');
-
-
-function handleEvent(event){
-  if(event.type === 'f')
-    console.log(event.key);
+// Se o usuário clicar na tecla (t), aumente todo o texto do site. 
+function handleClickt(event){
+  if(event.key === 't'){
+    document.documentElement.classList.toggle('textomaior')
+  }
 }
 
-// h1.addEventListener('click', handleEvent);
-// h1.addEventListener('mouseenter', handleEvent)
-
-// window.addEventListener('resize', handleEvent)
-// window.addEventListener('keydown', handleEvent)
-// h1.addEventListener('mousemove', handleEvent)
-
+window.addEventListener('keydown', handleClickt);
