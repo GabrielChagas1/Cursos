@@ -8,11 +8,11 @@ copy.appendChild(menuClone);
 // Selecione o primeiro DT da dl de Faq
 const faqList = document.querySelector('.faq-lista');
 const firstDT = faqList.querySelector('dt');
-console.log(firstDT)
+// console.log(firstDT)
 
 // Selecione o DD referente ao primeiro DT
 const ddFirst = firstDT.nextElementSibling;
-console.log(ddFirst);
+// console.log(ddFirst);
 
 // Substitua o conteúdo html de .faq pelo de .animais
 const faq = document.querySelector('.faq');
