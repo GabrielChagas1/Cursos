@@ -1,0 +1,21 @@
+.mapa{
+  grid-column: 2;
+}
+
+.dados{
+  grid-column: 3;
+
+  li{
+    margin-bottom: 1rem;
+    font-family: Helvetica, Arial;
+
+    &::before{
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 10px;
+      background: $color-primary;
+      margin-right: 10px;
+    }
+  }
+}
