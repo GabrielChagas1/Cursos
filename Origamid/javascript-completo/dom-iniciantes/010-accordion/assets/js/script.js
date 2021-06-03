@@ -19,3 +19,34 @@ function activeTab(index){
 tabMenu.forEach((itemMenu, index) => {
   itemMenu.addEventListener('click', () => activeTab(index));
 });
+
+//* Accordion
+function initAccordion() {
+
+  // recuperando todos os itens do accordion
+  const accordionlist = document.querySelectorAll('.js-accordion dt');
+
+  // classe para ativar o accordion
+  const activeClass = 'ativo';
+
+  // inicializando o primeiro item
+  if (accordionlist.length) {
+    accordionlist[0].classList.add(activeClass)
+    accordionlist[0].nextElementSibling.classList.add(activeClass)
+  }
+
+  // função responsavel por ativar e desativar os itens
+  function activeAccordion() {
+    this.classList.toggle(activeClass);
+    this.nextElementSibling.classList.toggle(activeClass);
+  }
+
+  // cliando um evento para cada item do accordion
+  accordionlist.forEach((item) => {
+    item.addEventListener('click', activeAccordion);
+  });
+
+}
+
+
+
