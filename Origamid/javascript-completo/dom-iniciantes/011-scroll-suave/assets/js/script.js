@@ -54,6 +54,44 @@ function initAccordion() {
 }
 
 
+function initScroll(){
+  const linkInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+
+  function scrollToSection(event){
+    // prevenindo o padrãosd
+    event.preventDefault();
+
+    // recuperando o href que foi clicado
+    const href = event.currentTarget.getAttribute('href');
+
+    // recuperando a section do href clicado
+    const section = document.querySelector(href);
+
+    // recuperando o valor que a section está do topo
+    const top = section.offsetTop;
+
+    // criando o scroll suave
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    // window.scrollTo({
+    //   top: top,
+    //   behavior: 'smooth'
+    // })
+  }
+
+  linkInternos.forEach((link) =>{
+    link.addEventListener('click', scrollToSection);
+  })
+  
+
+}
+
+
+
+
+
 
 //* Iniciando as funções
 initTabNav();
