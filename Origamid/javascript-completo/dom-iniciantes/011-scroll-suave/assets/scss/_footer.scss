@@ -1,0 +1,10 @@
+.copy{
+  grid-column: 3 / 5;
+  background: $color-primary;
+  margin-bottom: 2rem;
+  p{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    padding: 20px;
+  }
+}
