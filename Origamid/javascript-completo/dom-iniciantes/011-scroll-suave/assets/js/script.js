@@ -96,3 +96,4 @@ function initScroll(){
 //* Iniciando as funções
 initTabNav();
 initAccordion();
+initScroll()
