@@ -1,0 +1,66 @@
+.faq-lista{
+  grid-column:2 / 4;
+
+  dt{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color: $color-title;
+    user-select: none;
+    cursor: pointer;
+
+    &::before{
+      content: '';
+      display: inline-block;
+      background: $color-primary;
+      width: 20px;
+      height: 10px;
+      margin-right: 10px;
+    }
+
+  }
+
+  dd{
+    font-family: Helvetica, Arial;
+    margin-bottom: .5rem;
+    margin-left: 30px;
+  }
+
+}
+
+.js .js-accordion {
+
+  dd{
+    display: none;
+
+    &.ativo{
+      display: block;
+      animation: slideDown .5s forwards;
+    }
+  }
+
+  dt{
+    &::after{
+      content: '⬎';
+      margin-left: 10px;
+    }
+
+    &.ativo::after{
+      content: '⬏';
+    }
+  }
+
+
+}
+
+@keyframes slideDown {
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    opacity: 1;
+    max-height: 200px;
+  }
+}
