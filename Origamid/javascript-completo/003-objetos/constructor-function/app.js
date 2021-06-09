@@ -1,26 +1,13 @@
-//  window.alert('Nikola Jokic MVP');
-//  console.log(window.location.hash)
+function Carro(marca = 'Marca', preco = 0){
+  this.marca = marca;
+  this.preco = preco;
+}
 
- let h1 = document.querySelector('h1');
+const honda = new Carro();
+honda.marca = 'Honda';
+honda.preco = 4000;
 
- function callbackH1(){
-   console.log(`Clicou em ${h1.innerText}`);
- }
-
- h1.addEventListener('click', callbackH1);
+const fiat = new Carro('Fiat', 3000);
 
 
-//* Exercícios
-
-// Retorne o url da página atual utilizando o objeto window
-console.log(`URL do navegador: ${window.location.href}`);
-
-// Seleciona o primeiro elemento da página que
-// possua a classe ativo
-let firstAtivo = document.querySelector('.ativo');
-
-// Retorne a linguagem do navegador
-console.log(`Lingaguem do navegador: ${navigator.language}`);
-
-// Retorne a largura da janela 
-console.log(`Largura do navegador: ${window.innerWidth}`)
+console.log(honda, fiat); 
