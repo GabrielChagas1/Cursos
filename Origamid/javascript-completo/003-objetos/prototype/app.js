@@ -5,5 +5,10 @@ function Pessoa(nome, idade){
 
 const gabriel = new Pessoa('Gabriel', 21);
 
-// console.log(Pessoa.prototype)
-// console.log(gabriel.prototype)
+const pais = 'Brasil';
+const cidade = new String('Rio');
+
+console.log(pais.charAt(0));
+console.log(cidade.charAt(0));
+
+console.log(String.prototype);
