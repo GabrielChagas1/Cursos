@@ -30,6 +30,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+
+#database sqlite
+src/database/database.sqlite
+
+
 # vercel
 .vercel
 
