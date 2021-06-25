@@ -5,7 +5,7 @@ import { NextFunction, Request, Response } from "express";
 
 export function ensureAdmin(request: Request, response: Response, next: NextFunction){
   // verificar se o usuário é um admin
-  const admin = true;
+  const admin = false;
 
   // se o usuário for admin, ele pode acessar a página
   if(admin){
