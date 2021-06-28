@@ -12,7 +12,7 @@ export function ensureAdmin(request: Request, response: Response, next: NextFunc
     return next();
   }
 
-  // senão é devolvido um erro
+  // senão é devolvido um erro, informando que o usuário não é autorizado a usar aquela rota
   return response.status(401).json({
     error: "Unauthorized",
   });
