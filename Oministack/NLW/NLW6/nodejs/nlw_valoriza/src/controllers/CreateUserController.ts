@@ -6,13 +6,13 @@ class CreateUserController{
   async handle(request: Request, response: Response){
     try {
       // recuperando os valores que chegam do body da aplicação
-      const { name, email, admin} = request.body; 
+      const { name, email, password, admin} = request.body; 
 
       // instanciando um objeto do user service
       const createUserService = new CreateUserService();
 
       // utilizando o método execute para criar um novo usuário
-      const user = await createUserService.execute({name, email, admin});
+      const user = await createUserService.execute({name, email, password, admin});
 
       // retornando os dados cadastrados
       return response.json(user);
