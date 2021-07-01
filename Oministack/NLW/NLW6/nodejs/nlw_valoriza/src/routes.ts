@@ -12,7 +12,7 @@ const createTagController = new CreateTagController();
 const createComplimentController = new CreateComplimentController();
 const authenticateUserController = new AuthenticateUserController();
 
-
+// rotas da aplicação
 router.post("/tags", ensureAdmin, createTagController.handle);
 
 router.post("/users", createUserController.handle);
