@@ -13,6 +13,8 @@ const createComplimentController = new CreateComplimentController();
 const authenticateUserController = new AuthenticateUserController();
 
 // rotas da aplicação
+
+// rotas que utilizam o middleware ensureAdmin
 router.post("/tags", ensureAdmin, createTagController.handle);
 
 router.post("/users", createUserController.handle);
