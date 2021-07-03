@@ -35,7 +35,4 @@ yarn-error.log*
 src/database/database.sqlite
 
 
-# vercel
-.vercel
 
-.vercel
