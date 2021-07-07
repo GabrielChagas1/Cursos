@@ -9,6 +9,7 @@ class CreateComplimentController{
     const {tag_id, user_sender, user_receiver, message} = request.body;
 
 
+    // criando variável para ler a compliment service
     const createComplimentService = new CreateComplimentService();
 
     // persistindo os dados no banco de dados
