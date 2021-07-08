@@ -37,6 +37,7 @@ class Compliment{
   @CreateDateColumn()
   created_at: Date;
 
+  // criando um id usando a biblioteca de uuid
   constructor(){
     if(!this.id){
       this.id = uuid();
