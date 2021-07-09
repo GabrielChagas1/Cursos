@@ -12,11 +12,11 @@ const createTagController = new CreateTagController();
 const createComplimentController = new CreateComplimentController();
 const authenticateUserController = new AuthenticateUserController();
 
-// rotas da aplicação
 
 // rotas que utilizam o middleware ensureAdmin
 router.post("/tags", ensureAdmin, createTagController.handle);
 
+// rotas da aplicação
 router.post("/users", createUserController.handle);
 router.post("/compliments", createComplimentController.handle);
 router.post("/login", authenticateUserController.handle);
