@@ -7,6 +7,7 @@ import { ensureAdmin } from "./middlewares/ensureAdmin";
 
 const router = Router();
 
+// criando uma instância para os controller
 const createUserController = new CreateUserController();
 const createTagController = new CreateTagController();
 const createComplimentController = new CreateComplimentController();
