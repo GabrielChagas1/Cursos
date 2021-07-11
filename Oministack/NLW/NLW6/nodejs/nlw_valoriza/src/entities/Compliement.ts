@@ -40,6 +40,7 @@ class Compliment{
   // criando um id usando a biblioteca de uuid
   constructor(){
     if(!this.id){
+      // criando um id utilizando o uuid
       this.id = uuid();
     }
   }
