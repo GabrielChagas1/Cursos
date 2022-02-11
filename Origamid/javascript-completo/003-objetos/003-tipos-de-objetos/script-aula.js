@@ -1,4 +1,1 @@
-if(typeof Array.from !== "undefined") 
-  console.log('Existe');
-else
-  console.log('Não Existe');
+typeof Array.from !== "undefined" ? console.log('Existe') : console.log('Não Existe');
