@@ -38,7 +38,6 @@ function Dom(selector) {
 
   this.setActive = (setClass) => {
 
-
     if(setClass !== undefined)
       this.element().classList.add(setClass);
     else
