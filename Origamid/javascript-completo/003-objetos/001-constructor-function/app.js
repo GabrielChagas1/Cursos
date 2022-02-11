@@ -1,17 +1,18 @@
 // Transforme o objeto abaixo em uma Constructor Function
-const pessoa = {
-  nome: 'Nome pessoa',
-  idade: 0,
-  andar() {
-    console.log(this.nome + ' andou');
-  }
-}
+// const pessoa = {
+//   nome: 'Nome pessoa',
+//   idade: 0,
+//   andar() {
+//     console.log(this.nome + ' andou');
+//   }
+// }
 
 function Pessoa(nome, idade){
-  this.nome = nome,
+  this.nome = nome
   this.idade = idade
-  this.andar = () =>{
-    console.log(`${this.nome} andou`);
+
+  this.setWalk = () => {
+    console.log(`${this.nome} andou`)
   }
 }
 
@@ -31,30 +32,29 @@ const bruno = new Pessoa('Bruno', 15);
 // addClass(classe), adiciona a classe a todos os elementos
 // removeClass(classe), remove a classe a todos os elementos
 
-
-function Dom(selector){
-
-  this.elementList = () =>{
-    return document.querySelectorAll(selector);
+function Dom(selector) {
+  this.elementList = () => {
+    return document.querySelectorAll(selector)
   }
 
   this.addClass = (setClass) => {
     if(this.elementList().length)
       this.elementList().forEach((item) =>{
-        item.classList.add(setClass)
+        item.classList.add(setClass);
       });
-    else
-      console.log('elemento não encontrado')
+    else 
+      console.log('elemento não encontrado!');
   }
 
-  this.removeClass = (setClass) =>{
+  this.removeClass = (removeClass) =>{
     if(this.elementList().length)
       this.elementList().forEach((item) =>{
-        item.classList.remove(setClass);
-      });
+        item.classList.remove(removeClass);
+      })
     else
-      console.log('elemento não encontrado')
-  } 
+      console.log('elemento não encontrado!');
+  }
+
 }
 
 const li = new Dom('li');
